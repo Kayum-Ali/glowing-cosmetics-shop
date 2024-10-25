@@ -5,6 +5,8 @@ import {
 import MainLayouts from "../layouts/MainLayouts";
 import HomePage from "../pages/HomePage";
 import ElementPage from "../pages/ElementPage";
+import ShopPage from "../pages/ShopPage";
+import BlogPage from "../pages/BlogPage";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
         {
             path: '/element',
             element: <ElementPage></ElementPage>
+        },
+        {
+            path: '/shop',
+            element: <ShopPage></ShopPage>
+        },
+        {
+            path: '/blog',
+            element: <BlogPage></BlogPage>
         }
       ]
     },

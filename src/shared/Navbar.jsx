@@ -5,14 +5,14 @@ const Navbar = () => {
     const navLinks = <>
     <li><NavLink to={`/`}>HOME</NavLink></li>
     <li><NavLink to={`/element`}>ELEMENT</NavLink></li>
-    <li><NavLink to={`/b`}>SHOP</NavLink></li>
-    <li><NavLink to={`/v`}>BLOG</NavLink></li>
-    <li><NavLink to={`/j`}>PAGE</NavLink></li>
+    <li><NavLink to={`/shop`}>SHOP</NavLink></li>
+    <li><NavLink to={`/blog`}>BLOG</NavLink></li>
+    <li><NavLink to={`/page`}>PAGE</NavLink></li>
    
     </>
   return (
     <nav className="container mx-auto">
-      <div className="navbar ">
+      <div className="navbar bg-base-200 lg:bg-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +33,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content  rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content lg:bg-white bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >  
             {navLinks}
              
