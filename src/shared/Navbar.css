@@ -1,0 +1,28 @@
+nav li {
+  position: relative;
+  width: max-content;
+  font-weight: 600;
+}
+a.active {
+  /* background-color: transparent;
+    */
+  background: #4e7661 !important;
+  color: white !important;
+}
+
+nav li::after {
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, red, #015cb5);
+  border-radius: 100px;
+  transition: width 1s ease-out; /* Set transition on width for initial state */
+}
+
+nav li:hover::after {
+  width: 100%;
+  transition: width 1s ease-in-out; /* Smoothly transition to 100% width */
+}
