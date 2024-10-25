@@ -1,5 +1,4 @@
 nav li {
-  /* font-size: 18px; */
   position: relative;
   width: max-content;
   font-weight: 600;
@@ -24,4 +23,13 @@ nav li::after {
 nav li:hover::after {
   width: 100%;
   transition: width 1s ease-in-out;
+}
+
+.pages {
+  display: none;
+}
+.page:hover .pages {
+  display: block;
+  background-color: #4e7661;
+  z-index: 100;
 }

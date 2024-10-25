@@ -8,70 +8,107 @@ import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [toggle,setToggle] = useState(false)
-  const navLinks = (
-    <>
-      <li>
-        <NavLink to={`/`}>HOME</NavLink>
-      </li>
-      <li>
-        <NavLink to={`/element`}>ELEMENT</NavLink>
-      </li>
-      <li>
-        <NavLink to={`/shop`}>SHOP</NavLink>
-      </li>
-      <li>
-        <NavLink to={`/blog`}>BLOG</NavLink>
-      </li>
-      <li>
-        <NavLink to={`/page`}>PAGE</NavLink>
-      </li>
-    </>
-  );
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <div className=" font-medium ">
-      <div className="navbar bg-base-200 lg:bg-white">
+    <div className=" font-medium relative">
+      <nav className="navbar bg-base-200 lg:bg-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              {
-                toggle? (
-                  <RxCross1 onClick={()=>setToggle(!toggle)}  className="text-xl"/>
-                ) : (
-                  <RxHamburgerMenu  onClick={()=>setToggle(!toggle)} className="text-xl" />
-                )
-              }
-            
+              {toggle ? (
+                <RxCross1
+                  onClick={() => setToggle(!toggle)}
+                  className="text-xl"
+                />
+              ) : (
+                <RxHamburgerMenu
+                  onClick={() => setToggle(!toggle)}
+                  className="text-xl"
+                />
+              )}
             </div>
             <ul
               tabIndex={0}
-              className={`menu menu-sm dropdown-content lg:bg-white bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow ${toggle || 'hidden'}`}
+              className={`menu menu-sm dropdown-content lg:bg-white bg-base-300 rounded-box z-[1] mt-3 w-52 p-2 shadow ${
+                toggle || "hidden"
+              }`}
             >
-              {navLinks}
+              <li>
+                <NavLink to={`/`}>HOME</NavLink>
+              </li>
+              <li>
+                <NavLink to={`/element`}>ELEMENT</NavLink>
+              </li>
+              <li>
+                <NavLink to={`/shop`}>SHOP</NavLink>
+              </li>
+              <li>
+                <NavLink to={`/blog`}>BLOG</NavLink>
+              </li>
+              <li>
+                <NavLink className="page" to={`/page`}>
+                  PAGE
+                </NavLink>
+              </li>
             </ul>
           </div>
-          <Link to={`/`} className="text-xl font-bold text-[#4e7661]">GLOWING</Link>
+          <Link to={`/`} className="text-xl font-bold text-[#4e7661]">
+            GLOWING
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <NavLink to={`/`}>HOME</NavLink>
+            </li>
+            <li>
+              <NavLink to={`/element`}>ELEMENT</NavLink>
+            </li>
+            <li>
+              <NavLink to={`/shop`}>SHOP</NavLink>
+            </li>
+            <li>
+              <NavLink to={`/blog`}>BLOG</NavLink>
+            </li>
+            <li className="page">
+              <NavLink to={`/page`}>PAGE</NavLink>
+
+              {/* pages content */}
+              <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute bottom-0 top-9  pages">
+                <div className="">
+                  
+                <li><Link to={`/about-us`} className="block">About Us</Link></li>
+                <li> <Link to={`/contact`} className="block">Contact</Link></li>
+                <li><Link to={`/faq`} className="block">FAQ</Link></li>
+
+                </div>
+               
+              </div>
+            </li>
+          </ul>
         </div>
         <div className="navbar-end text-2xl flex lg:gap-8 gap-5 font-bold text-[#4e7661]">
           <div>
             <CiSearch />
           </div>
-          <div >
+          <div>
             <GoPerson />
           </div>
           <div className="flex relative">
             <TbJewishStar className="wishlist" />
-            <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">0</span>
+            <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">
+              0
+            </span>
           </div>
-          <div  className="flex relative">
+          <div className="flex relative">
             <PiShoppingBagOpenBold />
-            <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">0</span>
+            <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">
+              0
+            </span>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };
