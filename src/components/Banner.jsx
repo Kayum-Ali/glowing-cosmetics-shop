@@ -23,38 +23,78 @@ export default function Banner() {
           clickable: true,
         }}
         modules={[Mousewheel, Pagination]}
-        className="mySwiper"
+        className="mySwiper lg:w-full bg-center md:w-auto md:h-[500px] lg:h-[700px] h-[300px] w-auto"
       >
         <SwiperSlide>
-          <div className="bg1 w-full h-full bg-cover relative">
-            <div className="absolute top-1/2 left-10 -translate-y-1/2 space-y-5">
-              <h2 className="text-2xl text-gray-800 font-medium">
-                ESSENTIAL ITEMS
+          <div className="bg1 w-full h-full bg-cover bg-center relative">
+            <div className="absolute top-1/2 lg:left-10 left-5 -translate-y-1/2 lg:space-y-5 space-y-2">
+              <h2 className="lg:text-2xl text-xl text-gray-800 font-medium">
+              Your Skin, Our Passion
               </h2>
               <div>
-                <h1 className="text-6xl text-gray-800 font-semibold">
+                <h1 className="lg:text-6xl text-4xl text-gray-800 lg:font-semibold font-bold">
                   Beauty Inspired{" "}
                 </h1>
-                <h1 className="text-6xl mt-2 text-gray-800 font-semibold">
+                <h1 className="lg:text-6xl text-4xl mt-2 text-gray-800 font-semibold">
                   by Real Life{" "}
                 </h1>
               </div>
-              <p className=" text-xl text-gray-800 leading-7 opacity-80">
-                Made using clean, non-toxic ingredients, our products <br /> are
+              <p className="w-2/3 lg:w-auto md:w-auto md:text-xl lg:text-xl text-gray-800 lg:leading-7 md:leading-7 opacity-80">
+                Made using clean, non-toxic ingredients, our products <br className="hidden lg:block md:block" /> are
                 designed for everyone.
               </p>
-              <button className="px-10 py-3 text-white bg-black  font-bold rounded-md hover:bg-[#4E7661]">Shop Now</button>
+              <button className="lg:px-10 md:px-8 px-6 py-3 text-white bg-black  lg:font-bold  md:font-bold font-medium rounded-md hover:bg-[#4E7661]">Shop Now</button>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+
+        <SwiperSlide>
+          <div className="bg2 w-full h-full bg-cover bg-center relative">
+            <div className="absolute top-1/2 lg:left-10 left-5 -translate-y-1/2 lg:space-y-5 space-y-2">
+              <h2 className="lg:text-2xl text-xl text-gray-800 font-medium">
+              Glow Brighter, Shine Longer
+              </h2>
+              <div>
+                <h1 className="lg:text-6xl text-4xl text-gray-800 lg:font-semibold font-bold">
+                  Get the Perfectly{" "}
+                </h1>
+                <h1 className="lg:text-6xl text-4xl mt-2 text-gray-800 font-semibold">
+                  Hydrated Skin{" "}
+                </h1>
+              </div>
+              <p className=" w-2/3 lg:w-auto md:w-auto lg:text-xl text-gray-800 lg:leading-7 opacity-80">
+                Made using clean, non-toxic ingredients, our products <br className="hidden lg:block md:block" /> are
+                designed for everyone.
+              </p>
+              <button className="lg:px-10 md:px-8 px-6 py-3 text-white bg-black  lg:font-bold  md:font-bold font-medium rounded-md hover:bg-[#4E7661]">Shop Now</button>
+            </div>
+          </div>
+        </SwiperSlide>
+       
+        <SwiperSlide>
+          <div className="bg3 w-full h-full bg-cover bg-center relative">
+            <div className="absolute top-1/2 lg:left-10 left-5 -translate-y-1/2 lg:space-y-5 space-y-2">
+              <h2 className="lg:text-2xl text-xl text-gray-800 font-medium">
+                GET THE GLOW
+              </h2>
+              <div>
+                <h1 className="lg:text-6xl text-4xl text-gray-800 lg:font-semibold font-bold">
+                  Be Your Kid{" "}
+                </h1>
+                <h1 className="lg:text-6xl text-4xl mt-2 text-gray-800 font-semibold">
+                  of Beauty{" "}
+                </h1>
+              </div>
+              <p className=" w-2/3 lg:w-auto md:w-auto lg:text-xl text-gray-800 lg:leading-7 opacity-80">
+                Made using clean, non-toxic ingredients, our products <br className="hidden lg:block md:block" /> are
+                designed for everyone.
+              </p>
+              <button className="lg:px-10 md:px-8 px-6 py-3 text-white bg-black  lg:font-bold  md:font-bold font-medium rounded-md hover:bg-[#4E7661]">Shop Now</button>
+            </div>
+          </div>
+        </SwiperSlide>
+    
+      
       </Swiper>
     </>
   );

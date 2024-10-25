@@ -29,7 +29,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <nav className="container mx-auto font-medium py-2">
+    <div className=" font-medium ">
       <div className="navbar bg-base-200 lg:bg-white">
         <div className="navbar-start">
           <div className="dropdown">
@@ -55,11 +55,11 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end text-2xl flex gap-8 font-bold text-[#4e7661]">
+        <div className="navbar-end text-2xl flex lg:gap-8 gap-5 font-bold text-[#4e7661]">
           <div>
             <CiSearch />
           </div>
-          <div>
+          <div >
             <GoPerson />
           </div>
           <div className="flex relative">
@@ -72,7 +72,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

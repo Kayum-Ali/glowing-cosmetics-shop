@@ -4,8 +4,11 @@ import Navbar from "../shared/Navbar";
 
 const MainLayouts = () => {
     return (
-        <div>
-            <Navbar></Navbar>
+        <div >
+            <div className="container mx-auto">
+                <Navbar></Navbar>
+
+            </div>
             <Outlet></Outlet>
         </div>
     );

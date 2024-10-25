@@ -1,20 +1,23 @@
-.swiper {
-  width: 100%;
-  height: 700px;
-}
-
 .swiper-slide {
+  min-width: 300px;
+  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/* 
 .swiper-slide img {
   display: block;
   width: 50%;
   height: 50%;
   object-fit: cover;
-}
+} */
 .bg1 {
   background-image: url("../assets/bg-slider-01.jpg");
+}
+.bg2 {
+  background-image: url("../assets/bg-slider-02.jpg");
+}
+.bg3 {
+  background-image: url("../assets/bg-slider-03.jpg");
 }
