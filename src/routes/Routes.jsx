@@ -7,6 +7,7 @@ import HomePage from "../pages/HomePage";
 import ElementPage from "../pages/ElementPage";
 import ShopPage from "../pages/ShopPage";
 import BlogPage from "../pages/BlogPage";
+import Page from "../pages/Page";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         {
             path: '/blog',
             element: <BlogPage></BlogPage>
+        },
+        {
+            path: '/page',
+            element: <Page></Page>
         }
       ]
     },
