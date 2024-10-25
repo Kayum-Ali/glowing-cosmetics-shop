@@ -72,7 +72,8 @@ const Navbar = () => {
               <NavLink to={`/blog`}>BLOG</NavLink>
             </li>
             <li className="page">
-              <NavLink to={`/page`}>PAGE</NavLink>
+              {/* <NavLink to={`/page`}>PAGE</NavLink> */}
+              <p>PAGE</p>
 
               {/* pages content */}
               <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute bottom-0 top-9  pages">

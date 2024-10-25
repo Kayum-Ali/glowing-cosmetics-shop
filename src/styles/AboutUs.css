@@ -1,0 +1,7 @@
+.bg1 {
+  background-image: url("../assets/bg-about-01.jpg");
+}
+.cover {
+  min-width: 300px;
+  min-height: 300px;
+}
