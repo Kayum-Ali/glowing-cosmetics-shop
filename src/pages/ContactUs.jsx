@@ -73,7 +73,19 @@ const ContactUs = () => {
 
       {/* google map */}
       <div className="my-5">
-        <iframe className="w-4/5 h-[450px] mx-auto rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.16040383638!2d88.89368367485659!3d25.78214830776096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e3510c25d5cb7d%3A0xdc031227e1d15836!2sSaidpur%20Plaza!5e1!3m2!1sen!2sbd!4v1729948180682!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe className="w-4/5 h-[550px] mx-auto rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.16040383638!2d88.89368367485659!3d25.78214830776096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e3510c25d5cb7d%3A0xdc031227e1d15836!2sSaidpur%20Plaza!5e1!3m2!1sen!2sbd!4v1729948180682!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div className="pt-8">
+          <h2 className="text-4xl mx-auto text-center">Sent A Message</h2>
+          <form className=" text-center w-1/2 mx-auto py-10">
+              <div className="flex gap-8">
+                <input type="text" placeholder="Name" className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-3 text-2xl w-full"/>
+                <input type="email" placeholder="Email"  className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-3 text-2xl w-full"/>
+              </div>
+                <textarea name="" id="" rows={5} placeholder="Message"  className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-3 text-2xl w-full mt-8"></textarea>
+                <button className="text-xl bg-[#ABD6D4] text-black mt-8 rounded-lg px-8 py-3 hover:bg-[#4E7661] hover:text-white">Submit</button>
+          </form>
       </div>
 
 
