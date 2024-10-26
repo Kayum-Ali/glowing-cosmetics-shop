@@ -9,10 +9,11 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  //  z-50
 
   return (
-    <div className=" font-medium relative">
-      <nav className="navbar bg-base-200 lg:bg-white">
+    <div className="font-medium bg-gradient-to-r from-white to-[#aed6f1] fixed top-0 w-full z-50 ">
+      <nav className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,8 +54,8 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link to={`/`} className="text-xl font-bold text-[#4e7661]">
-            GLOWING
+          <Link to={`/`} className="text-xl font-bold text-[#C5A3FF]">
+             GLOWING
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

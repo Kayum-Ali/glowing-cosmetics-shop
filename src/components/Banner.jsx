@@ -43,7 +43,8 @@ export default function Banner() {
                 Made using clean, non-toxic ingredients, our products <br className="hidden lg:block md:block" /> are
                 designed for everyone.
               </p>
-              <button className="lg:px-10 md:px-8 px-6 py-3 text-white bg-black  lg:font-bold  md:font-bold font-medium rounded-md hover:bg-[#4E7661]">Shop Now</button>
+              {/* <button className="lg:px-10 md:px-8 px-6 py-3 text-white bg-[#4E7661] lg:font-bold  md:font-bold font-medium rounded-md hover:bg-universe_primary hover:text-[#4E7661]">Shop Now</button> */}
+              <button className="lg:px-10 md:px-8 px-6 py-3 text-[#4E7661] bg-gradient-to-r from-white to-[#aed6f1] lg:font-bold  md:font-bold font-medium rounded-md hover:bg-universe_primary hover:text-[#4E7661] hover:bg-gradient-to-r hover:from-universe_secendary hover:to-white ">Shop Now</button>
             </div>
           </div>
         </SwiperSlide>

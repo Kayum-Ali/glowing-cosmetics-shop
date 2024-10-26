@@ -42,6 +42,7 @@ const AboutUsPage = () => {
           </div>
            
       </div>
+      
 
       {/* Your Skin, Our Passion section  */}
       <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto">
