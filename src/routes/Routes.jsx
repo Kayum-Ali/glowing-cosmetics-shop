@@ -10,6 +10,7 @@ import BlogPage from "../pages/BlogPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import Slider1 from "../components/Slider1";
 import ContactUs from "../pages/ContactUs";
+import GalaryPage from "../pages/GalaryPage";
 
 const router = createBrowserRouter([
     {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
         {
           path: '/contact',
           element: <ContactUs></ContactUs>
+        },
+        {
+          path: '/galary',
+          element: <GalaryPage></GalaryPage>
         }
       ]
     },

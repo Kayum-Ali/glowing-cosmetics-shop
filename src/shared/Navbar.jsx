@@ -46,10 +46,24 @@ const Navbar = () => {
               <li>
                 <NavLink to={`/blog`}>BLOG</NavLink>
               </li>
-              <li>
-                <NavLink className="page" to={`/page`}>
+              <li className="page">
+                <p  to={`/page`}>
                   PAGE
-                </NavLink>
+                </p>
+                {/* pages content */}
+              <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute  top-4 left-14 pages">
+                <div className="">
+                  
+                <li><Link to={`/about-us`} className="block">About Us</Link></li>
+                <li> <Link to={`/contact`} className="block">Contact</Link></li>
+                <li><Link to={`/faq`} className="block">FAQ</Link></li>
+
+                </div>
+               
+              </div>
+              </li>
+              <li>
+                <NavLink to={`/galary`}>GALARY</NavLink>
               </li>
             </ul>
           </div>
@@ -87,6 +101,9 @@ const Navbar = () => {
                
               </div>
             </li>
+            <li>
+                <NavLink to={`/galary`}>GALARY</NavLink>
+              </li>
           </ul>
         </div>
         <div className="navbar-end text-2xl flex lg:gap-8 gap-5 font-bold text-[#4e7661]">
