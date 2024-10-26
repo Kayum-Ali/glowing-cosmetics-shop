@@ -46,6 +46,18 @@ const router = createBrowserRouter([
               {
                 path: '/about-us/perker',
                 element: <Slider1 name={`“ Amazing product. The results are so transformative in texture and my face feels plump and healthy. Highly recommend! “`}></Slider1>
+              },
+              {
+                path: '/about-us/beast',
+                element: <Slider1 name={`“ Millions of combinations, meaning you get a totally unique piece of furniture exactly the way you want it.”`}></Slider1>
+              },
+              {
+                path: '/about-us/heyden',
+                element: <Slider1 name={`“ Great tags, Millie has got used to it, nothing like the old tin tags of years gone by. Light weight and great colours available.”`}></Slider1>
+              },
+              {
+                path: '/about-us/good-mood',
+                element: <Slider1 name={`“ Amazing product. The results are so transformative in texture and my face feels plump and healthy. Highly recommend! “`}></Slider1>
               }
             ]
         }

@@ -182,17 +182,17 @@ const AboutUsPage = () => {
             </NavLink>
           </SwiperSlide>
           <SwiperSlide>
-            <NavLink to={`/about-us/contact`}>
+            <NavLink to={`/about-us/beast`}>
             <img src={img4} alt="" />
             </NavLink>
           </SwiperSlide>
           <SwiperSlide>
-            <NavLink to={`/about-us/contact`}>
+            <NavLink to={`/about-us/heyden`}>
             <img src={img5} alt="" />
             </NavLink>
           </SwiperSlide>
           <SwiperSlide>
-            <NavLink to={`/about-us/contact`}>
+            <NavLink to={`/about-us/good-mood`}>
             <img src={img6} alt="" />
             </NavLink>
           </SwiperSlide>

@@ -1,0 +1,4 @@
+li:hover {
+  text-decoration: underline;
+  transition: transform 0.5s;
+}
