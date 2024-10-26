@@ -3,10 +3,6 @@ nav li {
   width: max-content;
   font-weight: 600;
 }
-a.active {
-  background: #4e7661 !important;
-  color: white !important;
-}
 
 nav li::after {
   position: absolute;

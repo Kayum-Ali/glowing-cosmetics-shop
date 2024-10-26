@@ -9,7 +9,6 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  //  z-50
 
   return (
     <div className="font-medium bg-gradient-to-r from-white to-[#aed6f1] fixed top-0 w-full z-50 ">
