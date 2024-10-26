@@ -9,6 +9,7 @@ import ShopPage from "../pages/ShopPage";
 import BlogPage from "../pages/BlogPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import Slider1 from "../components/Slider1";
+import ContactUs from "../pages/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
                 element: <Slider1 name={`“ Amazing product. The results are so transformative in texture and my face feels plump and healthy. Highly recommend! “`}></Slider1>
               }
             ]
+        },
+        {
+          path: '/contact',
+          element: <ContactUs></ContactUs>
         }
       ]
     },

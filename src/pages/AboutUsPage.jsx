@@ -15,7 +15,7 @@ import img6 from '../assets/testimonial-03.png'
 
 // import required modules
 import { Mousewheel, Pagination } from "swiper/modules";
-import "./AboutUs.css";
+import "../styles/AboutUs.css";
 
 const AboutUsPage = () => {
   return (
