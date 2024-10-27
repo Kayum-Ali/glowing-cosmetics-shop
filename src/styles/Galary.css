@@ -27,3 +27,11 @@
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
+.imgGalary img {
+  border-radius: 12px;
+}
+.imgGalary div:hover img {
+  cursor: pointer;
+  /* filter: brightness(1.2); */
+  opacity: 0.5;
+}

@@ -1,4 +1,4 @@
-import  { useRef, } from 'react';
+import  { useEffect, useRef, useState, } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -13,6 +13,14 @@ import '../styles/Galary.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function GalaryPage() {
+  const [imges,setImges] = useState([])
+  useEffect(()=>{
+    fetch('./imgGalary.json')
+     .then(response => response.json())
+     .then(data => setImges(data))
+  },[])
+
+ 
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
@@ -90,6 +98,25 @@ export default function GalaryPage() {
           <span ref={progressContent}></span>
         </div>
       </Swiper>
+
+      <div className='container mx-auto px-10'>
+          <h2 className='text-center text-3xl font-bold my-14'>Gallery</h2>
+          <p className='text-center font-medium text-black'>BUILD WEBSITE</p>
+          <h2 className='text-center text-3xl font-bold my-14'>Gallery Basic</h2>
+          {/* img grid */}
+          <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 imgGalary my-5'>
+             {
+              imges.map(img => (
+                <div key={img.id}>
+                <img src={img.img} alt="" />
+               </div>
+              ))
+             }
+           
+
+              
+          </div>
+      </div>
          
      </div>
     
