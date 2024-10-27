@@ -173,9 +173,9 @@ export default function GalaryPage() {
           {/* <h3 className="font-bold text-lg">Hello!</h3> */}
             <img id='modalImg' src="" className="lg:w-[400px] w-[300px]   rounded-lg" alt="" />
           <div className="absolute top-16 right-4">
-            <form method="dialog flex">
+            <form method="dialog ">
               {/* if there is a button in form, it will close the modal */}
-              <button className="pt-5">
+              <button className="">
                   <IoMdClose className="text-3xl text-white"/>
               </button>
               {/* <a href="https://glowing.g5plus.net/elementor/wp-content/uploads/2021/10/product-01-4.jpg" download=""><i class="eicon-download-bold" aria-label="Download"></i>Download image</a> */}
