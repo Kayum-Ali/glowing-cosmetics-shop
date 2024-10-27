@@ -10,6 +10,8 @@ import "./styles.css";
 
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
+import { PiShoppingBagOpenBold } from "react-icons/pi";
+import { IoEyeOutline, IoStarOutline } from "react-icons/io5";
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
@@ -53,7 +55,18 @@ const FeaturedProducts = () => {
                           
                            <div  className="absolute hover:z-50  hover:cursor-pointer w-full h-full left-0 duration-1000 ease-in-out" >
                                <img className=" " src={product.hoverImg} alt="" />
-                               <h2 className="absolute top-0 right-0">hellow</h2>
+                               {/* icon and tooltip */}
+                               <div className="absolute top-36 right-8 space-y-3">
+                                   <div data-tip='View Products' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center w-[50px] h-[50px] tooltip hover:tooltip-open tooltip-left shadow-lg">
+                                      <PiShoppingBagOpenBold className="m-3 text-2xl"/>
+                                  </div>
+                                   <div data-tip='Quick View' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center w-[50px] h-[50px] tooltip hover:tooltip-open tooltip-left shadow-lg">
+                                   <IoEyeOutline className="m-3 text-2xl"/>
+                                  </div>
+                                   <div data-tip='Add Wishlist' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center w-[50px] h-[50px] tooltip hover:tooltip-open tooltip-left shadow-lg">
+                                   <IoStarOutline className="m-3 text-2xl"/>
+                                  </div>
+                               </div>
                            </div>
                            <div className="absolute hover:w-0 w-full z-10  hover:-z-0  h-full duration-1000  ease-in-out">
                               <img className=""  src={product.img} alt="" />
@@ -62,10 +75,6 @@ const FeaturedProducts = () => {
                              
                         </div>
 
-                        <div className="absolute top-0 right-0 z-50 hidden hover:block">
-                          
-
-                        </div>
                     </div>
                   </SwiperSlide>
                 ))
