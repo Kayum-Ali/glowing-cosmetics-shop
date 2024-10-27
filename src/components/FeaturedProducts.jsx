@@ -12,6 +12,7 @@ import "./styles.css";
 import { FreeMode, Pagination } from "swiper/modules";
 import { PiShoppingBagOpenBold } from "react-icons/pi";
 import { IoEyeOutline, IoStarOutline } from "react-icons/io5";
+import { IoIosStar } from "react-icons/io";
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
@@ -50,31 +51,60 @@ const FeaturedProducts = () => {
             {
                 products.map((product, index) => (
                   <SwiperSlide key={index}>
-                    <div className="w-full h-[440px] ">
-                        <div className={`relative`}>
+                    <div className="w-full lg:h-[540px] h-[300px] relative ">
+                        <div className={`relative  w-full`}>
                           
                            <div  className="absolute hover:z-50  hover:cursor-pointer w-full h-full left-0 duration-1000 ease-in-out" >
-                               <img className=" " src={product.hoverImg} alt="" />
+                               <img className="w-full " src={product.hoverImg} alt="" />
                                {/* icon and tooltip */}
-                               <div className="absolute top-36 right-8 space-y-3">
-                                   <div data-tip='View Products' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center w-[50px] h-[50px] tooltip hover:tooltip-open tooltip-left shadow-lg">
-                                      <PiShoppingBagOpenBold className="m-3 text-2xl"/>
+                               <div className="absolute lg:top-36 top-5 right-2 lg:right-8 space-y-3">
+                                   <div data-tip='View Products' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg">
+                                      <PiShoppingBagOpenBold className="lg:m-3 m-2 text-2xl "/>
                                   </div>
-                                   <div data-tip='Quick View' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center w-[50px] h-[50px] tooltip hover:tooltip-open tooltip-left shadow-lg">
-                                   <IoEyeOutline className="m-3 text-2xl"/>
+                                   <div data-tip='Quick View' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg">
+                                   <IoEyeOutline className="lg:m-3 m-2 text-2xl "/>
                                   </div>
-                                   <div data-tip='Add Wishlist' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center w-[50px] h-[50px] tooltip hover:tooltip-open tooltip-left shadow-lg">
-                                   <IoStarOutline className="m-3 text-2xl"/>
+                                   <div data-tip='Add Wishlist'className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg">
+                                   <IoStarOutline className="lg:m-3 m-2 text-2xl "/>
                                   </div>
                                </div>
+                              {/* price and name */}
+                               <div className="absolute top-3 lg:left-6 left-2 text-black lg:space-y-2 space-y-1
+                               ">
+                                   <h2 className="lg:text-2xl text-sm text-black lg:font-bold">${product.price}</h2>
+                                   <p className="lg:text-xl text-xs hover:underline lg:font-medium">{product.productName}</p>
+                                  <div className="flex lg:gap-2 ">
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                  </div>
+                               </div>
+                               
                            </div>
                            <div className="absolute hover:w-0 w-full z-10  hover:-z-0  h-full duration-1000  ease-in-out">
-                              <img className=""  src={product.img} alt="" />
+                              <img className="w-full"  src={product.img} alt="" />
+                              
+                              <div className="absolute top-3 lg:left-6 left-2 text-black lg:space-y-2 space-y-1
+                               ">
+                                   <h2 className="lg:text-2xl text-sm text-black lg:font-bold">${product.price}</h2>
+                                   <p className="lg:text-xl text-xs hover:underline lg:font-medium">{product.productName}</p>
+                                  <div className="flex lg:gap-2 ">
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                  </div>
+                               </div>
                               
                            </div>
                              
                         </div>
 
+                        
+                       
                     </div>
                   </SwiperSlide>
                 ))
