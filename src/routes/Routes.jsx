@@ -12,6 +12,7 @@ import Slider1 from "../components/Slider1";
 import ContactUs from "../pages/ContactUs";
 import GalaryPage from "../pages/GalaryPage";
 
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -70,7 +71,8 @@ const router = createBrowserRouter([
         {
           path: '/galary',
           element: <GalaryPage></GalaryPage>
-        }
+        },
+        
       ]
     },
   ]);
