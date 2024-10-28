@@ -11,6 +11,7 @@ import Slider1 from "../components/Slider1";
 import ContactUs from "../pages/ContactUs";
 import GalaryPage from "../pages/GalaryPage";
 import FeaturedProductsDetails from "../pages/FeaturedProductsDetails";
+import Video from "../pages/video";
 
 
 const router = createBrowserRouter([
@@ -72,6 +73,9 @@ const router = createBrowserRouter([
           path: '/featured-products/:id',
           element: <FeaturedProductsDetails></FeaturedProductsDetails>,
           loader: ({params})=> fetch(`http://localhost:5000/featured-products/${params.id}`)
+        },{
+          path:'/video',
+          element: <Video></Video>
         }
         
       ]

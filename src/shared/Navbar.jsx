@@ -34,11 +34,23 @@ const Navbar = () => {
                 toggle || "hidden"
               }`}
             >
+              {/* sm screen */}
               <li>
                 <NavLink to={`/`}>HOME</NavLink>
               </li>
-              <li>
-                <NavLink to={`/element`}>ELEMENT</NavLink>
+              <li className="page">
+                <p>ELEMENT</p>
+                   {/* pages content */}
+              <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute  top-4 left-20 pages">
+                <div className="">
+                  
+                <li><Link to={`/about-us`} className="block">About Us</Link></li>
+                <li> <Link to={`/contact`} className="block">Contact</Link></li>
+                <li><Link to={`/faq`} className="block">FAQ</Link></li>
+
+                </div>
+               
+              </div>
               </li>
               <li>
                 <NavLink to={`/shop`}>SHOP</NavLink>
@@ -47,7 +59,7 @@ const Navbar = () => {
                 <NavLink to={`/blog`}>BLOG</NavLink>
               </li>
               <li className="page">
-                <p  to={`/page`}>
+                <p>
                   PAGE
                 </p>
                 {/* pages content */}
@@ -73,11 +85,23 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
+            {/* lg screen */}
             <li>
               <NavLink to={`/`}>HOME</NavLink>
             </li>
-            <li>
-              <NavLink to={`/element`}>ELEMENT</NavLink>
+            <li className="page">
+              <p>ELEMENT</p>
+               {/* pages content */}
+               <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute bottom-0 top-9  pages">
+                <div className="">
+                  
+                <li><Link to={`/video`} className="block">Video</Link></li>
+                <li> <Link to={`/contact`} className="block">Contact</Link></li>
+                <li><Link to={`/faq`} className="block">FAQ</Link></li>
+
+                </div>
+               
+              </div>
             </li>
             <li>
               <NavLink to={`/shop`}>SHOP</NavLink>
