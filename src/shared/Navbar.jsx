@@ -11,7 +11,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="font-medium bg-gradient-to-r from-white to-[#aed6f1] fixed top-0 w-full z-50 ">
+    <div className="font-medium bg-gradient-to-r from-[#E6E6FA] to-[#aed6f1] fixed top-0 w-full z-50 ">
       <nav className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
