@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaHome } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { IoStarOutline } from "react-icons/io5";
 import { Link, useLoaderData } from "react-router-dom";
@@ -9,7 +10,7 @@ const FeaturedProductsDetails = () => {
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
   const [activeIMG, setActiveIMG] = useState(products.img);
-  console.log(typeof size, color);
+  window.scrollTo({ top: 80, behavior: "smooth" });
   const handleClear = () => {
     setSize("");
     setColor("");
@@ -20,7 +21,8 @@ const FeaturedProductsDetails = () => {
     <div>
       <div className="breadcrumbs bg-[#FFC1CC] py-3 ">
         <ul className="container mx-auto flex justify-center">
-          <li>
+          <li className="flex gap-2">
+          <FaHome />
             <Link to={`/`}>Home</Link>{" "}
           </li>
           <li>{products.category}</li>
@@ -31,7 +33,7 @@ const FeaturedProductsDetails = () => {
       {/* product details */}
       <div className="flex flex-col lg:flex-row md:flex-row container mx-auto gap-14 py-16 px-5">
         <div className="flex-1">
-          <img className="w-full" src={activeIMG} alt="" />
+          <img className="w-full h-[600px]" src={activeIMG} alt="" />
           <div className="flex gap-5 mt-3">
               <img onClick={()=> setActiveIMG(products.img)} className="lg:w-32 w-24 hover:border-2 hover:border-[#FFC1CC] rounded-lg" src={products.img} alt="" />
               <img onClick={()=> setActiveIMG(products.hoverImg)} className="lg:w-32 w-24 hover:border-2 hover:border-[#FFC1CC] rounded-lg" src={products.hoverImg} alt="" />

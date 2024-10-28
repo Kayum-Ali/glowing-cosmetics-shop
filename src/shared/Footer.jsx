@@ -37,11 +37,11 @@ const Footer = () => {
                     <div className="lg:col-span-2 col-span-1 *:list-none mt-10 lg:mt-0">
                         <h2 className="text-xl">Useful links</h2>
                         <div className="mt-5  leading-4 space-y-3 opacity-80">
-                            <li><Link>New Products</Link></li>
-                            <li><Link>Best Sellers</Link></li>
-                            <li><Link>Bundle & Save</Link></li>
-                            <li><Link>Online Gift Card</Link></li>
-                            <li><Link>Online Gift Card</Link></li>
+                            <li className="li"><Link>New Products</Link></li>
+                            <li className="li"><Link>Best Sellers</Link></li>
+                            <li className="li"><Link>Bundle & Save</Link></li>
+                            <li className="li"><Link>Online Gift Card</Link></li>
+                            <li className="li"><Link>Online Gift Card</Link></li>
                           
                         </div>
                     </div>
@@ -50,11 +50,11 @@ const Footer = () => {
                         <h2  className="text-xl">Infomation
                         </h2>
                         <div className="mt-5 leading-4 space-y-3 opacity-80">
-                            <li><Link>Start a Return</Link></li>
-                            <li><Link>Contact Us</Link></li>
-                            <li><Link>Shipping FAQ</Link></li>
-                            <li><Link>Terms & Conditions</Link></li>
-                            <li><Link>Nimu Inventory</Link></li>
+                            <li className="li"><Link>Start a Return</Link></li>
+                            <li className="li"><Link>Contact Us</Link></li>
+                            <li className="li"><Link>Shipping FAQ</Link></li>
+                            <li className="li"><Link>Terms & Conditions</Link></li>
+                            <li className="li"><Link>Nimu Inventory</Link></li>
                         </div>
                     </div>
                     {/* 4th */}
