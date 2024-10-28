@@ -1,0 +1,230 @@
+[
+  {
+    "_id": "671df8654ead8e8192605a00",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729959392/product-11-3-400x533_bkxooq.jpg",
+    "id": 1,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729959427/product-11-1-1-400x533_qdtxsf.jpg",
+    "price": 29.99,
+    "smallPrice": 20.99,
+    "largePrice": 34.99,
+    "extraLargePrice": 39.99,
+    "productName": "Shield Conditioner",
+    "description": "Plumping and hydrating lip gloss for a glossy finish.",
+    "category": "Haircare",
+    "SKU": "woo-album",
+    "Tags": ["glossy", "hydrating", "plumping"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729959505/product-11-2-1_dvmlmu.jpg"
+    ],
+    "discountPersentage": 10
+  },
+  {
+    "_id": "671df8654ead8e8192605a01",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729959621/product-13-4-400x533_alu9tg.jpg",
+    "id": 2,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729959704/product-13-1-1-400x533_uvvja3.jpg",
+    "price": 34.99,
+    "smallPrice": 24.99,
+    "largePrice": 44.99,
+    "extraLargePrice": 53.99,
+    "productName": "Perfecting Facial Oil",
+    "description": "Long-lasting matte liquid lipstick for a bold lip.",
+    "category": "Skincare",
+    "SKU": "woo-polo",
+    "Tags": ["Coffee Bean", "Eye Cream", "Healthy"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729959747/product-13-2-1_gzxpup.jpg"
+    ],
+    "discountPersentage": 15
+  },
+  {
+    "_id": "671df8654ead8e8192605a02",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729959900/product-10-3-400x533_aayrno.jpg",
+    "id": 3,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729959923/product-10-1-1-400x533_sk1vjh.jpg",
+    "price": 24.99,
+    "smallPrice": 20.99,
+    "largePrice": 35.99,
+    "extraLargePrice": 40.99,
+    "productName": "Enriched Hand & Body Wash",
+    "description": "Lengthening and volumizing mascara with natural ingredients.",
+    "category": "Bodycare",
+    "SKU": "EYE001",
+    "Tags": ["natural", "lengthening", "volumizing"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729959963/product-10-2-1_qgrawu.jpg"
+    ],
+    "discountPersentage": 5
+  },
+  {
+    "_id": "671df8654ead8e8192605a03",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729960032/product-12-3-400x533_zkjdeh.jpg",
+    "id": 4,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729960057/product-12-1-1-400x533_v1klzd.jpg",
+    "price": 37.99,
+    "smallPrice": 24.99,
+    "largePrice": 48.99,
+    "extraLargePrice": 55.99,
+    "productName": "Shield Shampoo",
+    "description": "Versatile eyeshadow palette with shimmery shades.",
+    "category": "Haircare",
+    "SKU": "woo-hoodie-with-zipper",
+    "Tags": ["Cleansing", "Shampoo", "Skin Care"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729960089/product-12-2-1_dsgw1q.jpg"
+    ],
+    "discountPersentage": 20
+  },
+  {
+    "_id": "671df8654ead8e8192605a04",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729960251/product-08-04-400x533_wccl2v.jpg",
+    "id": 5,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729960283/product-08-1-1-400x533_o5de66.jpg",
+    "price": 20.99,
+    "smallPrice": 12.99,
+    "largePrice": 28.99,
+    "extraLargePrice": 34.99,
+    "productName": "Enriched Hand Wash",
+    "description": "Lightweight, hydrating face cream for all skin types.",
+    "category": "Bodycare",
+    "SKU": "woo-sunglasses",
+    "Tags": ["Cleansing", "Coffee Bean", "Make Up"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729960375/product-08-3-100x134_c5pffb.jpg"
+    ],
+    "discountPersentage": 10
+  },
+  {
+    "_id": "671df8654ead8e8192605a05",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729960492/product-07-1-1-400x533_wf6jdj.jpg",
+    "id": 6,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729960519/product-07-04-400x533_ajpijr.jpg",
+    "price": 37.99,
+    "smallPrice": 24.99,
+    "largePrice": 48.99,
+    "extraLargePrice": 55.99,
+    "productName": "Enriched Duo",
+    "description": "Potent anti-aging serum for youthful-looking skin.",
+    "category": "Bodycare",
+    "SKU": "woo-cap",
+    "Tags": ["Sale", "Shampoo", "Skin Care"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729960581/product-07-2-1_hj9xmc.jpg"
+    ],
+    "discountPersentage": 15
+  },
+  {
+    "_id": "671df8654ead8e8192605a06",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729960756/product-06-3-400x533_nkksmk.jpg",
+    "id": 7,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729960792/product-06-1-1-400x533_c969er.jpg",
+    "price": 14.99,
+    "smallPrice": 9.99,
+    "largePrice": 23.99,
+    "extraLargePrice": 29.99,
+    "productName": "Shield Spray",
+    "description": "Gentle facial cleanser with natural ingredients.",
+    "category": "Haircare",
+    "SKU": "woo-belt",
+    "Tags": ["Coffee Bean", "Nail", "Oil"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729960919/product-06-2-1_b3icqs.jpg"
+    ],
+    "discountPersentage": 5
+  },
+  {
+    "_id": "671df8654ead8e8192605a07",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729961066/product-05-05-400x533_ghvnzo.jpg",
+    "id": 8,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729961102/product-05-1-1-400x533_iqgrps.jpg",
+    "price": 20.99,
+    "smallPrice": 14.99,
+    "largePrice": 27.99,
+    "extraLargePrice": 40.99,
+    "productName": "Vital Eye Cream",
+    "description": "Rich and nourishing hand cream for soft hands.",
+    "category": "Skincare",
+    "SKU": "woo-beanie",
+    "Tags": ["Eye Cream", "Healthy", "Make Up"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729961152/product-05-2-1_lq0uuy.jpg"
+    ],
+    "discountPersentage": 20
+  },
+  {
+    "_id": "671df8654ead8e8192605a08",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729961267/product-04-3-400x533_qhiw1n.jpg",
+    "id": 9,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729961371/product-04-1-1-400x533_zpz8cz.jpg",
+    "price": 22.99,
+    "smallPrice": 16.99,
+    "largePrice": 29.99,
+    "extraLargePrice": 37.99,
+    "productName": "Supreme Moisture Mask",
+    "description": "Lightweight and refreshing body lotion for all seasons.",
+    "category": "Skincare",
+    "SKU": "woo-tshirt",
+    "Tags": ["Sale", "Shampoo", "Skin Care"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729961404/product-04-2-1_gce3ol.jpg"
+    ],
+    "discountPersentage": 10
+  },
+  {
+    "_id": "671df8654ead8e8192605a09",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729961810/product-03-4-400x533_glfojg.jpg",
+    "id": 10,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729961835/product-03-1-1-400x533_bvxt6v.jpg",
+    "price": 33.99,
+    "smallPrice": 22.99,
+    "largePrice": 38.99,
+    "extraLargePrice": 43.99,
+    "productName": "Supreme Polishing Treatment",
+    "description": "Hydrating and nourishing body oil for silky-smooth skin.",
+    "category": "Skincare",
+    "SKU": "woo-hoodie-with-logo",
+    "Tags": ["Make Up", "Nail", "Oil"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729961868/product-03-2-1_pn85zl.jpg"
+    ],
+    "discountPersentage": 15
+  },
+  {
+    "_id": "671df8654ead8e8192605a0a",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729962152/product-16-1-1_lezra6.jpg",
+    "id": 11,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729962195/product-16-4_kn8qls.jpg",
+    "price": 14.99,
+    "smallPrice": 10.99,
+    "largePrice": 16.99,
+    "extraLargePrice": 20.99,
+    "productName": "Getaway Travel Case Set",
+    "description": "Long-lasting, natural perfume with floral notes.",
+    "category": "Accessories",
+    "SKU": "Woo-beanie-logo",
+    "Tags": ["Coffee Bean", "Eye Cream", "Nail"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729962215/product-16-2-1-100x134_rkmyad.jpg"
+    ],
+    "discountPersentage": 5
+  },
+  {
+    "_id": "671df8654ead8e8192605a0b",
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1729962460/product-02-3_ilckvy.jpg",
+    "id": 12,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1729962479/product-02-1-1-100x134_subb3j.jpg",
+    "price": 37.99,
+    "smallPrice": 24.99,
+    "largePrice": 48.99,
+    "extraLargePrice": 55.99,
+    "productName": "Scalp Moisturizing Cream",
+    "description": "Intense woody fragrance for a sophisticated scent.",
+    "category": "Haircare",
+    "SKU": "woo-hoodie",
+    "Tags": ["Cleansing", "Eye Cream", "Healthy"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1729962496/product-02-2-1-100x134_c9ica9.jpg"
+    ],
+    "discountPersentage": 7
+  }
+]
