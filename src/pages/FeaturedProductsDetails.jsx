@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { IoStarOutline } from "react-icons/io5";
@@ -10,11 +10,14 @@ const FeaturedProductsDetails = () => {
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
   const [activeIMG, setActiveIMG] = useState(products.img);
-  window.scrollTo({ top: 80, behavior: "smooth" });
+  
   const handleClear = () => {
     setSize("");
     setColor("");
   };
+  useEffect(()=>{
+    window.scrollTo({ top: 80, behavior: "smooth" });
+  },[])
   //   console.log(active)
   console.log(products);
   return (

@@ -2,6 +2,7 @@ import { FaHome } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import  { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const Video = () => {
  
@@ -108,7 +109,7 @@ const CountdownTimer = ({ endDate }) => {
       </div>
 
       {/* banner */}
-      <div className="container mx-auto flex gap-14 flex-col  items-center">
+      <div className="container mx-auto flex gap-14 flex-col px-5 lg:flex-row  items-center">
            {/* img */}
            <div >
              <img className="w-full rounded-lg" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730135094/countdown-07-600x600_rolga1.jpg" alt="" />
@@ -130,6 +131,10 @@ const CountdownTimer = ({ endDate }) => {
       </div>
     </div>
   );
+};
+
+Video.propTypes = {
+  endDate: PropTypes.string.isRequired,
 };
 
 export default Video;
