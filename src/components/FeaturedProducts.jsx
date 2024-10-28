@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import {Link} from "react-router-dom";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,7 +18,7 @@ import { IoIosStar } from "react-icons/io";
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-//   console.log(products[0].img)
+  console.log(products)
   useEffect(() => {
     setLoading(true);
     fetch("http://localhost:5000/featured-products")
@@ -37,7 +38,7 @@ const FeaturedProducts = () => {
       </div>
     
 
-      <div className="container mx-auto">
+      <div className="container mx-auto py-12">
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
@@ -52,7 +53,7 @@ const FeaturedProducts = () => {
                 products.map((product, index) => (
                   <SwiperSlide key={index}>
                     <div className="w-full lg:h-[540px] h-[300px] relative ">
-                        <div className={`relative  w-full`}>
+                        <Link to={`/featured-products/${product._id}`} className={`relative block w-full`}>
                           
                            <div  className="absolute hover:z-50  hover:cursor-pointer w-full h-full left-0 duration-1000 ease-in-out" >
                                <img className="w-full " src={product.hoverImg} alt="" />
@@ -95,13 +96,13 @@ const FeaturedProducts = () => {
                                      <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
                                      <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
                                      <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                                     <IoIosStar className="lg:text-xl hidden lg:block md:block text-sm text-[#4e7661]" />
                                   </div>
                                </div>
                               
                            </div>
                              
-                        </div>
+                        </Link>
 
                         
                        

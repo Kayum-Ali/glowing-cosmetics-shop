@@ -4,13 +4,13 @@ import {
   } from "react-router-dom";
 import MainLayouts from "../layouts/MainLayouts";
 import HomePage from "../pages/HomePage";
-import ElementPage from "../pages/ElementPage";
 import ShopPage from "../pages/ShopPage";
 import BlogPage from "../pages/BlogPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import Slider1 from "../components/Slider1";
 import ContactUs from "../pages/ContactUs";
 import GalaryPage from "../pages/GalaryPage";
+import FeaturedProductsDetails from "../pages/FeaturedProductsDetails";
 
 
 const router = createBrowserRouter([
@@ -21,10 +21,6 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <HomePage></HomePage>
-        },
-        {
-            path: '/element',
-            element: <ElementPage></ElementPage>
         },
         {
             path: '/shop',
@@ -72,6 +68,11 @@ const router = createBrowserRouter([
           path: '/galary',
           element: <GalaryPage></GalaryPage>
         },
+        {
+          path: '/featured-products/:id',
+          element: <FeaturedProductsDetails></FeaturedProductsDetails>,
+          loader: ({params})=> fetch(`http://localhost:5000/featured-products/${params.id}`)
+        }
         
       ]
     },
