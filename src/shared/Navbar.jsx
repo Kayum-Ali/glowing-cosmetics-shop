@@ -80,7 +80,8 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to={`/`} className="text-xl font-bold text-[#C5A3FF]">
-             GLOWING
+             Madina Bag
+             {/* <img className="w-28" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730136673/WhatsApp_Image_2024-10-28_at_18.53.06_16c27229-removebg-preview_d4bfo5.png" alt="" /> */}
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

@@ -13,7 +13,7 @@ import icon from '../assets/icon-pay-300x27.png'
 
 
 const Footer = () => {
-    const subLogo = "https://res.cloudinary.com/dqescabbl/image/upload/v1729913258/logo_trial-HaXHLEZwN-transformed-removebg-preview_qkw38r.png";
+    const subLogo = "https://res.cloudinary.com/dqescabbl/image/upload/v1730136673/WhatsApp_Image_2024-10-28_at_18.53.06_16c27229-removebg-preview_d4bfo5.png";
     return (
         <div className='bg-[#154360] mt-3'>
             <footer className='container mx-auto py-10 px-10 text-white'>
