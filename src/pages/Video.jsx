@@ -26,6 +26,7 @@ const CountdownTimer = ({ endDate }) => {
   }
 
   useEffect(() => {
+    document.title= "Video";
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);

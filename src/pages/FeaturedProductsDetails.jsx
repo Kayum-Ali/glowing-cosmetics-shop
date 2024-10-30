@@ -17,6 +17,7 @@ const FeaturedProductsDetails = () => {
   };
   useEffect(()=>{
     window.scrollTo({ top: 80, behavior: "smooth" });
+    document.title = "Featured Products Details";
   },[])
   //   console.log(active)
   console.log(products);

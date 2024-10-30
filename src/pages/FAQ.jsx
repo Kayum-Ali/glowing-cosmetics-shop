@@ -2,6 +2,7 @@ import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const FAQ = () => {
+  document.title = "FAQ";
   return (
     <div>
       {/* breadcumbs */}

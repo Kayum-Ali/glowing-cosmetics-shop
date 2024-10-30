@@ -17,6 +17,7 @@ import { Mousewheel, Pagination } from "swiper/modules";
 import "../styles/AboutUs.css";
 
 const AboutUsPage = () => {
+  document.title = "About Us";
   return (
     <div>
       <div className="bg1 w-full lg:h-[600px] h-[300px] bg-cover bg-center relative">

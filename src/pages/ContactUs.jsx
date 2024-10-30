@@ -4,6 +4,7 @@ import { MdAccessTime } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const ContactUs = () => {
+  document.title = "Contact Us";
   return (
     <div>
       <div className="relative">
