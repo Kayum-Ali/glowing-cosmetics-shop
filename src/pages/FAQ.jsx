@@ -32,13 +32,13 @@ const FAQ = () => {
       </div>
 
       {/*1st faq */}
-      <div className="flex gap-5 container mx-auto py-12 px-5 flex-col lg:flex-row">
+      <div className="flex gap-10 container mx-auto py-16 px-5 flex-col lg:flex-row">
         {/* left side */}
         <div>
-          <h1 className="text-2xl font-bold">Orders & Shipping</h1>
+          <h1 className="text-2xl font-bold lg:mr-6">Orders & Shipping</h1>
         </div>
         {/* right side */}
-        <div>
+        <div className="lg:w-3/5">
         {/* 1st */}
            <div tabIndex={0} className="collapse collapse-arrow border-base-300  border">
              <div className="collapse-title text-xl font-medium">
@@ -102,6 +102,56 @@ const FAQ = () => {
 
         
       </div>
+
+      {/* 2nd FAq */}
+      <div className="flex gap-10 container mx-auto py-12 px-5 flex-col lg:flex-row">
+        {/* left side */}
+        <div>
+          <h1 className="text-2xl font-bold">Returns & Exchanges</h1>
+        </div>
+        {/* right side */}
+        <div className="lg:w-3/5">
+        {/* 1st */}
+           <div tabIndex={0} className="collapse collapse-arrow border-base-300  border">
+             <div className="collapse-title text-xl font-medium">
+             How do I know my package has shipped?
+
+            </div>
+              <div className="collapse-content space-y-3">
+            <p>tabindex={0}Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits, vitamins, and other skin-nourishing nutrients. Creamy liquid formula sets with a pristine matte finish for soft, velvety smooth skin.</p>
+            <p>Say hello to flawless, long-lasting foundation that comes in 7 melt-into-your-skin shades. This lightweight, innovative formula creates a smooth, natural matte finish that won’t settle into lines. It’s the perfect fit for your skin. 1 fl. oz.</p>
+            </div>
+          </div>
+          {/* 2nd */}
+           <div tabIndex={0} className="collapse collapse-arrow border-base-300  border">
+             <div className="collapse-title text-xl font-medium">
+             Why are certain products unavailable to ship to Internationally?
+
+            </div>
+              <div className="collapse-content space-y-3">
+            <p>tabindex={0}Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits, vitamins, and other skin-nourishing nutrients. Creamy liquid formula sets with a pristine matte finish for soft, velvety smooth skin.</p>
+            <p>Say hello to flawless, long-lasting foundation that comes in 7 melt-into-your-skin shades. This lightweight, innovative formula creates a smooth, natural matte finish that won’t settle into lines. It’s the perfect fit for your skin. 1 fl. oz.</p>
+            </div>
+          </div>
+          {/* 3rd */}
+           <div tabIndex={0} className="collapse collapse-arrow border-base-300  border">
+             <div className="collapse-title text-xl font-medium">
+             Why is my tracking number not updating?
+
+            </div>
+              <div className="collapse-content space-y-3">
+            <p>tabindex={0}Complexion-perfecting natural foundation enriched with antioxidant-packed superfruits, vitamins, and other skin-nourishing nutrients. Creamy liquid formula sets with a pristine matte finish for soft, velvety smooth skin.</p>
+            <p>Say hello to flawless, long-lasting foundation that comes in 7 melt-into-your-skin shades. This lightweight, innovative formula creates a smooth, natural matte finish that won’t settle into lines. It’s the perfect fit for your skin. 1 fl. oz.</p>
+            </div>
+          </div>
+        
+        </div>
+         
+
+        
+      </div>
+
+
     </div>
   );
 };
