@@ -12,6 +12,7 @@ import ContactUs from "../pages/ContactUs";
 import GalaryPage from "../pages/GalaryPage";
 import FeaturedProductsDetails from "../pages/FeaturedProductsDetails";
 import Video from "../pages/video";
+import FAQ from "../pages/FAQ";
 
 
 const router = createBrowserRouter([
@@ -76,6 +77,9 @@ const router = createBrowserRouter([
         },{
           path:'/video',
           element: <Video></Video>
+        },{
+          path: '/faq',
+          element: <FAQ></FAQ>
         }
         
       ]

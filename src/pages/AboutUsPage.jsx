@@ -1,17 +1,16 @@
-import {  NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-
-import img1 from '../assets/clinet-logo-01.png'
-import img2 from '../assets/clinet-logo-02.png'
-import img3 from '../assets/clinet-logo-04.png'
-import img4 from '../assets/testimonial-01.png'
-import img5 from '../assets/testimonial-02.png'
-import img6 from '../assets/testimonial-03.png'
+import img1 from "../assets/clinet-logo-01.png";
+import img2 from "../assets/clinet-logo-02.png";
+import img3 from "../assets/clinet-logo-04.png";
+import img4 from "../assets/testimonial-01.png";
+import img5 from "../assets/testimonial-02.png";
+import img6 from "../assets/testimonial-03.png";
 
 // import required modules
 import { Mousewheel, Pagination } from "swiper/modules";
@@ -79,7 +78,6 @@ const AboutUsPage = () => {
             alt=""
           />
         </div>
-
         <div className="lg:p-20 p-10 md:p-10 flex flex-col">
           <h2 className="text-4xl font-bold text-gray-800"> Our misstion</h2>
 
@@ -168,56 +166,47 @@ const AboutUsPage = () => {
         >
           <SwiperSlide>
             <NavLink to={`/about-us`}>
-             <img src={img1} alt="" />
+              <img src={img1} alt="" />
             </NavLink>
           </SwiperSlide>
           <SwiperSlide>
             <NavLink to={`/about-us/grand`}>
-            <img src={img2} alt="" />
+              <img src={img2} alt="" />
             </NavLink>
           </SwiperSlide>
           <SwiperSlide>
             <NavLink to={`/about-us/perker`}>
-            <img src={img3} alt="" />
+              <img src={img3} alt="" />
             </NavLink>
           </SwiperSlide>
           <SwiperSlide>
             <NavLink to={`/about-us/beast`}>
-            <img src={img4} alt="" />
+              <img src={img4} alt="" />
             </NavLink>
           </SwiperSlide>
           <SwiperSlide>
             <NavLink to={`/about-us/heyden`}>
-            <img src={img5} alt="" />
+              <img src={img5} alt="" />
             </NavLink>
           </SwiperSlide>
           <SwiperSlide>
             <NavLink to={`/about-us/good-mood`}>
-            <img src={img6} alt="" />
+              <img src={img6} alt="" />
             </NavLink>
           </SwiperSlide>
-         
         </Swiper>
         {/* lg brand no slider.. sm hidden */}
         <div className="flex md:flex gap-1 mt-8 justify-center lgBrand">
-         
-             <img className="" src={img1} alt="" />
-            
+          <img className="" src={img1} alt="" />
 
-            
-            <img src={img2} alt="" />
-          
+          <img src={img2} alt="" />
 
-          
-            <img src={img3} alt="" />
-          
+          <img src={img3} alt="" />
 
-            
-             <img src={img4} alt="" />
-           
+          <img src={img4} alt="" />
 
-            <img src={img5} alt="" />
-            <img src={img6} alt="" />
+          <img src={img5} alt="" />
+          <img src={img6} alt="" />
         </div>
       </div>
     </div>
