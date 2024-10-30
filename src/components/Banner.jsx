@@ -15,10 +15,10 @@ export default function Banner() {
   return (
     <>
       <Swiper
-        direction={"vertical"}
+        // direction={"vertical"}
         slidesPerView={1}
         spaceBetween={30}
-        mousewheel={true}
+        // mousewheel={true}
         pagination={{
           clickable: true,
         }}

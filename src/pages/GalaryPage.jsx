@@ -23,6 +23,7 @@ export default function GalaryPage() {
   const [toggle, setToggle] = useState(false);
   useEffect(() => {
     document.title = "Galary";
+    window.scrollTo(0,0)
     fetch("./imgGalary.json")
       .then((response) => response.json())
       .then((data) => setImges(data));
