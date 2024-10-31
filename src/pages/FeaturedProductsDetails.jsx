@@ -3,9 +3,10 @@ import { FaHome } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { IoStarOutline } from "react-icons/io5";
 import { Link, useLoaderData } from "react-router-dom";
+import StarRatings from "react-star-ratings";
 import ReactStars from "react-stars";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 const FeaturedProductsDetails = () => {
   const products = useLoaderData();
@@ -22,6 +23,27 @@ const FeaturedProductsDetails = () => {
     window.scrollTo({ top: 80, behavior: "smooth" });
     document.title = "Featured Products Details";
   }, []);
+
+  const [rating, setRating] = useState(0);
+  // console.log(rating);
+
+  const changeRating = (newRating) => {
+    setRating(newRating);
+  };
+
+  const handleReview = (e) =>{
+    e.preventDefault();
+    console.log("review submitted");
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const review = form.review.value;
+    const newReview = { name, email, review, rating };
+    console.log(newReview);
+
+    
+
+  }
 
   return (
     <div>
@@ -212,22 +234,158 @@ const FeaturedProductsDetails = () => {
       {/* textColor="secondary"
       indicatorColor="secondary" */}
       {/* description, info, reviews */}
-      <div className="text-center text-sm lg:text-base">
+      <div className="text-center text-sm lg:text-xl container mx-auto ">
         <Tabs>
           <TabList>
-            <Tab>Description</Tab>
-            <Tab>Additional Information</Tab>
-            <Tab>Reviews(0)</Tab>
+            <Tab>
+              <h2 className="font-bold">Description</h2>
+            </Tab>
+            <Tab>
+              <h2 className="font-bold">Additional Information</h2>
+            </Tab>
+            <Tab>
+              <h2 className="font-bold">Reviews(1)</h2>
+            </Tab>
           </TabList>
 
-          <TabPanel>
-            <h2>Achieve a flawless complexion with our Radiant Glow Foundation. This lightweight, buildable formula offers medium to full coverage, perfect for everyday wear or special occasions. Infused with skin-loving ingredients, it hydrates and nourishes while providing a natural, luminous finish.</h2>
+          <TabPanel className={`w-2/3 mx-auto`}>
+            <h2>
+              Achieve a flawless complexion with our Radiant Glow Foundation.
+              This lightweight, buildable formula offers medium to full
+              coverage, perfect for everyday wear or special occasions. Infused
+              with skin-loving ingredients, it hydrates and nourishes while
+              providing a natural, luminous finish.
+            </h2>
           </TabPanel>
-          <TabPanel>
-            <h2>Any content 2</h2>
+          <TabPanel className={`w-2/3 mx-auto`}>
+            <div>
+              <div className="flex justify-between">
+                <h2>Color</h2>
+                <div className="flex gap-5">
+                  <p>Blue</p>
+                  <p>Green</p>
+                  <p>Red</p>
+                  <p>yellow</p>
+                  <p>Gray</p>
+                </div>
+              </div>
+              <hr className="my-5" />
+              <div className="flex justify-between">
+                <h2>Size</h2>
+                <div className="flex gap-5">
+                  <p>Small</p>
+                  <p>Medium</p>
+                  <p>Large</p>
+                  <p>Extra Large</p>
+                </div>
+              </div>
+            </div>
           </TabPanel>
+
           <TabPanel>
-            <h2>Any content 2</h2>
+            <div>
+              <h2 className="font-bold flex justify-start">
+                1 review for {products.productName}
+              </h2>
+              {/* right side */}
+              <div className="flex justify-start gap-5 my-10">
+                {/* avatar */}
+                <div className="avatar">
+                  <div className="w-24 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <div className="text-start space-y-2">
+                  {/* react star rating */}
+                  <div className="text-sm">
+                    <StarRatings
+                      rating={rating}
+                      starRatedColor="gold"
+                      changeRating={changeRating}
+                      numberOfStars={5}
+                      name="rating"
+                      starDimension="20px"
+                      starSpacing="5px"
+                    />
+                  </div>
+                  {/* userName and date */}
+                  <div className="flex items-center">
+                    <h2 className="font-bold">Kayum Ali -</h2>
+                    <p className="text-sm opacity-90">June 20, 2022</p>
+                  </div>
+                  <div>
+                    <h2 className="text-sm ">Good Products</h2>
+                  </div>
+                </div>
+              </div>
+
+              {/* add review */}
+              <div className="w-2/3 mx-auto">
+                <h2 className="text-xl font-bold">Add a review</h2>
+                <p className="text-sm opacity-80">
+                  Your email address will not be published. Required fields are
+                  marked *
+                </p>
+
+                {/* rating form */}
+                <form onSubmit={handleReview} className="py-5 grid grid-cols-1 lg:grid-cols-12 gap-5">
+                  <div className="text-start lg:col-span-6">
+                    <label htmlFor="name" className="block font-medium">
+                      Name{" "}
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      name="name"
+                      required
+                      className="bg-slate-300 focus:border-2 focus:border-green-500  outline-none py-1 px-4 rounded-md focus:bg-white duration-300 w-full"
+                    />
+                  </div>
+                  <div className="text-start lg:col-span-6">
+                    <label htmlFor="email" className="block font-medium">
+                      Email{" "}
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      required
+                      className="bg-slate-300 focus:border-2 focus:border-green-500  outline-none py-1 px-4 rounded-md focus:bg-white duration-300 w-full"
+                    />
+                  </div>
+                  <div className="text-start lg:col-span-12">
+                    <label htmlFor="review" className="block font-medium">
+                      Your Review{" "}
+                    </label>
+                    <textarea
+                      name="review"
+                      id="review"
+                      cols="30"
+                      className="bg-slate-300 focus:border-2 focus:border-green-500  outline-none py-1 px-4 rounded-md focus:bg-white duration-300 w-full"
+                    ></textarea>
+                  </div>
+                  <div className="text-start lg:col-span-12">
+                    <label htmlFor="rating" className="block font-medium">
+                      Your Rating{" "}
+                    </label>
+                    <StarRatings
+                      rating={rating}
+                      starRatedColor="gold"
+                      changeRating={changeRating}
+                      numberOfStars={5}
+                      name="rating"
+                      starDimension="20px"
+                      starSpacing="5px"
+                    />
+                  </div>
+                  <div className=" text-center mx-auto">
+                    <button type="submit" className="text-white font-bold rounded-md hover:bg-black duration-300 bg-[#82588D] px-12 py-2.5">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </TabPanel>
         </Tabs>
       </div>
