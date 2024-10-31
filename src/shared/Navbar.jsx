@@ -135,9 +135,9 @@ const Navbar = () => {
           <div>
             <CiSearch />
           </div>
-          <div>
+          <NavLink to={`/login`}>
             <GoPerson />
-          </div>
+          </NavLink>
           <div className="flex relative">
             <TbJewishStar className="wishlist" />
             <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">

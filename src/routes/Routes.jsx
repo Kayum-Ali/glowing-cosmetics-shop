@@ -13,6 +13,7 @@ import GalaryPage from "../pages/GalaryPage";
 import FeaturedProductsDetails from "../pages/FeaturedProductsDetails";
 import Video from "../pages/video";
 import FAQ from "../pages/FAQ";
+import Login from "../pages/Login";
 
 
 
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
           path: '/faq',
           element: <FAQ></FAQ>
         },
+        {
+          path: '/login',
+          element: <Login></Login>
+        }
        
         
       ]
