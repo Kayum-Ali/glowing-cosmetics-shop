@@ -14,6 +14,7 @@ import FeaturedProductsDetails from "../pages/FeaturedProductsDetails";
 import Video from "../pages/video";
 import FAQ from "../pages/FAQ";
 import Login from "../pages/Login";
+import ErrorPage from "../pages/ErrorPage";
 
 
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayouts></MainLayouts>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
