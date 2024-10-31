@@ -15,6 +15,8 @@ import Video from "../pages/video";
 import FAQ from "../pages/FAQ";
 
 
+
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -73,14 +75,15 @@ const router = createBrowserRouter([
         {
           path: '/featured-products/:id',
           element: <FeaturedProductsDetails></FeaturedProductsDetails>,
-          loader: ({params})=> fetch(`http://localhost:5000/featured-products/${params.id}`)
+          loader: ({params})=> fetch(`http://localhost:5000/featured-products/${params.id}`),
         },{
           path:'/video',
           element: <Video></Video>
         },{
           path: '/faq',
           element: <FAQ></FAQ>
-        }
+        },
+       
         
       ]
     },
