@@ -16,10 +16,13 @@ const ErrorPage = () => {
         </ul>
       </div>
 
-       <h2 className="text-center font-bold text-3xl">Page Not Found</h2>
+       <h2 className="text-center font-bold text-3xl py-12">Page Not Found</h2>
        <div className="flex justify-center">
-            <h3 className="bg-black text-4xl text-white text-center w-max">404</h3>
+            <h3 className=" font-bold text-8xl text-center w-max">404</h3>
        </div>
+       <p className="text-center text-xl pt-10">Oops! That page can’t be found.</p>
+       <p className="text-center opacity-80">Sorry, but the page you are looking for is not found. Please, make sure you have typed the current URL.</p>
+       <Link to={`/`} className="bg-[#4E7661] text-white block text-center w-max mx-auto px-8 py-2.5 mt-10 rounded-md">Go to Home Page</Link>
     </div>
   );
 };

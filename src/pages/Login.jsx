@@ -3,12 +3,14 @@ import { AuthContext } from "../context/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 import {  useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Sign Up");
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [show, setShow] = useState(false)
   const { signUp, login,googleLogin } = useContext(AuthContext);
    const navigate = useNavigate()
    const location = useLocation()
@@ -16,21 +18,35 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (currentState === "Sign Up") {
-      signUp(email, password).then((result) => {
+      signUp(email, password).then(() => {
         setCurrentState("Login");
         setUserName("");
         setEmail("");
         setPassword("");
-        console.log(result.user);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Successfully Sign Up",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        navigate(from)
       });
     } else {
       // login code here
-      login(email, password).then((result) => {
+      login(email, password).then(() => {
         setCurrentState("Login");
         setUserName("");
         setEmail("");
         setPassword("");
-        console.log(result.user);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Successfully Login",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        navigate(from)
        
       });
     }
@@ -78,13 +94,22 @@ const Login = () => {
             placeholder="Email"
             className="px-3 py-2 w-full rounded-md outline-none"
           />
-          <input
+          <div className="relative">
+             <input
             onChange={(e) => setPassword(e.target.value)}
             value={password}
-            type="password"
+            type={`${show ? 'text' : 'password'}`}
             placeholder="Password"
             className="px-3 py-2 w-full rounded-md outline-none"
-          />
+             />
+            <button className="absolute top-1/2 -translate-y-1/2 right-5">
+             {
+               
+               show ? <FaRegEye onClick={()=>setShow(!show)}/> :  <FaRegEyeSlash onClick={()=>setShow(!show)}/>
+              }
+            </button>
+            
+          </div>
           {/* forgate password */}
 
           <button
