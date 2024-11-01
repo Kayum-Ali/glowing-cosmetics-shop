@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
+import {  useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const [currentState, setCurrentState] = useState("Sign Up");
@@ -8,7 +10,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { signUp, login,googleLogin } = useContext(AuthContext);
-
+   const navigate = useNavigate()
+   const location = useLocation()
+   const from = location?.state ? location.state : '/'
   const handleSubmit = (e) => {
     e.preventDefault();
     if (currentState === "Sign Up") {
@@ -27,6 +31,7 @@ const Login = () => {
         setEmail("");
         setPassword("");
         console.log(result.user);
+       
       });
     }
   };
@@ -36,6 +41,15 @@ const Login = () => {
     googleLogin()
     .then((result) => {
         console.log(result.user);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Successfully Login",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        navigate(from)
+
     })
 
   }

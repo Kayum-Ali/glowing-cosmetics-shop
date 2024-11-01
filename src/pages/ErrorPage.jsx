@@ -17,7 +17,7 @@ const ErrorPage = () => {
       </div>
 
        <h2 className="text-center font-bold text-3xl">Page Not Found</h2>
-       <div>
+       <div className="flex justify-center">
             <h3 className="bg-black text-4xl text-white text-center w-max">404</h3>
        </div>
     </div>

@@ -18,7 +18,7 @@ import { IoIosStar } from "react-icons/io";
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  console.log(products)
+  // console.log(products)
   useEffect(() => {
     setLoading(true);
     fetch("http://localhost:5000/featured-products")

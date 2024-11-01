@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { CiSearch } from "react-icons/ci";
 import { GoPerson } from "react-icons/go";
@@ -7,14 +7,25 @@ import { PiShoppingBagOpenBold } from "react-icons/pi";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user,logout } = useContext(AuthContext);
   const [toggle, setToggle] = useState(false)
+  const navigate = useNavigate()
   const handleLogout = () =>{
     console.log('logout');
     logout()
     .then(()=>{
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Successfully logged out",
+        showConfirmButton: false,
+        timer: 1500
+      });
+      navigate('/')
+
       
     })
   }

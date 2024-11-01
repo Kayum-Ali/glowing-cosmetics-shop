@@ -15,6 +15,7 @@ import Video from "../pages/video";
 import FAQ from "../pages/FAQ";
 import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -77,7 +78,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/featured-products/:id',
-          element: <FeaturedProductsDetails></FeaturedProductsDetails>,
+          element: <PrivateRoute><FeaturedProductsDetails></FeaturedProductsDetails></PrivateRoute>,
           loader: ({params})=> fetch(`http://localhost:5000/featured-products/${params.id}`),
         },{
           path:'/video',
