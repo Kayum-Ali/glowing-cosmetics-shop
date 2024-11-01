@@ -79,7 +79,7 @@ const router = createBrowserRouter([
         {
           path: '/featured-products/:id',
           element: <PrivateRoute><FeaturedProductsDetails></FeaturedProductsDetails></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/featured-products/${params.id}`),
+          loader: ({params})=> fetch(`https://glowing-cosmetics-shop-server.vercel.app/featured-products/${params.id}`),
         },{
           path:'/video',
           element: <Video></Video>

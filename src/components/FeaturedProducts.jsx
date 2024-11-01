@@ -21,7 +21,7 @@ const FeaturedProducts = () => {
   // console.log(products)
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/featured-products")
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/featured-products")
       .then((response) => response.json())
       .then((data) => setProducts(data));
       setLoading(false);
@@ -33,7 +33,7 @@ const FeaturedProducts = () => {
   return (
     <div className="py-16 ">
       <div className="text-center space-y-3 ">
-        <h2 className="text-4xl font-bold">Our Featured Products</h2>
+        <h2 className="lg:text-4xl text-2xl font-bold">Our Featured Products</h2>
         <p className="font-medium">Get the skin you want to feel</p>
       </div>
     

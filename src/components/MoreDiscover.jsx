@@ -9,7 +9,7 @@ const MoreDiscover = () => {
                  <p className="text-[#757272] font-medium">Our bundles were designed to conveniently package your tanning <br /> essentials while saving you money.</p>
             </div>
 
-            <div className="flex gap-5 container mx-auto"> 
+            <div className="flex flex-col lg:flex-row md:flex-row gap-5 container mx-auto"> 
                  <div className="overflow-hidden w-full">
                      <img className="w-full transform scale-100 hover:scale-110 hover:skew-y-5 duration-500" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730115835/image-box-10-600x322_m3vl2u.jpg" alt="Discover More 1" />
                      <div className="text-center my-5">

@@ -32,14 +32,14 @@ export default function Banner() {
               Your Skin, Our Passion
               </h2>
               <div>
-                <h1 className="lg:text-6xl text-4xl text-gray-800 lg:font-semibold font-bold">
+                <h1 className="lg:text-6xl text-2xl text-gray-800 lg:font-semibold font-bold">
                   Beauty Inspired{" "}
                 </h1>
-                <h1 className="lg:text-6xl text-4xl mt-2 text-gray-800 font-semibold">
+                <h1 className="lg:text-6xl text-2xl mt-2 text-gray-800 font-semibold">
                   by Real Life{" "}
                 </h1>
               </div>
-              <p className="w-2/3 lg:w-auto md:w-auto md:text-xl lg:text-xl text-gray-800 lg:leading-7 md:leading-7 opacity-80">
+              <p className="w-2/3 lg:w-auto md:w-auto text-base md:text-xl lg:text-xl text-gray-800 lg:leading-7 md:leading-7 opacity-80">
                 Made using clean, non-toxic ingredients, our products <br className="hidden lg:block md:block" /> are
                 designed for everyone.
               </p>
@@ -56,14 +56,14 @@ export default function Banner() {
               Glow Brighter, Shine Longer
               </h2>
               <div>
-                <h1 className="lg:text-6xl text-4xl text-gray-800 lg:font-semibold font-bold">
+                <h1 className="lg:text-6xl text-2xl text-gray-800 lg:font-semibold font-bold">
                   Get the Perfectly{" "}
                 </h1>
-                <h1 className="lg:text-6xl text-4xl mt-2 text-gray-800 font-semibold">
+                <h1 className="lg:text-6xl text-2xl mt-2 text-gray-800 font-semibold">
                   Hydrated Skin{" "}
                 </h1>
               </div>
-              <p className=" w-2/3 lg:w-auto md:w-auto lg:text-xl text-gray-800 lg:leading-7 opacity-80">
+              <p className=" w-2/3 lg:w-auto md:w-auto text-base lg:text-xl text-gray-800 lg:leading-7 opacity-80">
                 Made using clean, non-toxic ingredients, our products <br className="hidden lg:block md:block" /> are
                 designed for everyone.
               </p>
@@ -79,14 +79,14 @@ export default function Banner() {
                 GET THE GLOW
               </h2>
               <div>
-                <h1 className="lg:text-6xl text-4xl text-gray-800 lg:font-semibold font-bold">
+                <h1 className="lg:text-6xl text-2xl text-gray-800 lg:font-semibold font-bold">
                   Be Your Kid{" "}
                 </h1>
-                <h1 className="lg:text-6xl text-4xl mt-2 text-gray-800 font-semibold">
+                <h1 className="lg:text-6xl text-2xl mt-2 text-gray-800 font-semibold">
                   of Beauty{" "}
                 </h1>
               </div>
-              <p className=" w-2/3 lg:w-auto md:w-auto lg:text-xl text-gray-800 lg:leading-7 opacity-80">
+              <p className=" w-2/3 lg:w-auto md:w-auto text-base lg:text-xl text-gray-800 lg:leading-7 opacity-80">
                 Made using clean, non-toxic ingredients, our products <br className="hidden lg:block md:block" /> are
                 designed for everyone.
               </p>

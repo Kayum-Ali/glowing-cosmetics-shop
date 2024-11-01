@@ -18,6 +18,7 @@ const FeaturedProductsDetails = () => {
   const [activeIMG, setActiveIMG] = useState(products.img);
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState([]);
+  const [refetch, setRefetch] = useState(false)
   // console.log(typeof review[0].rating);
 
   const handleClear = () => {
@@ -28,10 +29,10 @@ const FeaturedProductsDetails = () => {
   useEffect(() => {
     window.scrollTo({ top: 80, behavior: "smooth" });
     document.title = "Featured Products Details";
-    fetch("http://localhost:5000/review")
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/review", {withCredentials: true})
       .then((response) => response.json())
       .then((review) => setReview(review));
-  }, []);
+  }, [refetch]);
 
   const changeRating = (newRating) => {
     setRating(newRating);
@@ -50,7 +51,7 @@ const FeaturedProductsDetails = () => {
     const newReview = { name, email, review, rating, photo, formattedDate };
 
     console.log(newReview);
-    fetch("http://localhost:5000/review", {
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -60,6 +61,7 @@ const FeaturedProductsDetails = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        setRefetch(!refetch);
       });
   };
 
@@ -262,7 +264,7 @@ const FeaturedProductsDetails = () => {
               <h2 className="font-bold">Additional Information</h2>
             </Tab>
             <Tab>
-              <h2 className="font-bold">Reviews(1)</h2>
+              <h2 className="font-bold">Reviews({review.length})</h2>
             </Tab>
           </TabList>
 
@@ -275,11 +277,11 @@ const FeaturedProductsDetails = () => {
               providing a natural, luminous finish.
             </h2>
           </TabPanel>
-          <TabPanel className={`w-2/3 mx-auto`}>
+          <TabPanel className={`lg:w-2/3 mx-auto`}>
             <div>
-              <div className="flex justify-between">
+              <div className="flex justify-between px-5">
                 <h2>Color</h2>
-                <div className="flex gap-5">
+                <div className="flex lg:gap-5 gap-3">
                   <p>Blue</p>
                   <p>Green</p>
                   <p>Red</p>
@@ -288,9 +290,9 @@ const FeaturedProductsDetails = () => {
                 </div>
               </div>
               <hr className="my-5" />
-              <div className="flex justify-between">
+              <div className="flex justify-between px-5">
                 <h2>Size</h2>
-                <div className="flex gap-5">
+                <div className="flex lg:gap-5 gap-3">
                   <p>Small</p>
                   <p>Medium</p>
                   <p>Large</p>
@@ -312,7 +314,7 @@ const FeaturedProductsDetails = () => {
                    <div className="flex gap-5 items-center space-y-8" key={idx}>
                     
                       <div className="w-24 rounded-full">
-                        <img src={rev.photo} className="rounded-full" alt="user Image" />
+                        <img src={rev?.photo ?  rev?.photo :'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'} className="rounded-full" alt="user Image" />
                       </div>
                     
                     <div className="text-start space-y-2">
@@ -344,7 +346,7 @@ const FeaturedProductsDetails = () => {
               </div>
 
               {/* add review */}
-              <div className="w-2/3 mx-auto">
+              <div className="w-2/3 mx-auto my-10">
                 <h2 className="text-xl font-bold">Add a review</h2>
                 <p className="text-sm opacity-80">
                   Your email address will not be published. Required fields are

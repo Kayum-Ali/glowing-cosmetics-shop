@@ -19,7 +19,7 @@ const Footer = () => {
             <footer className='container mx-auto py-10 px-10 text-white'>
                 <div className='grid grid-cols-1 lg:grid-cols-12 justify-center '>
                     {/* 1st */}
-                    <div className="lg:col-span-4 ">
+                    <div className="lg:col-span-4 col-span-1">
                         <img className='w-[200px]  ' src={subLogo} alt="" />
 
                         <div className="mt-5 opacity-80">
@@ -58,11 +58,11 @@ const Footer = () => {
                         </div>
                     </div>
                     {/* 4th */}
-                    <div  className="lg:col-span-4 col-span-1 *:list-none mt-10 lg:-mt-4 ">
+                    <div  className="lg:col-span-4 col-span-2 *:list-none mt-10 lg:-mt-4 ">
                         <h2  className="text-xl ">Good emails.</h2>
                         <p className="mt-3 leading-4 py-3 opacity-80">Enter your email below to be the first to know about new collections and product launches.</p>
                         <div className="flex py-2">
-                            <input type="email" placeholder="Enter your email address" className="py-2 px-2 border-none rounded-tl-lg rounded-bl-lg outline-none text-black"/>
+                            <input type="email" placeholder="email address" className="py-2 px-2 border-none rounded-tl-lg rounded-bl-lg outline-none text-black w-32 lg:w-auto"/>
                             <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-tr-lg rounded-br-lg opacity-80">Subscribe</button>
                         </div>
                     </div>
