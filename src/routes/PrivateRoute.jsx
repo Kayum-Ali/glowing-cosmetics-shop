@@ -5,7 +5,11 @@ import PropTypes from 'prop-types'
 
 const PrivateRoute = ({children}) => {
     const location = useLocation()
-  const {user} = useContext(AuthContext)
+  
+  const {user,loading} = useContext(AuthContext)
+  if(loading){
+    return <div className="loading loading-bars loading-lg py-12 h-screen text-green-600 mx-auto flex justify-center items-center"></div>
+  }
   if(user){
     return children
   }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 import { IoStarOutline } from "react-icons/io5";
@@ -7,12 +7,18 @@ import StarRatings from "react-star-ratings";
 import ReactStars from "react-stars";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { AuthContext } from "../context/AuthProvider";
 
 const FeaturedProductsDetails = () => {
+  const { user } = useContext(AuthContext);
+  const photo = user.photoURL;
   const products = useLoaderData();
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
   const [activeIMG, setActiveIMG] = useState(products.img);
+  const [rating, setRating] = useState(0);
+  const [review, setReview] = useState([]);
+  // console.log(typeof review[0].rating);
 
   const handleClear = () => {
     setSize("");
@@ -22,28 +28,40 @@ const FeaturedProductsDetails = () => {
   useEffect(() => {
     window.scrollTo({ top: 80, behavior: "smooth" });
     document.title = "Featured Products Details";
+    fetch("http://localhost:5000/review")
+      .then((response) => response.json())
+      .then((review) => setReview(review));
   }, []);
-
-  const [rating, setRating] = useState(0);
-  // console.log(rating);
 
   const changeRating = (newRating) => {
     setRating(newRating);
   };
 
-  const handleReview = (e) =>{
+  const handleReview = (e) => {
     e.preventDefault();
     console.log("review submitted");
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const review = form.review.value;
-    const newReview = { name, email, review, rating };
+    const currentDate = new Date();
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const formattedDate = currentDate.toLocaleDateString("en-US", options);
+    const newReview = { name, email, review, rating, photo, formattedDate };
+
     console.log(newReview);
-
-    
-
-  }
+    fetch("http://localhost:5000/review", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newReview),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
 
   return (
     <div>
@@ -288,35 +306,41 @@ const FeaturedProductsDetails = () => {
                 1 review for {products.productName}
               </h2>
               {/* right side */}
-              <div className="flex justify-start gap-5 my-10">
-                {/* avatar */}
-                <div className="avatar">
-                  <div className="w-24 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                  </div>
-                </div>
-                <div className="text-start space-y-2">
-                  {/* react star rating */}
-                  <div className="text-sm">
-                    <StarRatings
-                      rating={rating}
-                      starRatedColor="gold"
-                      changeRating={changeRating}
-                      numberOfStars={5}
-                      name="rating"
-                      starDimension="20px"
-                      starSpacing="5px"
-                    />
-                  </div>
-                  {/* userName and date */}
-                  <div className="flex items-center">
-                    <h2 className="font-bold">Kayum Ali -</h2>
-                    <p className="text-sm opacity-90">June 20, 2022</p>
-                  </div>
-                  <div>
-                    <h2 className="text-sm ">Good Products</h2>
-                  </div>
-                </div>
+              <div className="">
+                 {
+                  review.map((rev,idx)=> (
+                   <div className="flex gap-5 items-center space-y-8" key={idx}>
+                    
+                      <div className="w-24 rounded-full">
+                        <img src={rev.photo} className="rounded-full" alt="user Image" />
+                      </div>
+                    
+                    <div className="text-start space-y-2">
+                      {/* react star rating */}
+                      <div className="text-sm">
+                        <StarRatings
+                         
+                          starRatedColor="gold"
+                          changeRating={changeRating}
+                          numberOfStars={rev.rating}
+                          name="rating"
+                          starDimension="20px"
+                          starSpacing="5px"
+                        />
+                      </div>
+                      {/* userName and date */}
+                      <div className="flex items-center">
+                        <h2 className="font-bold">{rev.name}-</h2>
+                        <p className="text-sm opacity-90">{rev.formattedDate}</p>
+                      </div>
+                      <div>
+                        <h2 className="text-sm ">{rev.review}</h2>
+                      </div>
+                    </div>
+                  </div>            
+                    
+                  ))
+                 }
               </div>
 
               {/* add review */}
@@ -328,7 +352,10 @@ const FeaturedProductsDetails = () => {
                 </p>
 
                 {/* rating form */}
-                <form onSubmit={handleReview} className="py-5 grid grid-cols-1 lg:grid-cols-12 gap-5">
+                <form
+                  onSubmit={handleReview}
+                  className="py-5 grid grid-cols-1 lg:grid-cols-12 gap-5"
+                >
                   <div className="text-start lg:col-span-6">
                     <label htmlFor="name" className="block font-medium">
                       Name{" "}
@@ -379,7 +406,10 @@ const FeaturedProductsDetails = () => {
                     />
                   </div>
                   <div className=" text-center mx-auto">
-                    <button type="submit" className="text-white font-bold rounded-md hover:bg-black duration-300 bg-[#82588D] px-12 py-2.5">
+                    <button
+                      type="submit"
+                      className="text-white font-bold rounded-md hover:bg-black duration-300 bg-[#82588D] px-12 py-2.5"
+                    >
                       Submit
                     </button>
                   </div>
