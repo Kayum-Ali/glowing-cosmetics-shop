@@ -116,8 +116,8 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link to={`/`} className="lg:text-xl text-sm lg:font-bold font-medium text-[#C5A3FF]">
-            Madina <span className="hidden md:block lg:block">Bag</span>
+          <Link to={`/`} className="lg:text-xl lg:font-bold font-medium text-[#C5A3FF]">
+            Madina Bag
             {/* <img className="w-28" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730136673/WhatsApp_Image_2024-10-28_at_18.53.06_16c27229-removebg-preview_d4bfo5.png" alt="" /> */}
           </Link>
         </div>
@@ -190,14 +190,14 @@ const Navbar = () => {
         </div>
         <div className="navbar-end text-2xl flex lg:gap-8 gap-3 font-bold text-[#4e7661]">
           <div>
-            <CiSearch className="text-sm lg:text-base" />
+            <CiSearch className="" />
           </div>
           <NavLink
             to={`/login`}
             className={`tooltip  tooltip-left dropdown  `}
             data-tip={`${user ? user.email : "login"}`}
           >
-            <GoPerson className="text-sm lg:text-base" />
+            <GoPerson className="" />
             <ul
               tabIndex={0}
               className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
@@ -212,13 +212,13 @@ const Navbar = () => {
             </ul>
           </NavLink>
           <div className="flex relative">
-            <TbJewishStar className="wishlist text-sm lg:text-base" />
+            <TbJewishStar className="wishlist " />
             <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">
               0
             </span>
           </div>
           <div className="flex relative">
-            <PiShoppingBagOpenBold  className="text-sm lg:text-base"/>
+            <PiShoppingBagOpenBold  className=""/>
             <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">
               0
             </span>

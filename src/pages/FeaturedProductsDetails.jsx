@@ -322,7 +322,8 @@ const FeaturedProductsDetails = () => {
                       <div className="text-sm">
                         <StarRatings
                          
-                          starRatedColor="gold"
+                          starRatedColor="yellow"
+                          starEmptyColor='#4e7661'
                           changeRating={changeRating}
                           numberOfStars={rev.rating}
                           name="rating"

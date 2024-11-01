@@ -36,7 +36,7 @@ const AboutUsPage = () => {
           src="https://res.cloudinary.com/dqescabbl/image/upload/v1729876367/image-box-11_z9ykt6.jpg"
           alt=""
         />
-        <h2 className="lg:text-4xl text-3xl text-gray-800 font-bold mx-auto lg:w-[600px]">
+        <h2 className="lg:text-4xl text-2xl text-gray-800 font-bold mx-auto lg:w-[600px]">
           We strive to live with compassion, kindness and empathy
         </h2>
         <p className="lg:w-1/2 mx-auto  text-gray-800 opacity-80 font-medium">
@@ -57,10 +57,10 @@ const AboutUsPage = () => {
           />
         </div>
         <div className="lg:p-20 p-10 md:p-10 flex flex-col">
-          <h2 className="lg:text-4xl text-3xl font-bold text-gray-800">
+          <h2 className="lg:text-4xl text-2xl font-bold text-gray-800">
             Give your skin a healthy
           </h2>
-          <h2 className="lg:text-4xl text-3xl font-bold text-gray-800">
+          <h2 className="lg:text-4xl text-2xl font-bold text-gray-800">
             {" "}
             glow everyone
           </h2>
@@ -126,7 +126,7 @@ const AboutUsPage = () => {
           {/* message and store house section */}
           <div className="flex gap-10 text-gray-800">
             <div className="flex-1 space-y-2">
-              <h2 className="text-xl font-bold">Message</h2>
+              <h2 className="lg:text-xl font-bold">Message</h2>
               <p className="opacity-80 font-medium text-sm">
                 Send us a text & an ambassador <br /> will respond when
                 available.
@@ -136,12 +136,12 @@ const AboutUsPage = () => {
               </cite>
             </div>
             <div className="flex-1 space-y-2">
-              <h3 className="text-xl font-bold">Store Hours</h3>
-              <div className="flex gap-6">
+              <h3 className="lg:text-xl font-bold">Store Hours</h3>
+              <div className="flex gap-6 text-sm">
                 <h2 className="font-bold">Mon – Fri:</h2>
                 <h2>08:30 – 20:00</h2>
               </div>
-              <div className="flex gap-6">
+              <div className="flex gap-6 text-sm">
                 <h2 className="font-bold">Sat & Sun:</h2>
                 <h2>09:30 – 21:30</h2>
               </div>
@@ -151,7 +151,7 @@ const AboutUsPage = () => {
       </div>
 
       {/* navigate slider */}
-      <div className="bg-[#F5F5F5] text-center py-20 opasiti">
+      <div className="bg-[#F5F5F5] text-center lg:py-20 py-10 opasiti">
         <Outlet></Outlet>
         {/* sm screen slider... lg hidded */}
         <Swiper

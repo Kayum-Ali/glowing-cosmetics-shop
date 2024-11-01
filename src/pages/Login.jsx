@@ -71,7 +71,7 @@ const Login = () => {
   }
   return (
     <div className="flex justify-center py-12 items-center bg-[url('https://res.cloudinary.com/dqescabbl/image/upload/v1730393528/scroll-navigation-05_nzk1ty.jpg')] bg-center">
-      <div className="border-2 p-12 bg-[#FFB6C1] w-[450px]">
+      <div className="border-2 lg:p-12 p-6 bg-[#FFB6C1] w-[450px]">
         <div className="text-center">
           <h2 className="text-3xl font-bold">{currentState}</h2>
           <p>Please {currentState} using account detail bellow.</p>

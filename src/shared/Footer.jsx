@@ -26,13 +26,13 @@ const Footer = () => {
                             <p className="flex items-center gap-2"><FaLocationDot></FaLocationDot> 5/A, Ga-130/B, Progoti Sharani, Middle</p>
                             <p>Saidpur, Rangpur Division, Bangladesh.</p>
                             <p className="flex items-center gap-2"><IoCall></IoCall>  +88 01867217084</p>
-                            <p className="flex items-center gap-2"> <IoMdMailUnread></IoMdMailUnread> madinabag&varaitisestore@gmail.com</p>
+                            <p className="flex items-center lg:gap-2 gap-1 text-sm lg:text-base"> <IoMdMailUnread></IoMdMailUnread> madinabag&varaitisestore@gmail.com</p>
 
 
                         </div>
                     </div>
 
-                  <div className="col-span-8 grid lg:grid-cols-8 grid-cols-2 md:grid-cols-4 justify-center items-center py-10 lg:py-0">
+                  <div className="col-span-8 grid lg:grid-cols-8 grid-cols-2 md:grid-cols-4 justify-center gap-5 lg:gap-2 items-center py-10 lg:py-0">
                           {/* 2nd */}
                     <div className="lg:col-span-2 col-span-1 *:list-none mt-10 lg:mt-0">
                         <h2 className="text-xl">Useful links</h2>
