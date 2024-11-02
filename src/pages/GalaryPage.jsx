@@ -281,7 +281,7 @@ export default function GalaryPage() {
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536398/banner-06-600x600_ogseik.jpg`}
             alt="Image 1"
-            className="w-full h-auto rounded-md rounded-lg shadow-md"
+            className="w-full h-auto rounded-md  shadow-md"
           />
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536471/blog-03-1024x613_ja5zfe.jpg`}
@@ -301,7 +301,7 @@ export default function GalaryPage() {
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536573/blog-07-1024x613_car0jt.jpg`}
             alt="Image 1"
-            className=" w-full h-auto rounded-md rounded-lg shadow-md"
+            className=" w-full h-auto rounded-md  shadow-md"
           />
 
         </div>
@@ -384,6 +384,8 @@ export default function GalaryPage() {
           />
         </div>
       </div>
+
+    
     </div>
   );
 }

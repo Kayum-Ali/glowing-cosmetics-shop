@@ -26,7 +26,7 @@ const Footer = () => {
                             <p className="flex items-center  gap-2"><FaLocationDot></FaLocationDot>1st floor, right side, Saidpur Plaza</p>
                             <p className="">Saidpur, Rangpur Division, Bangladesh.</p>
                             <p className="flex items-center gap-2"><IoCall></IoCall>  +88 01867217084</p>
-                            <p className="flex items-center lg:gap-2 gap-1"> <IoMdMailUnread></IoMdMailUnread> madinabag&varaitisestore@gmail.com</p>
+                            <p className="flex items-center text-xs lg:text-base lg:gap-2 gap-1"> <IoMdMailUnread></IoMdMailUnread> madinabag&varaitisestore@gmail.com</p>
 
 
                         </div>

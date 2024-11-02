@@ -29,7 +29,7 @@ const CountdownTimer = ({ endDate }) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     document.title= "Video";
   },[])
-  
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
@@ -62,6 +62,19 @@ const CountdownTimer = ({ endDate }) => {
           <li>Element</li>
           <li>Video</li>
         </ul>
+      </div>
+
+        {/* video */}
+        <div className="w-full relative ">
+           <video src="http://firstsight.design/v/levre_bg.mp4" autoPlay muted playsInline loop className="w-full "></video>
+           <div className="absolute lg:top-1/2 top-8 lg:-translate-y-1/2 lg:left-10 text-white container mx-auto lg:space-y-8 space-y-3 px-5  lg:px-0">
+                <h2 className="lg:text-5xl text-xl font-bold tracking-wider">Beauty products that work.</h2>
+                <p className="lg:w-[580px] lg:text-xl text-xs tracking-wider">Our formulations have proven efficacy, contain organic ingredients only and are 100% cruelty free.</p>
+                <div className="flex gap-8">
+                    <button className=" bg-white lg:px-8 px-6 lg:py-2.5  py-2 text-black lg:font-medium">Skincare</button>
+                    <button className=" hover:bg-white border-2 border-white lg:px-8 px-6 lg:py-2.5 py-2 hover:text-black text-white lg:font-medium lg:text-xl">Shop All</button>
+                </div>
+           </div>
       </div>
       {/* video */}
       <h3 className="text-3xl mt-12 text-center font-bold">Video</h3>
