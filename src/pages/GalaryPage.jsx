@@ -266,42 +266,42 @@ export default function GalaryPage() {
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536199/banner-09-600x561_ukb2b1.jpg`}
             alt="Image 1"
-            className="w-full h-auto rounded-lg shadow-md"
+            className="w-full h-auto rounded-md shadow-md"
           />
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536294/banner-08-600x600_owyob1.jpg`}
             alt="Image 1"
-            className=" w-full h-auto rounded-lg shadow-md"
+            className=" w-full h-auto rounded-md shadow-md"
           />
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536349/banner-07-600x600_xz9u16.jpg`}
             alt="Image 1"
-            className=" w-full h-auto rounded-lg shadow-md"
+            className=" w-full h-auto rounded-md shadow-md"
           />
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536398/banner-06-600x600_ogseik.jpg`}
             alt="Image 1"
-            className="w-full h-auto rounded-lg shadow-md"
+            className="w-full h-auto rounded-md rounded-lg shadow-md"
           />
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536471/blog-03-1024x613_ja5zfe.jpg`}
             alt="Image 1"
-            className=" w-full h-full rounded-lg shadow-md"
+            className=" w-full h-full rounded-md shadow-md"
           />
         <img
             src={img2}
             alt="Image 1"
-            className=" w-full h-full rounded-lg shadow-md"
+            className=" w-full h-full rounded-md shadow-md"
           />
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536541/blog-05-1024x613_ddfxnq.jpg`}
             alt="Image 1"
-            className=" w-full h-auto rounded-lg shadow-md"
+            className=" w-full h-auto rounded-md shadow-md"
           />
         <img
             src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536573/blog-07-1024x613_car0jt.jpg`}
             alt="Image 1"
-            className=" w-full h-auto rounded-lg shadow-md"
+            className=" w-full h-auto rounded-md rounded-lg shadow-md"
           />
 
         </div>
@@ -317,70 +317,70 @@ export default function GalaryPage() {
           <img
             src={img1}
             alt="Image 1"
-            className="col-span-2 col-start-1 col-end-3 row-span-2 w-full h-auto rounded-lg shadow-md"
+            className="col-span-2 col-start-1 col-end-3 row-span-2 w-full h-auto rounded-md shadow-md"
           />
           <img
             src={img2}
             alt="Image 2"
-            className="col-span-1 col-start-3 col-end-4 row-span-1 w-full h-auto rounded-lg shadow-md"
+            className="col-span-1 col-start-3 col-end-4 row-span-1 w-full h-auto rounded-md shadow-md"
           />
           <img
             src={img3}
             alt="Image 3"
-            className="col-span-1 col-start-4 col-end-5 row-span-1 w-full h-auto rounded-lg shadow-md"
+            className="col-span-1 col-start-4 col-end-5 row-span-1 w-full h-auto rounded-md shadow-md"
           />
 
           {/* Row 2 */}
           <img
             src={img4}
             alt="Image 4"
-            className="col-span-2 row-start-2 col-start-3 row-end-4 w-full h-auto rounded-lg shadow-md"
+            className="col-span-2 row-start-2 col-start-3 row-end-4 w-full h-auto rounded-md shadow-md"
           />
           <img
             src={img5}
             alt="Image 5"
-            className="col-span-1 row-start-3 row-end-4 row-span-1 w-full h-auto rounded-lg shadow-md"
+            className="col-span-1 row-start-3 row-end-4 row-span-1 w-full h-auto rounded-md shadow-md"
           />
 
           {/* Row 3 */}
           <img
             src={img6}
             alt="Image 6"
-            className="col-span-1 row-start-3 row-end-4  row-span-1 w-full h-auto rounded-lg shadow-md"
+            className="col-span-1 row-start-3 row-end-4  row-span-1 w-full h-auto rounded-md shadow-md"
           />
           <img
             src={img7}
             alt="Image 7"
-            className="col-span-2 row-start-4 row-end-6  row-span-1 w-full h-auto rounded-lg shadow-md"
+            className="col-span-2 row-start-4 row-end-6  row-span-1 w-full h-auto rounded-md shadow-md"
           />
           <img
             src={img8}
             alt="Image 8"
-            className="col-span-2 row-start-4 row-end-5 col-start-3 col-end-4 row-span-1 w-full h-auto rounded-lg shadow-md"
+            className="col-span-2 row-start-4 row-end-5 col-start-3 col-end-4 row-span-1 w-full h-auto rounded-md shadow-md"
           />
 
           {/* Row 4 */}
           <img
             src={img9}
             alt="Image 9"
-            className=" row-start-4 row-end-5 row-span-1 w-full h-auto rounded-lg shadow-md"
+            className=" row-start-4 row-end-5 row-span-1 w-full h-auto rounded-md shadow-md"
           />
           <img
             src={img10}
             alt="Image 10"
-            className="col-span-3 col-start-3 col-end-5 row-start-5 row-end-7 row-span-1 w-full h-auto rounded-lg shadow-md"
+            className="col-span-3 col-start-3 col-end-5 row-start-5 row-end-7 row-span-1 w-full h-auto rounded-md shadow-md"
           />
 
           {/* Row 5 */}
           <img
             src={img11}
             alt="Image 11"
-            className="col-start-1 col-end-2 row-span-1 row-start-6 row-end-7 w-full h-auto rounded-lg shadow-md"
+            className="col-start-1 col-end-2 row-span-1 row-start-6 row-end-7 w-full h-auto rounded-md shadow-md"
           />
           <img
             src={img12}
             alt="Image 12"
-            className="col-start-2 col-end-3 row-start-6 row-end-7 row-span-1 w-full h-auto rounded-lg shadow-md"
+            className="col-start-2 col-end-3 row-start-6 row-end-7 row-span-1 w-full h-auto rounded-md shadow-md"
           />
         </div>
       </div>

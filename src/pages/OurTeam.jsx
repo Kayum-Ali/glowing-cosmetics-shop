@@ -26,14 +26,14 @@ const OurTeam = () => {
 
       <div className="text-center space-y-3">
         <h2 className="text-2xl font-bold pt-10">Our Team</h2>
-        <p className="font-semibold text-3xl ">
+        <p className="font-semibold lg:text-3xl text-2xl ">
           We pride ourselves on have a <br /> team of highly skilled
         </p>
       </div>
       <div className="flex justify-center  px-5 py-10">
         {/* mamuni*/}
         <div>
-          <div className="bg-[#DEDEE0] h-[330px] w-[400px] relative profile overflow-hidden rounded-md">
+          <div className="bg-[#DEDEE0] h-[330px] lg:w-[400px] w-[300px] relative profile overflow-hidden rounded-md">
             <img
               className="w-full h-full bg-cover bg-top pt-5"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1730554385/Screenshot_10_d7bck8.png"
@@ -60,7 +60,7 @@ const OurTeam = () => {
           <h2 className="text-2xl font-bold pt-4 pl-2">Mst Mamuni Akter Mim</h2>
           <p className="font-medium text-[#9F9F9F]">
             {" "}
-            - Founder, Brad Representive
+            - Founder, Brand Representive
           </p>
         </div>
       </div>
