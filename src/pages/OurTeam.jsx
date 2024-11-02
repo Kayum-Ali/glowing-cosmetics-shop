@@ -7,7 +7,7 @@ import "../styles/team.css";
 
 const OurTeam = () => {
   return (
-    <div>
+    <div >
       {/* breadcumbs */}
       <div className="breadcrumbs bg-[#FFC1CC] py-3 ">
         <ul className="container mx-auto flex justify-center">
@@ -25,7 +25,7 @@ const OurTeam = () => {
           We pride ourselves on have a <br /> team of highly skilled
         </p>
       </div>
-      <div className="flex justify-center py-10">
+      <div className="flex justify-center  px-5 py-10">
         {/* mamuni*/}
         <div>
           <div className="bg-[#DEDEE0] h-[330px] w-[400px] relative profile overflow-hidden rounded-md">
@@ -61,7 +61,7 @@ const OurTeam = () => {
       </div>
 
       {/* team card  */}
-      <div className="grid grid-cols-4 gap-5 container mx-auto py-10">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2  px-5 grid-cols-1 gap-5 container mx-auto py-10">
         {/* kayum */}
         <div>
           <div className="bg-[#DEDEE0] h-[330px] relative profile overflow-hidden rounded-md">
