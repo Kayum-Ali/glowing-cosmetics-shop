@@ -8,6 +8,8 @@ import ReactStars from "react-stars";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { AuthContext } from "../context/AuthProvider";
+import {  toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const FeaturedProductsDetails = () => {
   const { user } = useContext(AuthContext);
@@ -40,7 +42,9 @@ const FeaturedProductsDetails = () => {
 
   const handleReview = (e) => {
     e.preventDefault();
-    console.log("review submitted");
+    if(rating === 0){
+      return toast.error('Please select a rating')
+    }
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
@@ -61,6 +65,7 @@ const FeaturedProductsDetails = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        toast.success('Your Review Submitted successfully')
         setRefetch(!refetch);
       });
   };
@@ -82,23 +87,23 @@ const FeaturedProductsDetails = () => {
       {/* product details */}
       <div className="flex flex-col lg:flex-row md:flex-row container mx-auto gap-14 py-16 px-5">
         <div className="flex-1">
-          <img className="w-full h-[600px]" src={activeIMG} alt="" />
-          <div className="flex gap-5 mt-3">
+          <img className="w-full lg:h-[600px] h-auto" src={activeIMG} alt="" />
+          <div className="flex lg:gap-5 gap-2 mt-3">
             <img
               onClick={() => setActiveIMG(products.img)}
-              className="lg:w-32 w-24 hover:border-2 hover:border-[#FFC1CC] rounded-lg"
+              className="lg:w-32 w-20 hover:border-2 hover:border-[#FFC1CC] rounded-lg"
               src={products.img}
               alt=""
             />
             <img
               onClick={() => setActiveIMG(products.hoverImg)}
-              className="lg:w-32 w-24 hover:border-2 hover:border-[#FFC1CC] rounded-lg"
+              className="lg:w-32 w-20 hover:border-2 hover:border-[#FFC1CC] rounded-lg"
               src={products.hoverImg}
               alt=""
             />
             <img
               onClick={() => setActiveIMG(products.extraImg[0])}
-              className="lg:w-32 w-24  hover:border-2 hover:border-[#FFC1CC] rounded-lg"
+              className="lg:w-32 w-20  hover:border-2 hover:border-[#FFC1CC] rounded-lg"
               src={products.extraImg[0]}
               alt=""
             />
@@ -125,7 +130,7 @@ const FeaturedProductsDetails = () => {
             />
             <h2 className="opacity-70 hover:opacity-100">
               {" "}
-              | (5 customer review)
+              | ({review.length} customer review)
             </h2>
           </div>
           {/* description */}
@@ -169,7 +174,7 @@ const FeaturedProductsDetails = () => {
             <button
               className={`${
                 size === "" && "hidden"
-              } bg-[#4E7661] text-white font-bold px-3 rounded-md py-2.5  `}
+              } bg-[#4E7661] text-white text-sm lg:text-base lg:font-bold px-3 rounded-md py-2.5  `}
               onClick={handleClear}
             >
               clear
@@ -201,10 +206,10 @@ const FeaturedProductsDetails = () => {
           <h2 className="text-xl font-bold">Quantity </h2>
           {/* add to cart */}
           <div className="flex gap-5">
-            <button className="bg-[#F8D7DA] hover:bg-[#FFC1CC] duration-300 lg:px-20 px-10 md:px-10 py-4 rounded-lg font-bold">
+            <button className="bg-[#F8D7DA] hover:bg-[#FFC1CC] duration-300 lg:px-20 px-8 md:px-10 py-4 rounded-lg font-bold">
               1
             </button>
-            <button className="bg-[#4E7661] hover:bg-black duration-300 px-16 py-4 text-white  rounded-lg font-bold ">
+            <button className="bg-[#4E7661] hover:bg-black duration-300 lg:px-16 px-10 py-4 text-white  rounded-lg font-bold ">
               Add To Cart
             </button>
           </div>
@@ -303,21 +308,21 @@ const FeaturedProductsDetails = () => {
           </TabPanel>
 
           <TabPanel>
-            <div>
+            <div className="px-3">
               <h2 className="font-bold flex justify-start">
-                1 review for {products.productName}
+              {review.length} review for {products.productName}
               </h2>
               {/* right side */}
               <div className="">
                  {
                   review.map((rev,idx)=> (
-                   <div className="flex gap-5 items-center space-y-8" key={idx}>
+                   <div className="flex gap-5 items-center  lg:space-y-8 space-y-5" key={idx}>
                     
                       <div className="w-24 rounded-full">
                         <img src={rev?.photo ?  rev?.photo :'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'} className="rounded-full" alt="user Image" />
                       </div>
                     
-                    <div className="text-start space-y-2">
+                    <div className="text-start lg:space-y-2 space-y-1">
                       {/* react star rating */}
                       <div className="text-sm">
                         <StarRatings
@@ -332,7 +337,7 @@ const FeaturedProductsDetails = () => {
                         />
                       </div>
                       {/* userName and date */}
-                      <div className="flex items-center">
+                      <div className="lg:flex items-center gap-2">
                         <h2 className="font-bold">{rev.name}-</h2>
                         <p className="text-sm opacity-90">{rev.formattedDate}</p>
                       </div>
