@@ -67,7 +67,7 @@ const CountdownTimer = ({ endDate }) => {
         {/* video */}
         <div className="w-full relative ">
            <video src="http://firstsight.design/v/levre_bg.mp4" autoPlay muted playsInline loop className="w-full "></video>
-           <div className="absolute lg:top-1/2 top-8 lg:-translate-y-1/2 lg:left-10 text-white container mx-auto lg:space-y-8 space-y-3 px-5  lg:px-0">
+           <div className="absolute lg:top-1/2 top-4 lg:-translate-y-1/2 lg:left-10 text-white container mx-auto lg:space-y-8 space-y-2 px-5  lg:px-0">
                 <h2 className="lg:text-5xl text-xl font-bold tracking-wider">Beauty products that work.</h2>
                 <p className="lg:w-[580px] lg:text-xl text-xs tracking-wider">Our formulations have proven efficacy, contain organic ingredients only and are 100% cruelty free.</p>
                 <div className="flex gap-8">
@@ -80,7 +80,7 @@ const CountdownTimer = ({ endDate }) => {
       <h3 className="text-3xl mt-12 text-center font-bold">Video</h3>
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:pl-20 gap-12 my-10 px-5">
         {/* content */}
-        <div className="space-y-5 flex-1 w-[300px]">
+        <div className="space-y-5 flex-1 lg:w-[300px] md:w-[300px]">
           <p className="uppercase  font-bold">new collection</p>
           <h2 className="lg:text-5xl text-3xl font-bold">Anti-aging Cream</h2>
           <p>
@@ -139,7 +139,7 @@ const CountdownTimer = ({ endDate }) => {
                     <button className="bg-[#B88539] px-3 text-white rounded-lg text-sm">-20%</button>
                 </div>
                 <h2 className="text-4xl font-bold">Mountain Pain Bath Oil</h2>
-                <p className="text-[#7E7E7E] w-2/3 tracking-wider font-medium">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                <p className="text-[#7E7E7E] lg:w-2/3  tracking-wider font-medium">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
                 <div>
                    <CountdownTimer endDate="2024-11-31T20:59:59" />
                 </div>

@@ -9,7 +9,7 @@ const NewCollection = () => {
         {/* heading */}
         <div className="text-center text-gray-800 space-y-2">
           <h2 className="lg:text-4xl text-2xl  font-bold">Discover Our New Collection</h2>
-          <p className="w-4/5 mx-auto text-xl font-medium">
+          <p className="w-4/5 mx-auto lg:text-xl md:text-xl text-sm  md:font-medium lg:font-medium">
             &quot;Unlock your radiance with our latest collection! Bold colors,
             rich textures, and skin-loving ingredients come together to create
             beauty that’s effortlessly you. Elevate your look with our must-have

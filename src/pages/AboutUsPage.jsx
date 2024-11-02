@@ -131,7 +131,7 @@ const AboutUsPage = () => {
           <div className="flex gap-10 text-gray-800">
             <div className="flex-1 space-y-2">
               <h2 className="lg:text-xl font-bold">Message</h2>
-              <p className="opacity-80 font-medium text-sm">
+              <p className="opacity-80 lg:font-medium lg:text-sm text-xs">
                 Send us a text & an ambassador <br /> will respond when
                 available.
               </p>
@@ -141,11 +141,11 @@ const AboutUsPage = () => {
             </div>
             <div className="flex-1 space-y-2">
               <h3 className="lg:text-xl font-bold">Store Hours</h3>
-              <div className="flex gap-6 text-sm">
+              <div className="flex gap-6 lg:text-sm text-xs">
                 <h2 className="font-bold">Mon – Fri:</h2>
                 <h2>08:30 – 20:00</h2>
               </div>
-              <div className="flex gap-6 text-sm">
+              <div className="flex gap-6 lg:text-sm text-xs">
                 <h2 className="font-bold">Sat & Sun:</h2>
                 <h2>09:30 – 21:30</h2>
               </div>
