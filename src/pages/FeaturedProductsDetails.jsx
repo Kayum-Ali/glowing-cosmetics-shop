@@ -65,8 +65,13 @@ const FeaturedProductsDetails = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        toast.success('Your Review Submitted successfully')
-        setRefetch(!refetch);
+        if(data.insertedId) {
+          toast.success('Your Review Submitted successfully')
+
+          setRefetch(!refetch);
+          // setReview([...review, newReview]);
+          form.reset()
+        }
       });
   };
 
@@ -85,7 +90,7 @@ const FeaturedProductsDetails = () => {
       </div>
 
       {/* product details */}
-      <div className="flex flex-col lg:flex-row md:flex-row container mx-auto gap-14 py-16 px-5">
+      <div className="flex flex-col lg:flex-row md:flex-row container mx-auto gap-14 lg:py-16 py-3 md:py-14 px-5">
         <div className="flex-1">
           <img className="w-full lg:h-[600px] h-auto" src={activeIMG} alt="" />
           <div className="flex lg:gap-5 gap-2 mt-3">
@@ -155,7 +160,7 @@ const FeaturedProductsDetails = () => {
             </select>
           </div>
           {/* size */}
-          <div className="flex gap-3 items-center">
+          <div className="flex lg:gap-3 gap-2 items-center">
             <label htmlFor="size" className="text-2xl font-bold w-16">
               Size :
             </label>
@@ -174,7 +179,7 @@ const FeaturedProductsDetails = () => {
             <button
               className={`${
                 size === "" && "hidden"
-              } bg-[#4E7661] text-white text-sm lg:text-base lg:font-bold px-3 rounded-md py-2.5  `}
+              } bg-[#4E7661] text-white  text-xs lg:text-base lg:font-bold px-3 rounded-md py-2.5  `}
               onClick={handleClear}
             >
               clear
@@ -352,7 +357,7 @@ const FeaturedProductsDetails = () => {
               </div>
 
               {/* add review */}
-              <div className="w-2/3 mx-auto my-10">
+              <div className="lg:w-2/3 md:w-2/3  mx-auto my-10 px-8 md:px-3 lg:px-0">
                 <h2 className="text-xl font-bold">Add a review</h2>
                 <p className="text-sm opacity-80">
                   Your email address will not be published. Required fields are
@@ -384,6 +389,7 @@ const FeaturedProductsDetails = () => {
                       id="email"
                       type="email"
                       name="email"
+                      defaultValue={user?.email}
                       required
                       className="bg-slate-300 focus:border-2 focus:border-green-500  outline-none py-1 px-4 rounded-md focus:bg-white duration-300 w-full"
                     />
@@ -396,6 +402,7 @@ const FeaturedProductsDetails = () => {
                       name="review"
                       id="review"
                       cols="30"
+                      required
                       className="bg-slate-300 focus:border-2 focus:border-green-500  outline-none py-1 px-4 rounded-md focus:bg-white duration-300 w-full"
                     ></textarea>
                   </div>

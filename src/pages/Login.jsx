@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 import {  useLocation, useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+  const {user} = useContext(AuthContext)
   const [currentState, setCurrentState] = useState("Sign Up");
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,6 +15,13 @@ const Login = () => {
   const { signUp, login,googleLogin } = useContext(AuthContext);
    const navigate = useNavigate()
    const location = useLocation()
+
+
+   useEffect(() => {
+    if (user) {
+      navigate('/')
+    }
+  }, [navigate, user])
    const from = location?.state ? location.state : '/'
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -120,7 +128,7 @@ const Login = () => {
           </button>
           {/* registration link */}
           {currentState === "Sign Up" ? (
-            <p className="login-toggle text-[#5c5c5c]">
+            <p className="login-toggle text-[#5c5c5c] text-sm lg:text-base">
               Already have an account{" "}
               <span
                 onClick={() => setCurrentState("Login")}
@@ -130,7 +138,7 @@ const Login = () => {
               </span>
             </p>
           ) : (
-            <p className="login-toggle text-[#5c5c5c]">
+            <p className="login-toggle text-[#5c5c5c] text-sm lg:text-base">
               Create an account{" "}
               <span
                 onClick={() => setCurrentState("Sign Up")}

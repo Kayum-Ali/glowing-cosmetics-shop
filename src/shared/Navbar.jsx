@@ -14,7 +14,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   const navigate = useNavigate()
   const handleLogout = () =>{
-    console.log('logout');
+  
     logout()
     .then(()=>{
       Swal.fire({
@@ -200,7 +200,8 @@ const Navbar = () => {
             <GoPerson className="" />
             <ul
               tabIndex={0}
-              className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              
+              className={`dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow ${user || 'hidden'}`}
             >
               <li className="flex justify-between">
                 <p>Setting</p>

@@ -22,11 +22,11 @@ const Footer = () => {
                     <div className="lg:col-span-4 col-span-1">
                         <img className='w-[200px]  ' src={subLogo} alt="" />
 
-                        <div className="mt-5 opacity-80">
-                            <p className="flex items-center gap-2"><FaLocationDot></FaLocationDot> 5/A, Ga-130/B, Progoti Sharani, Middle</p>
-                            <p>Saidpur, Rangpur Division, Bangladesh.</p>
+                        <div className="mt-5 opacity-80 space-y-2 lg:space-y-0">
+                            <p className="flex items-center  gap-2"><FaLocationDot></FaLocationDot>1st floor, right side, Saidpur Plaza</p>
+                            <p className="">Saidpur, Rangpur Division, Bangladesh.</p>
                             <p className="flex items-center gap-2"><IoCall></IoCall>  +88 01867217084</p>
-                            <p className="flex items-center lg:gap-2 gap-1 text-sm lg:text-base"> <IoMdMailUnread></IoMdMailUnread> madinabag&varaitisestore@gmail.com</p>
+                            <p className="flex items-center lg:gap-2 gap-1"> <IoMdMailUnread></IoMdMailUnread> madinabag&varaitisestore@gmail.com</p>
 
 
                         </div>
