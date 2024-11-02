@@ -87,40 +87,40 @@ export default function GalaryPage() {
           <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
-              src="https://res.cloudinary.com/dqescabbl/image/upload/v1729965002/2022-02-01_uheect.jpg"
+              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730539338/80ffa182-c132-4fc4-bf84-dba26020d353_h8lseo.jpg"
               alt=""
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full lg:h-[600px]">
+          <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
-              src="https://res.cloudinary.com/dqescabbl/image/upload/v1729966338/20220913_161321176_hbxmzh.jpg"
+              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730539380/9626d3e5-c4b0-4511-ac88-956d7f80d362_j23xkv.jpg"
               alt=""
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full lg:h-[600px]">
+          <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
-              src="https://res.cloudinary.com/dqescabbl/image/upload/v1729966476/20220913_161604099_gp4ebs.jpg"
+              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730539448/c931fccb-dbe4-4d94-92a4-017d67ef931c_yfkttn.jpg"
               alt=""
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full lg:h-[600px]">
+          <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
-              src="https://res.cloudinary.com/dqescabbl/image/upload/v1729966583/20220913_161528794_tvainb.jpg"
+              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730539476/ff9d92e5-6a1f-46b9-b1f0-8c9763bd0e03_zimvk3.jpg"
               alt=""
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full lg:h-[600px]">
+          <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1729967061/cosmetics-gallery-by-magnetic-rani-bagh-delhi-cosmetic-dealers-2mb0au7_bqrima.webp"
@@ -129,7 +129,7 @@ export default function GalaryPage() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full lg:h-[600px]">
+          <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1729967170/pari-cosmetics-delhi-sk52wmvccp_zagf3q.webp"
@@ -138,7 +138,7 @@ export default function GalaryPage() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full lg:h-[600px]">
+          <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1729967283/she-care-beauty-point-new-shimlapuri-ludhiana-beauty-parlours-9m373_kxvw7m.avif"
@@ -147,7 +147,7 @@ export default function GalaryPage() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full lg:h-[600px]">
+          <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1729967340/istockphoto-933154330-612x612_od8e8n.jpg"
@@ -156,7 +156,7 @@ export default function GalaryPage() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full lg:h-[600px]">
+          <div className="w-full lg:h-[600px] h-auto">
             <img
               className="w-full h-full"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1729967388/stock-photo-toronto-canada-december-skincare-and-cosmetic-products-on-display-in-a-department-303937541_ynqiu0.jpg"
