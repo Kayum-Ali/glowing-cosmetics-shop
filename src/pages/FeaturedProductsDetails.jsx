@@ -28,9 +28,12 @@ const FeaturedProductsDetails = () => {
     setColor("");
   };
 
-  useEffect(() => {
+  useEffect(()=>{
     window.scrollTo({ top: 80, behavior: "smooth" });
     document.title = "Featured Products Details";
+  },[])
+  useEffect(() => {
+    
     fetch("https://glowing-cosmetics-shop-server.vercel.app/review", {withCredentials: true})
       .then((response) => response.json())
       .then((review) => setReview(review));
