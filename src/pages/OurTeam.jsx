@@ -25,6 +25,40 @@ const OurTeam = () => {
           We pride ourselves on have a <br /> team of highly skilled
         </p>
       </div>
+      <div className="flex justify-center py-10">
+        {/* mamuni*/}
+        <div>
+          <div className="bg-[#DEDEE0] h-[330px] w-[400px] relative profile overflow-hidden rounded-md">
+            <img
+              className="w-full h-full bg-cover bg-top pt-5"
+              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730554385/Screenshot_10_d7bck8.png"
+              alt=""
+            />
+            <div className="bg-[#DEDEE0] social-link flex justify-center py-3 gap-4 *:text-xl *:cursor-pointer absolute  w-full">
+              <Link to={`https://x.com/Maybe_Kayum`} target="_blank">
+                <FaTwitter />
+              </Link>
+              <Link to={`https://www.facebook.com/kayumxten/`} target="_blank">
+                <RiFacebookCircleFill />
+              </Link>
+              <Link to={`https://www.instagram.com/kayumxten/`} target="_blank">
+                <AiOutlineInstagram />
+              </Link>
+              <Link
+                to={`https://www.linkedin.com/in/kaiumali/`}
+                target="_blank"
+              >
+                <IoLogoLinkedin />
+              </Link>
+            </div>
+          </div>
+          <h2 className="text-2xl font-bold pt-4 pl-2">Mst Mamuni Akter Mim</h2>
+          <p className="font-medium text-[#9F9F9F]">
+            {" "}
+            - Founder, Brad Representive
+          </p>
+        </div>
+      </div>
 
       {/* team card  */}
       <div className="grid grid-cols-4 gap-5 container mx-auto py-10">
@@ -154,40 +188,7 @@ const OurTeam = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center py-10">
-        {/* mamuni*/}
-        <div>
-          <div className="bg-[#DEDEE0] h-[330px] relative profile overflow-hidden rounded-md">
-            <img
-              className="w-full bg-cover bg-center pt-5"
-              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730554385/Screenshot_10_d7bck8.png"
-              alt=""
-            />
-            <div className="bg-[#DEDEE0] social-link flex justify-center py-3 gap-4 *:text-xl *:cursor-pointer absolute  w-full">
-              <Link to={`https://x.com/Maybe_Kayum`} target="_blank">
-                <FaTwitter />
-              </Link>
-              <Link to={`https://www.facebook.com/kayumxten/`} target="_blank">
-                <RiFacebookCircleFill />
-              </Link>
-              <Link to={`https://www.instagram.com/kayumxten/`} target="_blank">
-                <AiOutlineInstagram />
-              </Link>
-              <Link
-                to={`https://www.linkedin.com/in/kaiumali/`}
-                target="_blank"
-              >
-                <IoLogoLinkedin />
-              </Link>
-            </div>
-          </div>
-          <h2 className="text-2xl font-bold pt-4 pl-2">Kayum X Ten</h2>
-          <p className="font-medium text-[#9F9F9F]">
-            {" "}
-            - Founder, Chief Creative
-          </p>
-        </div>
-      </div>
+      
     </div>
   );
 };
