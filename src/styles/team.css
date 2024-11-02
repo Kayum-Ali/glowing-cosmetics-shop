@@ -1,0 +1,9 @@
+.social-link{
+    bottom: -50px;
+    display: none;
+}
+.profile:hover .social-link{
+    display: flex;
+    bottom: 0px;
+    transition: bottom 2s ease-in-out;
+}

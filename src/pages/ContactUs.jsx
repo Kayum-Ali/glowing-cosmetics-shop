@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdAccessTime } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const ContactUs = () => {
-  document.title = "Contact Us";
+
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.title = "Contact Us";
+  },[])
   return (
     <div>
       <div className="relative">
@@ -27,20 +32,20 @@ const ContactUs = () => {
       </div>
       {/* get in touch section */}
       <div className="text-center text-gray-800 py-16 space-y-4">
-          <h2 className="lg:text-5xl text-3xl font-bold">  Keep In Touch with Us</h2>
-          <p className="text-xl font-medium opacity-80">We’re talking about clean beauty gift sets, of course – and we’ve got a <br /> bouquet of beauties for yourself or someone you love.</p>
+          <h2 className="lg:text-5xl text-2xl font-bold">  Keep In Touch with Us</h2>
+          <p className="text-lg px-5 font-medium opacity-80">We’re talking about clean beauty gift sets, of course – and we’ve got a <br /> bouquet of beauties for yourself or someone you love.</p>
       </div>
 
-      <div className="flex flex-col md:flex-row lg:flex-row container my-10 pb-5 mx-auto lg:justify-evenly justify-center lg:gap-10 gap-5 md:px-3">
+      <div className="flex flex-col md:flex-row lg:flex-row container lg:my-10 my-3 pb-5 mx-auto lg:justify-evenly  justify-center lg:gap-10 gap-5 md:px-3">
         {/* 1st */}
-          <div className="flex gap-4 justify-center lg:justify-start">
+          <div className="flex gap-4 justify-center lg:justify-start ">
               <div>
                  <FaLocationDot className="lg:text-4xl text-2xl md:text-3xl" />
               </div>
               <div className="text-gray-800 space-y-3">
-                <h2 className="md:text-2xl text-3xl  font-bold">Address</h2>
+                <h2 className="md:text-2xl text-2xl  font-bold">Address</h2>
                 <p className="font-medium opacity-80 lg:text-xl">3245 Abbot Kinney BLVD - <br /> PH Venice, CA 124</p>
-                <p className="font-medium opacity-80 lg:text-xl">Saidpur, Rangpur Division, Bangladesh.</p>
+                <p className="font-medium opacity-80 lg:text-xl">Saidpur, Rangpur Division.</p>
               </div>
           </div>
           {/* 2nd */}
@@ -61,7 +66,7 @@ const ContactUs = () => {
               <MdAccessTime className="lg:text-4xl text-2xl md:text-3xl"/>
             </div>
             <div className="text-gray-800 space-y-3">
-                <h2 className="md:text-2xl text-3xl font-bold">Hour of operation</h2>
+                <h2 className="md:text-2xl text-2xl font-bold">Hour of operation</h2>
                 <div className="space-y-3">
                      <p className="font-medium lg:text-xl text-black">Monday to Friday : <span className="opacity-80"> 08:00 AM - 18:00 PM</span></p>
                      <p className="font-medium lg:text-xl text-black">Saturday & Sunday : <span className="opacity-80"> 09:00 AM - 21:00 PM</span></p>
@@ -78,14 +83,14 @@ const ContactUs = () => {
       </div>
 
       <div className="pt-8">
-          <h2 className="text-4xl mx-auto text-center">Sent A Message</h2>
-          <form className=" text-center lg:w-1/2 mx-auto py-10 px-8 lg:px-0">
+          <h2 className="lg:text-4xl text-2xl mx-auto text-center">Sent A Message</h2>
+          <form className=" text-center lg:w-1/2 mx-auto py-5 lg:py-10 px-8 lg:px-0">
               <div className="flex lg:gap-8 gap-5 flex-col lg:flex-row">
-                <input type="text" placeholder="Name" className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-3 text-2xl w-full"/>
-                <input type="email" placeholder="Email"  className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-3 text-2xl w-full"/>
+                <input type="text" placeholder="Name" className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-2 lg:py-3 lg:text-2xl text-xl w-full"/>
+                <input type="email" placeholder="Email"  className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-2 lg:py-3 lg:text-2xl text-xl w-full"/>
               </div>
-                <textarea name="" id="" rows={5} placeholder="Message"  className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-3 text-2xl w-full lg:mt-8 mt-5"></textarea>
-                <button className="text-xl bg-[#ABD6D4] text-black mt-8 rounded-lg px-8 py-3 hover:bg-[#4E7661] hover:text-white">Submit</button>
+                <textarea name="" id="" rows={5} placeholder="Message"  className="border-none outline-none text-gray-800 rounded-lg bg-[#ABD6D4] px-5 py-2 lg:py-3 lg:text-2xl text-xl w-full lg:mt-8 mt-5"></textarea>
+                <button className="text-xl bg-[#ABD6D4] text-black mt-8 rounded-lg px-8 lg:py-3 py-2 hover:bg-[#4E7661] hover:text-white">Submit</button>
           </form>
       </div>
 

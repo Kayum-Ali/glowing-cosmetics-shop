@@ -51,10 +51,10 @@ const Footer = () => {
                         </h2>
                         <div className="mt-5 leading-4 space-y-3 opacity-80">
                             <li className="li"><Link>Start a Return</Link></li>
-                            <li className="li"><Link>Contact Us</Link></li>
+                            <li className="li"><Link to={`/contact`}>Contact Us</Link></li>
                             <li className="li"><Link>Shipping FAQ</Link></li>
                             <li className="li"><Link>Terms & Conditions</Link></li>
-                            <li className="li"><Link>Nimu Inventory</Link></li>
+                            <li className="li"><Link to={`our-team`}>Our Team</Link></li>
                         </div>
                     </div>
                     {/* 4th */}

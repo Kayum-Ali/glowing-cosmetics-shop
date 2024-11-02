@@ -16,6 +16,7 @@ import FAQ from "../pages/FAQ";
 import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import OurTeam from "../pages/OurTeam";
 
 
 
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
         {
           path: '/login',
           element: <Login></Login>
+        },
+        {
+          path: '/our-team',
+          element: <OurTeam></OurTeam>
         }
        
         
