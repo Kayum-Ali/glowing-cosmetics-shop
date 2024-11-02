@@ -4,8 +4,13 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import "../styles/team.css";
+import { useEffect } from "react";
 
 const OurTeam = () => {
+    useEffect(()=>{
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        document.title = "Our Team";
+      },[])
   return (
     <div >
       {/* breadcumbs */}

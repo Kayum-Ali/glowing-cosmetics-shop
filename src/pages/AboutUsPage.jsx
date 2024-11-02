@@ -15,9 +15,13 @@ import img6 from "../assets/testimonial-03.png";
 // import required modules
 import { Mousewheel, Pagination } from "swiper/modules";
 import "../styles/AboutUs.css";
+import { useEffect } from "react";
 
 const AboutUsPage = () => {
-  document.title = "About Us";
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.title = "About Us";
+  },[])
   return (
     <div>
       <div className="bg1 w-full lg:h-[600px] h-[300px] bg-cover bg-center relative">

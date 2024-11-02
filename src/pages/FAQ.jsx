@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const FAQ = () => {
-  document.title = "FAQ";
+  
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.title = "FAQ";
+  },[])
   return (
     <div className="">
       {/* breadcumbs */}

@@ -25,9 +25,12 @@ const CountdownTimer = ({ endDate }) => {
     }
     return timeLeft;
   }
-
-  useEffect(() => {
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: "smooth" });
     document.title= "Video";
+  },[])
+  
+  useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
