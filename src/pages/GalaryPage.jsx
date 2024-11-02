@@ -205,16 +205,16 @@ export default function GalaryPage() {
             <form method="dialog ">
               {/* if there is a button in form, it will close the modal */}
               <button className="">
-                <IoMdClose className="text-3xl text-white" />
+                <IoMdClose className="text-3xl lg:text-white text-black" />
               </button>
               {/* <a href="https://glowing.g5plus.net/elementor/wp-content/uploads/2021/10/product-01-4.jpg" download=""><i class="eicon-download-bold" aria-label="Download"></i>Download image</a> */}
 
               <IoIosShareAlt
                 onClick={() => setToggle(!toggle)}
-                className="text-3xl text-white"
+                className="text-3xl lg:text-white text-black"
               />
               <div
-                className={`bg-white p-4 rounded-xl absolute top-24 right-4 w-max ${
+                className={`lg:bg-white bg-black  p-4 rounded-xl absolute top-24 right-4 w-max ${
                   toggle ? "block" : "hidden"
                 }`}
               >
@@ -224,7 +224,7 @@ export default function GalaryPage() {
                   className="flex items-center gap-2"
                 >
                   <BiLogoFacebookSquare className=" text-xl text-purple-500" />
-                  <h2>Share on Facebook</h2>
+                  <h2 className="text-white lg:text-black">Share on Facebook</h2>
                 </Link>
                 <Link
                   to={`https://twitter.com/intent/tweet?text= https%3A%2F%2Fglowing.g5plus.net%2Felementor%2Felements%2Fgallery%2F%23elementor-action%253Aaction%253Dlightbox%2526settings%253DeyJpZCI6NDczLCJ1cmwiOiJodHRwczpcL1wvZ2xvd2luZy5nNXBsdXMubmV0XC9lbGVtZW50b3JcL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjFcLzEwXC9wcm9kdWN0LTAxLTQuanBnIiwic2xpZGVzaG93IjoiNzE5YzY1OSJ9`}
@@ -232,7 +232,7 @@ export default function GalaryPage() {
                   className="flex items-center gap-2"
                 >
                   <IoLogoTwitter className=" text-xl text-blue-500" />
-                  <h2>Share on twitter</h2>
+                  <h2 className="text-white lg:text-black">Share on twitter</h2>
                 </Link>
                 <Link
                   to={`https://www.pinterest.com/pin/create/button/?url=&amp;media=https%3A%2F%2Fglowing.g5plus.net%2Felementor%2Fwp-content%2Fuploads%2F2021%2F10%2Fproduct-01-4.jpg`}
@@ -240,7 +240,7 @@ export default function GalaryPage() {
                   className="flex items-center gap-2"
                 >
                   <LiaPinterest className=" text-xl text-red-500" />
-                  <h2>Share on pinterest</h2>
+                  <h2 className="text-white lg:text-black">Share on pinterest</h2>
                 </Link>
                 <Link
                   to={``}
@@ -249,7 +249,7 @@ export default function GalaryPage() {
                   className="flex items-center gap-2"
                 >
                   <RiDownload2Fill className=" text-xl text-gray-500" />
-                  <h2>Download image</h2>
+                  <h2 className="text-white lg:text-black">Download image</h2>
                 </Link>
               </div>
             </form>
@@ -260,10 +260,49 @@ export default function GalaryPage() {
       <div className="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
         <div className="py-10 text-center">
           <h2 className="uppercase">Build Website</h2>
-          <h2 className="text-4xl font-bold mt-6">Gallery Metro</h2>
+          <h2 className="text-4xl font-bold mt-6">Gallery Masonry</h2>
         </div>
-        <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-3  lg:gap-4 gap-2 md:gap-3 max-w-5xl p-4">
-          <img src="" alt="" />
+        <div className="grid grid-cols-3 grid-rows-3   lg:gap-4 gap-2 md:gap-3 max-w-5xl p-4">
+        <img
+            src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536199/banner-09-600x561_ukb2b1.jpg`}
+            alt="Image 1"
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+        <img
+            src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536294/banner-08-600x600_owyob1.jpg`}
+            alt="Image 1"
+            className=" w-full h-auto rounded-lg shadow-md"
+          />
+        <img
+            src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536349/banner-07-600x600_xz9u16.jpg`}
+            alt="Image 1"
+            className=" w-full h-auto rounded-lg shadow-md"
+          />
+        <img
+            src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536398/banner-06-600x600_ogseik.jpg`}
+            alt="Image 1"
+            className="w-full h-auto rounded-lg shadow-md"
+          />
+        <img
+            src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536471/blog-03-1024x613_ja5zfe.jpg`}
+            alt="Image 1"
+            className=" w-full h-full rounded-lg shadow-md"
+          />
+        <img
+            src={img2}
+            alt="Image 1"
+            className=" w-full h-full rounded-lg shadow-md"
+          />
+        <img
+            src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536541/blog-05-1024x613_ddfxnq.jpg`}
+            alt="Image 1"
+            className=" w-full h-auto rounded-lg shadow-md"
+          />
+        <img
+            src={`https://res.cloudinary.com/dqescabbl/image/upload/v1730536573/blog-07-1024x613_car0jt.jpg`}
+            alt="Image 1"
+            className=" w-full h-auto rounded-lg shadow-md"
+          />
 
         </div>
       </div>
