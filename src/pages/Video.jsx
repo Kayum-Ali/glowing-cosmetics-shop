@@ -113,11 +113,11 @@ const CountdownTimer = ({ endDate }) => {
       {/* banner */}
       <div className="container mx-auto flex gap-14 flex-col px-5 lg:flex-row  items-center">
            {/* img */}
-           <div >
+           <div className="flex-1 w-full">
              <img className="w-full rounded-lg" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730135094/countdown-07-600x600_rolga1.jpg" alt="" />
            </div>
            {/* content */}
-           <div className="space-y-5">
+           <div className="space-y-5 flex-1">
                 <div className="flex gap-5">
                     <h2 className="text-gray-400 font-medium">Special offer</h2>
                     <button className="bg-[#B88539] px-3 text-white rounded-lg text-sm">-20%</button>

@@ -15,14 +15,15 @@ const Login = () => {
   const { signUp, login,googleLogin } = useContext(AuthContext);
    const navigate = useNavigate()
    const location = useLocation()
+   const from = location?.state ? location.state : '/'
 
 
    useEffect(() => {
     if (user) {
-      navigate('/')
+      navigate(from)
     }
-  }, [navigate, user])
-   const from = location?.state ? location.state : '/'
+  }, [from, navigate, user])
+   
   const handleSubmit = (e) => {
     e.preventDefault();
     if (currentState === "Sign Up") {

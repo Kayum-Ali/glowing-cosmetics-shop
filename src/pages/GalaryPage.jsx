@@ -257,7 +257,7 @@ export default function GalaryPage() {
         </div>
       </dialog>
 
-      <div className="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+      <div className="bg-gray-100 flex justify-center flex-col items-center">
         <div className="py-10 text-center">
           <h2 className="uppercase">Build Website</h2>
           <h2 className="text-4xl font-bold mt-6">Gallery Masonry</h2>
@@ -307,7 +307,7 @@ export default function GalaryPage() {
         </div>
       </div>
 
-      <div className="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+      <div className="bg-gray-100 flex justify-center flex-col items-center pb-5">
         <div className="py-10 text-center">
           <h2 className="uppercase">Build Website</h2>
           <h2 className="text-4xl font-bold mt-6">Gallery Metro</h2>
