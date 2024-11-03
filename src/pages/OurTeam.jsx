@@ -71,7 +71,7 @@ const OurTeam = () => {
         <div>
           <div className="bg-[#DEDEE0] h-[330px] relative profile overflow-hidden rounded-md">
             <img
-              className="w-full bg-cover bg-center pt-5"
+              className="w-full bg-cover  pt-5"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1730549179/download__5_-removebg-preview_yorjwh.png"
               alt=""
             />

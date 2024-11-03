@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "../styles/ShopPage.css";
 import { Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types'
 
 const ShopPage = () => {
   useEffect(() => {
@@ -182,5 +183,11 @@ const ShopPage = () => {
     </div>
   );
 };
+
+ShopPage.propTypes = {
+    endDate: PropTypes.string.isRequired,
+  };
+
+
 
 export default ShopPage;

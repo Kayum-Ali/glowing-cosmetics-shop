@@ -11,12 +11,13 @@ import Slider1 from "../components/Slider1";
 import ContactUs from "../pages/ContactUs";
 import GalaryPage from "../pages/GalaryPage";
 import FeaturedProductsDetails from "../pages/FeaturedProductsDetails";
-import Video from "../pages/video";
 import FAQ from "../pages/FAQ";
 import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import OurTeam from "../pages/OurTeam";
+import BestSelling from "../pages/BestSelling";
+import Video from "../pages/Video";
 
 
 
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
         {
           path: '/our-team',
           element: <OurTeam></OurTeam>
+        },
+        {
+          path: '/best-selling',
+          element: <BestSelling></BestSelling>
         }
        
         

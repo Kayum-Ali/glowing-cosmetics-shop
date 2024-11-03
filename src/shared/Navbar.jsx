@@ -37,14 +37,9 @@ const Navbar = () => {
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               {toggle ? (
-                <RxCross1
-                  onClick={() => setToggle(!toggle)}
-                  className="text-xl"
-                />
+                <RxCross1 onClick={() => setToggle(!toggle)} className="text-xl" />
               ) : (
-                <RxHamburgerMenu
-                  onClick={() => setToggle(!toggle)}
-                  className="text-xl"
+                <RxHamburgerMenu  onClick={() => setToggle(!toggle)}  className="text-xl"
                 />
               )}
             </div>
@@ -55,65 +50,35 @@ const Navbar = () => {
               }`}
             >
               {/* sm screen */}
-              <li>
-                <NavLink to={`/`}>HOME</NavLink>
-              </li>
+              <li><NavLink to={`/`}>HOME</NavLink></li>
               <li className="page">
                 <p>ELEMENT</p>
-                <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute top-4 left-20  pages">
+                <div className="w-[180px] h-[120px] text-white font-medium p-3 absolute top-4 left-20  pages">
                 <div className="">
-                  <li>
-                    <Link to={`/video`} className="block">
-                      Video
-                    </Link>
-                  </li>
-                  <li>
-                    {" "}
-                    <Link to={`/contact`} className="block">
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={`/faq`} className="block">
-                      FAQ
-                    </Link>
+                  <li><Link to={`/video`} className="block"> Video</Link></li>
+                  <li>{" "}<Link to={`/best-selling`} className="block">Best Selling Products</Link></li>
+                  <li> <Link to={`/faq`} className="block"> FAQ </Link>
                   </li>
                 </div>
               </div>
               </li>
-              <li>
-                <NavLink to={`/shop`}>SHOP</NavLink>
-              </li>
-              <li>
-                <NavLink to={`/blog`}>BLOG</NavLink>
-              </li>
+              <li> <NavLink to={`/shop`}>SHOP</NavLink> </li>
+              <li><NavLink to={`/blog`}>BLOG</NavLink> </li>
               <li className="page">
                 <p>PAGE</p>
                 {/* pages content */}
                 <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute  top-4 left-14 pages">
                   <div className="">
-                    <li>
-                      <Link to={`/about-us`} className="block">
-                        About Us
-                      </Link>
+                    <li> <Link to={`/about-us`} className="block">About Us</Link>
                     </li>
-                    <li>
-                      {" "}
-                      <Link to={`/contact`} className="block">
-                        Contact
-                      </Link>
+                    <li> {" "}<Link to={`/contact`} className="block">Contact</Link>
                     </li>
-                    <li>
-                      <Link to={`/faq`} className="block">
-                        FAQ
-                      </Link>
+                    <li><Link to={`/faq`} className="block"> FAQ</Link>
                     </li>
                   </div>
                 </div>
               </li>
-              <li>
-                <NavLink to={`/galary`}>GALARY</NavLink>
-              </li>
+              <li><NavLink to={`/galary`}>GALARY</NavLink></li>
             </ul>
           </div>
           <Link to={`/`} className="lg:text-xl lg:font-bold font-medium text-[#C5A3FF]">
@@ -124,68 +89,34 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {/* lg screen */}
-            <li>
-              <NavLink to={`/`}>HOME</NavLink>
-            </li>
+            <li> <NavLink to={`/`}>HOME</NavLink> </li>
             <li className="page">
               <p>ELEMENT</p>
               {/* pages content */}
-              <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute bottom-0 top-9  pages">
+              <div className="w-[180px] h-[120px] text-white font-medium p-3 absolute bottom-0 top-9  pages">
                 <div className="">
-                  <li>
-                    <Link to={`/video`} className="block">
-                      Video
-                    </Link>
-                  </li>
-                  <li>
-                    {" "}
-                    <Link to={`/contact`} className="block">
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to={`/faq`} className="block">
-                      FAQ
-                    </Link>
-                  </li>
+                  <li> <Link to={`/video`} className="block"> Video </Link> </li>
+                  <li>{" "}<Link to={`/best-selling`} className="block">Best Selling Products</Link>      </li>
+                  <li> <Link to={`/faq`} className="block"> FAQ </Link></li>
                 </div>
               </div>
             </li>
-            <li>
-              <NavLink to={`/shop`}>SHOP</NavLink>
-            </li>
-            <li>
-              <NavLink to={`/blog`}>BLOG</NavLink>
-            </li>
+            <li> <NavLink to={`/shop`}>SHOP</NavLink> </li>
+            <li><NavLink to={`/blog`}>BLOG</NavLink></li>
             <li className="page">
-              {/* <NavLink to={`/page`}>PAGE</NavLink> */}
               <p>PAGE</p>
-
               {/* pages content */}
               <div className="w-[150px] h-[120px] text-white font-medium p-3 absolute bottom-0 top-9  pages">
                 <div className="">
-                  <li>
-                    <Link to={`/about-us`} className="block">
-                      About Us
-                    </Link>
+                  <li><Link to={`/about-us`} className="block"> About Us </Link>
                   </li>
-                  <li>
-                    {" "}
-                    <Link to={`/contact`} className="block">
-                      Contact
-                    </Link>
+                  <li> {" "}<Link to={`/contact`} className="block">Contact</Link>
                   </li>
-                  <li>
-                    <Link to={`/faq`} className="block">
-                      FAQ
-                    </Link>
-                  </li>
+                  <li><Link to={`/faq`} className="block"> FAQ</Link></li>
                 </div>
               </div>
             </li>
-            <li>
-              <NavLink to={`/galary`}>GALARY</NavLink>
-            </li>
+            <li><NavLink to={`/galary`}>GALARY</NavLink></li>
           </ul>
         </div>
         <div className="navbar-end text-2xl flex lg:gap-8 gap-3 font-bold text-[#4e7661]">
@@ -205,11 +136,8 @@ const Navbar = () => {
             >
               <li className="flex justify-between">
                 <p>Setting</p>
-                {/* <p className="badge">New</p> */}
               </li>
-              <li>
-                <p onClick={handleLogout}>Logout</p>
-              </li>
+              <li><p onClick={handleLogout}>Logout</p></li>
             </ul>
           </NavLink>
           <div className="flex relative">
