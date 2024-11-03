@@ -41,10 +41,10 @@ const ShopPage = () => {
           </h2>
         </div>
         {/* slider */}
-        <div className="lg:py-10 py-7 md:py-8 ">
+        <div className="lg:py-10 py-7 md:py-8 px-5">
           <Swiper
             slidesPerView={4}
-            spaceBetween={20}
+            spaceBetween={30}
             pagination={{
               clickable: true,
             }}
@@ -54,21 +54,42 @@ const ShopPage = () => {
             <SwiperSlide>
                 <div className="bg-[#F5F5F5] p-14 space-y-5 text-center rounded-md">
                     <img className="w-[150px] bg-[#916A6A] transColor" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730636399/facial-massage_u9qvfu.png" alt="" />
-                    <h2 className="text-2xl font-bold">Facial Area</h2>
+                    <h2 className="lg:text-2xl text-xl font-bold">Facial Area</h2>
                       
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="bg-[#F5F5F5] p-14 space-y-5 text-center rounded-md">
                     <img className="w-[150px] bg-[#916A6A] transColor" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730637307/handshake_jpjsq1.png" alt="" />
-                    <h2 className="text-2xl font-bold">Hand zone</h2>
+                    <h2 className="lg:text-2xl text-xl font-bold">Hand zone</h2>
                       
                 </div>
             </SwiperSlide>
             <SwiperSlide>
                 <div className="bg-[#F5F5F5] p-14 space-y-5 text-center rounded-md">
                     <img className="w-[150px] bg-[#916A6A] transColor" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730637376/back_ibqqpj.png" alt="" />
-                    <h2 className="text-2xl font-bold">Back area</h2>
+                    <h2 className="lg:text-2xl text-xl font-bold">Back area</h2>
+                      
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="bg-[#F5F5F5] p-14 space-y-5 text-center rounded-md">
+                    <img className="w-[150px] bg-[#916A6A] transColor" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730637747/success_ics73g.png" alt="" />
+                    <h2 className="lg:text-2xl text-xl font-bold">life Zone</h2>
+                      
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="bg-[#F5F5F5] p-14 space-y-5 text-center rounded-md">
+                    <img className="w-[150px] bg-[#916A6A] transColor" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730640114/bikini_eagjll.png" alt="" />
+                    <h2 className="lg:text-2xl text-xl font-bold">Bikini Area</h2>
+                      
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="bg-[#F5F5F5] p-14 space-y-5 text-center rounded-md">
+                    <img className="w-[150px] bg-[#916A6A] transColor" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730640364/legs_gcuyym.png" alt="" />
+                    <h2 className="lg:text-2xl text-xl font-bold">Leg Area</h2>
                       
                 </div>
             </SwiperSlide>
