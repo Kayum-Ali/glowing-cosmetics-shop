@@ -5,6 +5,10 @@ import  { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const Video = () => {
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.title= "Video";
+  },[])
  
 
 const CountdownTimer = ({ endDate }) => {
@@ -25,10 +29,7 @@ const CountdownTimer = ({ endDate }) => {
     }
     return timeLeft;
   }
-  useEffect(()=>{
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    document.title= "Video";
-  },[])
+
 
   useEffect(() => {
     const timer = setInterval(() => {
