@@ -75,11 +75,13 @@ const ContactUs = () => {
             </div>
           </div>
       </div>
-   
+      {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.637437501074!2d88.89354491023673!3d25.78253647724424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e351004e11d2ab%3A0x41fabd72f76122d4!2sModina%20Bag%20and%20Varieties%20Store!5e0!3m2!1sen!2sbd!4v1730638258923!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
 
       {/* google map */}
       <div className="my-5">
-        <iframe className="w-4/5 lg:h-[550px] h-auto mx-auto rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.16040383638!2d88.89368367485659!3d25.78214830776096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e3510c25d5cb7d%3A0xdc031227e1d15836!2sSaidpur%20Plaza!5e1!3m2!1sen!2sbd!4v1729948180682!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        {/* <iframe className="w-4/5 lg:h-[550px] h-auto mx-auto rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.637437501074!2d88.89354491023673!3d25.78253647724424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e351004e11d2ab%3A0x41fabd72f76122d4!2sModina%20Bag%20and%20Varieties%20Store!5e0!3m2!1sen!2sbd!4v1730638258923!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
+
+        <iframe className="w-4/5 lg:h-[550px] h-auto mx-auto rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.6374368118386!2d88.89393651744383!3d25.782536499999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e351004e11d2ab%3A0x41fabd72f76122d4!2sModina%20Bag%20and%20Varieties%20Store!5e0!3m2!1sen!2sbd!4v1730639064600!5m2!1sen!2sbd"  allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <div className="pt-8">

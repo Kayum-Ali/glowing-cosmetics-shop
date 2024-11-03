@@ -1,0 +1,7 @@
+.transColor{
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: cover;
+    opacity: 0.7;
+}
