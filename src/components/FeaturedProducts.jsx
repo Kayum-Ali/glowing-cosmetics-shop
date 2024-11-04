@@ -27,6 +27,10 @@ const FeaturedProducts = () => {
       setLoading(false);
     
   }, []);
+
+  if(loading){
+    return <div className="loading loading-bars loading-lg text-green-500 mx-auto flex justify-between my-5"></div>
+  }
  
   return (
     <div className="py-16 ">

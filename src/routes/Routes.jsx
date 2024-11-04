@@ -18,6 +18,7 @@ import PrivateRoute from "./PrivateRoute";
 import OurTeam from "../pages/OurTeam";
 import BestSelling from "../pages/BestSelling";
 import Video from "../pages/Video";
+import TopSaverDetails from "../pages/TopSaverDetails";
 
 
 
@@ -100,6 +101,11 @@ const router = createBrowserRouter([
         {
           path: '/best-selling',
           element: <BestSelling></BestSelling>
+        },
+        {
+          path: '/top-savers/:id',
+          element: <PrivateRoute><TopSaverDetails></TopSaverDetails></PrivateRoute>,
+          loader: ({params})=> fetch(`http://localhost:5000/top-savers/${params.id}`),
         }
        
         

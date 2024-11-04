@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
 const BestSelling = () => {
+  useEffect(()=>{
+    window.scrollTo({ top: 80, behavior: "smooth" });
+    document.title = "Best Selling Products";
+  },[])
     return (
         <div>
            {/* banner img */}
