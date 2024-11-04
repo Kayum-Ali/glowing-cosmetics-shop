@@ -289,6 +289,32 @@ const TopSaverDetails = () => {
               </div>
             </div>
           </div>
+          <hr className="" />
+          {/* safe checkout */}
+          <fieldset className="border-2 text-center border-[#885E5E] rounded-md">
+             <legend className="bg-[#885E5E] text-white font-bold py-1 px-2 rounded-lg">Guaranteed SAFE Checkout</legend>
+             <div className="flex  justify-center my-5">
+                 <img className="lg:w-3/5 w-4/5 " src="https://res.cloudinary.com/dqescabbl/image/upload/v1730709199/safe-checkout_3_miogt1.png" alt="" />
+            </div>
+            {/* free, 100%, 30 day */}
+            <div className="bg-[#885E5E] text-white flex flex-col lg:flex-row md:flex-row  px-5 gap-5 py-5 justify-center">
+              <div>
+                   <h3 className="font-bold">Free</h3>
+                   <p>Worldwide Shopping</p>
+              </div>
+              <div>
+                   <h3 className="font-bold">100%</h3>
+                   <p>Guaranteed Satisfaction</p>
+              </div>
+              <div>
+                   <h3 className="font-bold">30 Day</h3>
+                   <p>Guaranteed Money Back</p>
+              </div>
+               
+            </div>
+          </fieldset>
+
+
         </div>
       </div>
 

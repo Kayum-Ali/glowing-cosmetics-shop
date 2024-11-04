@@ -116,10 +116,23 @@ const ShopPage = () => {
         {/* slider */}
         <div className="lg:py-10 py-7 md:py-8 ">
           <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
+            
             pagination={{
               clickable: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 5,
+                spaceBetween: 40,
+              },
             }}
             modules={[Pagination]}
             className="mySwiper"
@@ -207,6 +220,7 @@ const ShopPage = () => {
           pagination={{
             clickable: true,
           }}
+          
           modules={[FreeMode, Pagination]}
           className="mySwiper"
         >
