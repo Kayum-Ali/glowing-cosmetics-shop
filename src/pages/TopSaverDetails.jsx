@@ -34,7 +34,7 @@ const TopSaverDetails = () => {
   },[])
   useEffect(() => {
     
-    fetch("https://glowing-cosmetics-shop-server.vercel.app/review", {withCredentials: true})
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/top-Saver-Review", {withCredentials: true})
       .then((response) => response.json())
       .then((review) => setReview(review));
   }, [refetch]);
@@ -58,7 +58,7 @@ const TopSaverDetails = () => {
     const newReview = { name, email, review, rating, photo, formattedDate };
 
     console.log(newReview);
-    fetch("https://glowing-cosmetics-shop-server.vercel.app/review", {
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/top-Saver-Review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -292,7 +292,7 @@ const TopSaverDetails = () => {
           <hr className="" />
           {/* safe checkout */}
           <fieldset className="border-2 text-center border-[#885E5E] rounded-md">
-             <legend className="bg-[#885E5E] text-white font-bold py-1 px-2 rounded-lg">Guaranteed SAFE Checkout</legend>
+             <legend className="bg-[#885E5E] text-white lg:font-bold py-1 px-2 rounded-lg">Guaranteed SAFE Checkout</legend>
              <div className="flex  justify-center my-5">
                  <img className="lg:w-3/5 w-4/5 " src="https://res.cloudinary.com/dqescabbl/image/upload/v1730709199/safe-checkout_3_miogt1.png" alt="" />
             </div>
