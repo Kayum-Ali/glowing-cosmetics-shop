@@ -242,15 +242,16 @@ const ShopPage = () => {
                                      <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
                                      <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
                                   </div>
+                                  <h2>Brand : {product.brand}</h2>
                                </div>
                                
                            </div>
                            <div className="absolute hover:w-0 w-full z-10  hover:-z-0  h-full duration-1000  ease-in-out">
                               <img className="w-full"  src={product.img} alt="" />
                               
-                              {/* <div className="absolute top-3 lg:left-6 left-2 text-black lg:space-y-2 space-y-1
+                              <div className="absolute top-3 lg:left-6 left-2 text-black lg:space-y-2 space-y-1
                                ">
-                                   <h2 className="lg:text-2xl text-sm text-black lg:font-bold">${product.price}</h2>
+                                   <h2  className="lg:text-2xl text-sm text-black lg:font-bold flex ">${product.price} </h2>
                                    <p className="lg:text-xl text-xs hover:underline lg:font-medium">{product.productName}</p>
                                   <div className="flex lg:gap-2 ">
                                      <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
@@ -259,7 +260,8 @@ const ShopPage = () => {
                                      <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
                                      <IoIosStar className="lg:text-xl hidden lg:block md:block text-sm text-[#4e7661]" />
                                   </div>
-                               </div> */}
+                                  <h2>Brand : {product.brand}</h2>
+                               </div>
                               
                            </div>
                              

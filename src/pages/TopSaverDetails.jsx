@@ -95,8 +95,9 @@ const TopSaverDetails = () => {
       {/* product details */}
       <div className="flex flex-col lg:flex-row md:flex-row container mx-auto gap-14 lg:py-16 py-3 md:py-14 px-5">
         <div className="flex-1">
+
           <img className="w-full lg:h-[600px] h-auto" src={activeIMG} alt="" />
-          <div className="flex lg:gap-5 gap-2 mt-3">
+          <div className="flex flex-wrap lg:gap-5 gap-2 mt-3">
             <img
               onClick={() => setActiveIMG(products.img)}
               className="lg:w-32 w-20 hover:border-2 hover:border-[#FFC1CC] rounded-lg"
@@ -128,7 +129,9 @@ const TopSaverDetails = () => {
               alt=""
             />
           </div>
+          
         </div>
+
         <div className="flex-1 space-y-3">
           <div className="flex gap-3">
             <div className="flex gap-2">
@@ -157,7 +160,7 @@ const TopSaverDetails = () => {
             </h2>
           </div>
           {/* description */}
-          <p className="text-lg font-medium">{products.description}</p>
+          <p className="text-lg font-medium">{products.description.slice(0,50)}</p>
           {/* color */}
           <div className="flex gap-3 items-center">
             <label htmlFor="color" className="text-2xl font-bold">
@@ -261,6 +264,11 @@ const TopSaverDetails = () => {
                 })}
               </p>
             </div>
+            <div className="flex items-center gap-10">
+              <h2 className="text-black font-bold w-20">Brand : </h2>
+              <p>{products.brand}</p>
+            </div>
+           
             <div className="flex gap-10 ">
               <h2 className="text-black font-bold w-20">Share : </h2>
               <div className="flex gap-3 opacity-70">
@@ -279,8 +287,7 @@ const TopSaverDetails = () => {
         </div>
       </div>
 
-      {/* textColor="secondary"
-      indicatorColor="secondary" */}
+    
       {/* description, info, reviews */}
       <div className="text-center text-sm lg:text-xl container mx-auto ">
         <Tabs>
