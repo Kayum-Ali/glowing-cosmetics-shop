@@ -27,9 +27,7 @@ const FeaturedProducts = () => {
       setLoading(false);
     
   }, []);
-  if (loading) {
-    return <div className="loading loading-bars loading-lg text-green-500 mx-auto flex justify-between my-5"></div>
-  }
+ 
   return (
     <div className="py-16 ">
       <div className="text-center space-y-3 ">
@@ -37,7 +35,9 @@ const FeaturedProducts = () => {
         <p className="font-medium">Get the skin you want to feel</p>
       </div>
     
-
+       {
+        loading && <div className="loading loading-bars loading-lg text-green-500 mx-auto flex justify-between my-5"></div>
+       }
       <div className="container mx-auto py-12">
         <Swiper
           slidesPerView={3}

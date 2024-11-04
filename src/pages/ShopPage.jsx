@@ -10,6 +10,13 @@ import { useEffect, useState } from "react";
 import PropTypes from 'prop-types'
 
 const ShopPage = () => {
+  const [topSaver, setTopSaver] = useState([])
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/top-savers')
+    .then(res => res.json())
+    .then(data => setTopSaver(data))
+  },[])
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     document.title = "Video";
@@ -179,6 +186,9 @@ const ShopPage = () => {
             <CountdownTimer endDate="2024-11-31T20:59:59" />
           </div>
         </div>
+
+        {/* top saver data */}
+
       </section>
     </div>
   );

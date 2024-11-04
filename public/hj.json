@@ -64,6 +64,50 @@
       "https://res.cloudinary.com/dqescabbl/image/upload/v1730647303/product-17-800x800_jgvzme.jpg"
     ],
     "discountPersentage": 11
+  },
+  {
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1730693278/product-14-100x100.jpg",
+    "id": 4,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1730693325/product-15-100x100.jpg",
+    "price": 156,
+    "discountPrice": 136,
+    "sold": 19,
+    "stock": 40,
+    "brand": "Amanda",
+    "productName": "Solimo Eye Makeup Remover",
+    "description": "Not only is the toy bar shaped with funny animals on top, but it also has funny sounds that help children feel excited to help them learn to reflect, grasp, look at objects, very Good for brain development Made of high-quality fabric, with good sweat absorbency, helps prevent back heat, sweat when sleeping.",
+    "category": "Back area, Bikini area, Life Zone",
+    "SKU": "MEGA-HR",
+  
+    "Tags": ["Oils & Serums", "Skincare", "Moisturisers"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1730693356/product-01-100x100.jpg",
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1730693378/product-26-100x100.jpg",
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1730646680/product-04-100x100_j0acmt.jpg"
+    ],
+    "discountPersentage": 13
+  },
+  {
+    "img": "https://res.cloudinary.com/dqescabbl/image/upload/v1730695400/product-21-100x100_1_aufdbs.jpg",
+    "id": 5,
+    "hoverImg": "https://res.cloudinary.com/dqescabbl/image/upload/v1730695429/product-19-100x100_1_mkcdrd.jpg",
+    "price": 260,
+    "discountPrice": 240,
+    "sold": 15,
+    "stock": 45,
+    "brand": "AESOP",
+    "productName": "Fortunate Face",
+    "description": "Not only is the toy bar shaped with funny animals on top, but it also has funny sounds that help children feel excited to help them learn to reflect, grasp, look at objects, very Good for brain development Made of high-quality fabric, with good sweat absorbency, helps prevent back heat, sweat when sleeping.",
+    "category": "Back area, Bikini area, Life Zone",
+    "SKU": "MEGA-HR-1-9",
+  
+    "Tags": ["Oils & Serums", "Skincare", "Moisturisers"],
+    "extraImg": [
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1730695449/product-28-100x100_oucix8.jpg",
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1730695471/product-16-100x100_gswajg.jpg",
+      "https://res.cloudinary.com/dqescabbl/image/upload/v1730695486/product-30-100x100_pazm82.jpg"
+    ],
+    "discountPersentage": 4
   }
   
 ]
