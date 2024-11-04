@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const TopSaverDetails = () => {
-    const { user, data, setData, refetc, setRefetc } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const photo = user.photoURL;
     const product = useLoaderData();
     const [size, setSize] = useState("");
@@ -21,8 +21,6 @@ const TopSaverDetails = () => {
     const [rating, setRating] = useState(0);
     const [review, setReview] = useState([]);
     const [refetch, setRefetch] = useState(false);
-    const [alreadyInCart, setAlreadyInCart] = useState(false);
-    // console.log(typeof review[0].rating);
 
     const handleClear = () => {
         setSize("");
