@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import "../styles/ShopPage.css";
 // import { Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 import { PiShoppingBagOpenBold } from "react-icons/pi";
@@ -21,13 +21,13 @@ import { IoEyeOutline, IoStarOutline } from "react-icons/io5";
 import { IoIosStar } from "react-icons/io";
 
 const ShopPage = () => {
-  const [topSaver, setTopSaver] = useState([])
+  const [topSaver, setTopSaver] = useState([]);
 
-  useEffect(()=>{
-    fetch('https://glowing-cosmetics-shop-server.vercel.app/top-savers')
-    .then(res => res.json())
-    .then(data => setTopSaver(data))
-  },[])
+  useEffect(() => {
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/top-savers")
+      .then((res) => res.json())
+      .then((data) => setTopSaver(data));
+  }, []);
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     document.title = "Shop";
@@ -116,7 +116,6 @@ const ShopPage = () => {
         {/* slider */}
         <div className="lg:py-10 py-7 md:py-8 ">
           <Swiper
-            
             pagination={{
               clickable: true,
             }}
@@ -213,96 +212,131 @@ const ShopPage = () => {
 
         {/* top saver data */}
         <div className=" py-12">
-        <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          
-          modules={[FreeMode, Pagination]}
-          className="mySwiper"
-        >
-            {
-                topSaver.map((product, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="w-full lg:h-[440px] h-[250px] relative ">
-                        <Link to={`/top-savers/${product._id}`} className={`relative block w-full`}>
-                          
-                           <div  className="absolute hover:z-50  hover:cursor-pointer w-full h-full left-0 duration-1000 ease-in-out" >
-                               <img className="w-full " src={product.hoverImg} alt="" />
-                               {/* icon and tooltip */}
-                               <div className="absolute lg:top-36 top-5 right-2 lg:right-8 space-y-3">
-                                   <div data-tip='View Products' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg">
-                                      <PiShoppingBagOpenBold className="lg:m-3 m-2 text-2xl "/>
-                                  </div>
-                                   <div data-tip='Quick View' className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg">
-                                   <IoEyeOutline className="lg:m-3 m-2 text-2xl "/>
-                                  </div>
-                                   <div data-tip='Add Wishlist'className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg">
-                                   <IoStarOutline className="lg:m-3 m-2 text-2xl "/>
-                                  </div>
-                               </div>
-                              {/* price and name */}
-                               <div className="absolute top-3 lg:left-6 left-2 text-black lg:space-y-2 space-y-1
-                               ">
-                                   <h2 className="lg:text-2xl text-sm text-black lg:font-bold">${product.price}</h2>
-                                   <p className="lg:text-xl text-xs hover:underline lg:font-medium">{product.productName}</p>
-                                  <div className="flex lg:gap-2 ">
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                  </div>
-                                  <h2>Brand : {product.brand}</h2>
-                                  <h2>Sold: {product.sold} / {product.stock}</h2>
-                               </div>
-                               
-                           </div>
-                           <div className="absolute hover:w-0 w-full z-10  hover:-z-0  h-full duration-1000  ease-in-out">
-                              <img className="w-full"  src={product.img} alt="" />
-                              
-                              <div className="absolute top-3 lg:left-6 left-2 text-black lg:space-y-2 space-y-1
-                               ">
-                                   <h2  className="lg:text-2xl text-sm text-black lg:font-bold flex ">${product.price} </h2>
-                                   <p className="lg:text-xl text-xs hover:underline lg:font-medium">{product.productName}</p>
-                                  <div className="flex lg:gap-2 ">
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
-                                     <IoIosStar className="lg:text-xl hidden lg:block md:block text-sm text-[#4e7661]" />
-                                  </div>
-                                  <h2>Brand : {product.brand}</h2>
-                                  <h2>Sold:  {product.sold} / {product.stock}</h2>
-                               </div>
-                              
-                           </div>
-                             
-                        </Link>
-
-                        
-                       
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            freeMode={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[FreeMode, Pagination]}
+            className="mySwiper"
+          >
+            {topSaver.map((product, index) => (
+              <SwiperSlide key={index}>
+                <div className="w-full lg:h-[440px] h-[250px] relative ">
+                  <Link
+                    to={`/top-savers/${product._id}`}
+                    className={`relative block w-full`}
+                  >
+                    <div className="absolute hover:z-50  hover:cursor-pointer w-full h-full left-0 duration-1000 ease-in-out">
+                      <img className="w-full " src={product.hoverImg} alt="" />
+                      {/* icon and tooltip */}
+                      <div className="absolute lg:top-36 top-5 right-2 lg:right-8 space-y-3">
+                        <div
+                          data-tip="View Products"
+                          className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg"
+                        >
+                          <PiShoppingBagOpenBold className="lg:m-3 m-2 text-2xl " />
+                        </div>
+                        <div
+                          data-tip="Quick View"
+                          className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg"
+                        >
+                          <IoEyeOutline className="lg:m-3 m-2 text-2xl " />
+                        </div>
+                        <div
+                          data-tip="Add Wishlist"
+                          className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg"
+                        >
+                          <IoStarOutline className="lg:m-3 m-2 text-2xl " />
+                        </div>
+                      </div>
+                      {/* price and name */}
+                      <div
+                        className="absolute top-3 lg:left-6 left-2 text-black lg:space-y-2 space-y-1
+                               "
+                      >
+                        <h2 className="lg:text-2xl text-sm text-black lg:font-bold">
+                          ${product.price}
+                        </h2>
+                        <p className="lg:text-xl text-xs hover:underline lg:font-medium">
+                          {product.productName}
+                        </p>
+                        <div className="flex lg:gap-2 ">
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                        </div>
+                        <h2>Brand : {product.brand}</h2>
+                        <h2>
+                          Sold: {product.sold} / {product.stock}
+                        </h2>
+                      </div>
                     </div>
-                  </SwiperSlide>
-                ))
-            }
-         
-         
-        </Swiper>
-      </div>
+                    <div className="absolute hover:w-0 w-full z-10  hover:-z-0  h-full duration-1000  ease-in-out">
+                      <img className="w-full" src={product.img} alt="" />
 
+                      <div
+                        className="absolute top-3 lg:left-6 left-2 text-black lg:space-y-2 space-y-1
+                               "
+                      >
+                        <h2 className="lg:text-2xl text-sm text-black lg:font-bold flex ">
+                          ${product.price}{" "}
+                        </h2>
+                        <p className="lg:text-xl text-xs hover:underline lg:font-medium">
+                          {product.productName}
+                        </p>
+                        <div className="flex lg:gap-2 ">
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                          <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
+                          <IoIosStar className="lg:text-xl hidden lg:block md:block text-sm text-[#4e7661]" />
+                        </div>
+                        <h2>Brand : {product.brand}</h2>
+                        <h2>
+                          Sold: {product.sold} / {product.stock}
+                        </h2>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* top saver data banner */}
+        <div className="flex gap-5 flex-col lg:flex-row md:flex-row ">
+          <div>
+            <img className="w-full "
+              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730719332/banner-02_yjmebh.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img className="w-full "
+              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730719354/banner-03_hw9oak.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img className="w-full "
+              src="https://res.cloudinary.com/dqescabbl/image/upload/v1730719401/banner-04_ypfz1f.jpg"
+              alt=""
+            />
+          </div>
+        </div>
       </section>
     </div>
   );
 };
 
 ShopPage.propTypes = {
-    endDate: PropTypes.string.isRequired,
-  };
-
-
+  endDate: PropTypes.string.isRequired,
+};
 
 export default ShopPage;
