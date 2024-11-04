@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import credintials from "./credintials";
+import credintials from "./credentials";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_apiKey || credintials.VITE_apiKey,
