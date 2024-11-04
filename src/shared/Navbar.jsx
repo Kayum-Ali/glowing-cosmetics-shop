@@ -146,12 +146,12 @@ const Navbar = () => {
               0
             </span>
           </div>
-          <div className="flex relative">
+          <NavLink to={`/addToCart`} className="flex relative">
             <PiShoppingBagOpenBold  className=""/>
             <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">
               0
             </span>
-          </div>
+          </NavLink>
         </div>
       </nav>
     </div>

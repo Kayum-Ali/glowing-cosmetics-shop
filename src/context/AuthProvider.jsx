@@ -7,8 +7,15 @@ import PropTypes from "prop-types";
 export const AuthContext = createContext()
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
+    const [data, setData] = useState([])
+    const [refetc, setRefetc] = useState(true)
     const [loading, setLoading] = useState(true)
     const googleProvider = new GoogleAuthProvider()
+    useEffect(()=>{
+        fetch('http://localhost:5000/addToCart')
+        .then(res => res.json())
+        .then(data => setData(data))
+    },[refetc])
 
     const googleLogin = async() =>{
         setLoading(true)
@@ -31,8 +38,7 @@ const AuthProvider = ({children}) => {
     const authInfo = {
         googleLogin,
         signUp,
-        user,login,logout,loading
-
+        user,login,logout,loading,data,setData,refetc, setRefetc
     }
 
 

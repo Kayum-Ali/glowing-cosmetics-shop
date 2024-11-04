@@ -213,11 +213,25 @@ const ShopPage = () => {
         {/* top saver data */}
         <div className=" py-12">
           <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
+            // slidesPerView={3}
+            // spaceBetween={30}
             freeMode={true}
             pagination={{
               clickable: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
             }}
             modules={[FreeMode, Pagination]}
             className="mySwiper"
@@ -232,7 +246,7 @@ const ShopPage = () => {
                     <div className="absolute hover:z-50  hover:cursor-pointer w-full h-full left-0 duration-1000 ease-in-out">
                       <img className="w-full " src={product.hoverImg} alt="" />
                       {/* icon and tooltip */}
-                      <div className="absolute lg:top-36 top-5 right-2 lg:right-8 space-y-3">
+                      <div className="absolute lg:top-16 top-5 right-2 lg:right-8 space-y-3">
                         <div
                           data-tip="View Products"
                           className="bg-white hover:bg-gray-800  hover:text-white rounded-[60px] flex items-center lg:w-[50px] w-[30px] lg:h-[50px] h-[30px] tooltip hover:tooltip-open tooltip-left shadow-lg"
@@ -312,19 +326,19 @@ const ShopPage = () => {
         {/* top saver data banner */}
         <div className="flex gap-5 flex-col lg:flex-row md:flex-row ">
           <div>
-            <img className="w-full "
+            <img className="w-full rounded-md"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1730719332/banner-02_yjmebh.jpg"
               alt=""
             />
           </div>
           <div>
-            <img className="w-full "
+            <img className="w-full rounded-md"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1730719354/banner-03_hw9oak.jpg"
               alt=""
             />
           </div>
           <div>
-            <img className="w-full "
+            <img className="w-full rounded-md"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1730719401/banner-04_ypfz1f.jpg"
               alt=""
             />

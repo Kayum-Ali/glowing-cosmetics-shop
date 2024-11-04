@@ -8,11 +8,11 @@ import ReactStars from "react-stars";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { AuthContext } from "../context/AuthProvider";
-import {  toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const TopSaverDetails = () => {
-  const { user } = useContext(AuthContext);
+  const { user, data, setData, refetc,setRefetc } = useContext(AuthContext);
   const photo = user.photoURL;
   const products = useLoaderData();
   const [size, setSize] = useState("");
@@ -20,7 +20,7 @@ const TopSaverDetails = () => {
   const [activeIMG, setActiveIMG] = useState(products.img);
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState([]);
-  const [refetch, setRefetch] = useState(false)
+  const [refetch, setRefetch] = useState(false);
   // console.log(typeof review[0].rating);
 
   const handleClear = () => {
@@ -28,13 +28,16 @@ const TopSaverDetails = () => {
     setColor("");
   };
 
-  useEffect(()=>{
+  // dynamic title
+  useEffect(() => {
     window.scrollTo({ top: 80, behavior: "smooth" });
     document.title = "Top Saver Details";
-  },[])
+  }, []);
+  // fetch review
   useEffect(() => {
-    
-    fetch("https://glowing-cosmetics-shop-server.vercel.app/top-Saver-Review", {withCredentials: true})
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/top-Saver-Review", {
+      withCredentials: true,
+    })
       .then((response) => response.json())
       .then((review) => setReview(review));
   }, [refetch]);
@@ -45,8 +48,8 @@ const TopSaverDetails = () => {
 
   const handleReview = (e) => {
     e.preventDefault();
-    if(rating === 0){
-      return toast.error('Please select a rating')
+    if (rating === 0) {
+      return toast.error("Please select a rating");
     }
     const form = e.target;
     const name = form.name.value;
@@ -68,12 +71,50 @@ const TopSaverDetails = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        if(data.insertedId) {
-          toast.success('Your Review Submitted successfully')
+        if (data.insertedId) {
+          toast.success("Your Review Submitted successfully");
 
           setRefetch(!refetch);
           // setReview([...review, newReview]);
-          form.reset()
+          form.reset();
+        }
+      });
+  };
+
+  // handleaddToCart
+  const handleAddToCart = () => {
+    let added = [];
+    for (let item of data) {
+      if (item.productName === products.productName) {
+        added.push(item);
+      }
+    }
+    console.log(added);
+    if (added.length > 0) {
+       return toast.error('Item is already Added in the cart')
+
+    }
+
+    const cartData = {
+      productName: products.productName,
+      price: products.discountPrice,
+      quantity: 1,
+      photo: products.img,
+      email: user.email,
+    };
+    fetch("http://localhost:5000/addToCart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cartData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          toast.success(" added to Cart Successfully");
+          setData(...data, cartData)
+          setRefetc(!refetc);
         }
       });
   };
@@ -95,7 +136,6 @@ const TopSaverDetails = () => {
       {/* product details */}
       <div className="flex flex-col lg:flex-row md:flex-row container mx-auto gap-14 lg:py-16 py-3 md:py-14 px-5">
         <div className="flex-1">
-
           <img className="w-full lg:h-[400px] h-auto" src={activeIMG} alt="" />
           <div className="flex flex-wrap lg:gap-5 gap-2 mt-3">
             <img
@@ -129,14 +169,15 @@ const TopSaverDetails = () => {
               alt=""
             />
           </div>
-          
         </div>
 
         <div className="flex-1 space-y-3">
           <div className="flex gap-3">
             <div className="flex gap-2">
-              <h2 className="text-xl text-gray-300 line-through font-bold">${products.price}</h2>
-               <h2 className="text-xl font-bold">${products.discountPrice}</h2>
+              <h2 className="text-xl text-gray-300 line-through font-bold">
+                ${products.price}
+              </h2>
+              <h2 className="text-xl font-bold">${products.discountPrice}</h2>
             </div>
             <p className="bg-[#4E7661] text-white font-bold px-3 rounded-md">
               -{products.discountPersentage}%
@@ -160,7 +201,9 @@ const TopSaverDetails = () => {
             </h2>
           </div>
           {/* description */}
-          <p className="text-lg font-medium">{products.description.slice(0,50)}</p>
+          <p className="text-lg font-medium">
+            {products.description.slice(0, 50)}
+          </p>
           {/* stock and sold */}
           <div className="flex gap-3 items-center">
             <p className="text-[#007D71]"> {products.stock} In stock</p>
@@ -240,7 +283,10 @@ const TopSaverDetails = () => {
             <button className="bg-[#F8D7DA] hover:bg-[#FFC1CC] duration-300 lg:px-20 px-8 md:px-10 py-4 rounded-lg font-bold">
               1
             </button>
-            <button className="bg-[#4E7661] hover:bg-black duration-300 lg:px-16 px-10 py-4 text-white  rounded-lg font-bold ">
+            <button
+              onClick={handleAddToCart}
+              className="bg-[#4E7661] hover:bg-black duration-300 lg:px-16 px-10 py-4 text-white  rounded-lg font-bold "
+            >
               Add To Cart
             </button>
           </div>
@@ -273,7 +319,7 @@ const TopSaverDetails = () => {
               <h2 className="text-black font-bold w-20">Brand : </h2>
               <p>{products.brand}</p>
             </div>
-           
+
             <div className="flex gap-10 ">
               <h2 className="text-black font-bold w-20">Share : </h2>
               <div className="flex gap-3 opacity-70">
@@ -292,33 +338,35 @@ const TopSaverDetails = () => {
           <hr className="" />
           {/* safe checkout */}
           <fieldset className="border-2 text-center border-[#885E5E] rounded-md">
-             <legend className="bg-[#885E5E] text-white lg:font-bold py-1 px-2 rounded-lg">Guaranteed SAFE Checkout</legend>
-             <div className="flex  justify-center my-5">
-                 <img className="lg:w-3/5 w-4/5 " src="https://res.cloudinary.com/dqescabbl/image/upload/v1730709199/safe-checkout_3_miogt1.png" alt="" />
+            <legend className="bg-[#885E5E] text-white lg:font-bold py-1 px-2 rounded-lg">
+              Guaranteed SAFE Checkout
+            </legend>
+            <div className="flex  justify-center my-5">
+              <img
+                className="lg:w-3/5 w-4/5 "
+                src="https://res.cloudinary.com/dqescabbl/image/upload/v1730709199/safe-checkout_3_miogt1.png"
+                alt=""
+              />
             </div>
             {/* free, 100%, 30 day */}
             <div className="bg-[#885E5E] text-white flex flex-col lg:flex-row md:flex-row  px-5 gap-5 py-5 justify-center">
               <div>
-                   <h3 className="font-bold">Free</h3>
-                   <p>Worldwide Shopping</p>
+                <h3 className="font-bold">Free</h3>
+                <p>Worldwide Shopping</p>
               </div>
               <div>
-                   <h3 className="font-bold">100%</h3>
-                   <p>Guaranteed Satisfaction</p>
+                <h3 className="font-bold">100%</h3>
+                <p>Guaranteed Satisfaction</p>
               </div>
               <div>
-                   <h3 className="font-bold">30 Day</h3>
-                   <p>Guaranteed Money Back</p>
+                <h3 className="font-bold">30 Day</h3>
+                <p>Guaranteed Money Back</p>
               </div>
-               
             </div>
           </fieldset>
-
-
         </div>
       </div>
 
-    
       {/* description, info, reviews */}
       <div className="text-center text-sm lg:text-xl container mx-auto ">
         <Tabs>
@@ -371,25 +419,33 @@ const TopSaverDetails = () => {
           <TabPanel>
             <div className="px-3">
               <h2 className="font-bold flex justify-start">
-              {review.length} review for {products.productName}
+                {review.length} review for {products.productName}
               </h2>
               {/* right side */}
               <div className="">
-                 {
-                  review.map((rev,idx)=> (
-                   <div className="flex gap-5 items-center  lg:space-y-8 space-y-5" key={idx}>
-                    
-                      <div className="w-24 rounded-full">
-                        <img src={rev?.photo ?  rev?.photo :'https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'} className="rounded-full" alt="user Image" />
-                      </div>
-                    
+                {review.map((rev, idx) => (
+                  <div
+                    className="flex gap-5 items-center  lg:space-y-8 space-y-5"
+                    key={idx}
+                  >
+                    <div className="w-24 rounded-full">
+                      <img
+                        src={
+                          rev?.photo
+                            ? rev?.photo
+                            : "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                        }
+                        className="rounded-full"
+                        alt="user Image"
+                      />
+                    </div>
+
                     <div className="text-start lg:space-y-2 space-y-1">
                       {/* react star rating */}
                       <div className="text-sm">
                         <StarRatings
-                         
                           starRatedColor="yellow"
-                          starEmptyColor='#4e7661'
+                          starEmptyColor="#4e7661"
                           changeRating={changeRating}
                           numberOfStars={rev.rating}
                           name="rating"
@@ -400,16 +456,16 @@ const TopSaverDetails = () => {
                       {/* userName and date */}
                       <div className="lg:flex items-center gap-2">
                         <h2 className="font-bold">{rev.name}-</h2>
-                        <p className="text-sm opacity-90">{rev.formattedDate}</p>
+                        <p className="text-sm opacity-90">
+                          {rev.formattedDate}
+                        </p>
                       </div>
                       <div>
                         <h2 className="text-sm ">{rev.review}</h2>
                       </div>
                     </div>
-                  </div>            
-                    
-                  ))
-                 }
+                  </div>
+                ))}
               </div>
 
               {/* add review */}
