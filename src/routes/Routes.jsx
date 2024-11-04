@@ -105,7 +105,7 @@ const router = createBrowserRouter([
         {
           path: '/top-savers/:id',
           element: <PrivateRoute><TopSaverDetails></TopSaverDetails></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/top-savers/${params.id}`),
+          loader: ({params})=> fetch(`https://glowing-cosmetics-shop-server.vercel.app/top-savers/${params.id}`),
         }
        
         

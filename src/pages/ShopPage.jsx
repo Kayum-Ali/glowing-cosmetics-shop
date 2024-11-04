@@ -24,7 +24,7 @@ const ShopPage = () => {
   const [topSaver, setTopSaver] = useState([])
 
   useEffect(()=>{
-    fetch('http://localhost:5000/top-savers')
+    fetch('https://glowing-cosmetics-shop-server.vercel.app/top-savers')
     .then(res => res.json())
     .then(data => setTopSaver(data))
   },[])
@@ -243,6 +243,7 @@ const ShopPage = () => {
                                      <IoIosStar className="lg:text-xl text-sm text-[#4e7661]" />
                                   </div>
                                   <h2>Brand : {product.brand}</h2>
+                                  <h2>Sold: {product.sold} / {product.stock}</h2>
                                </div>
                                
                            </div>
@@ -261,6 +262,7 @@ const ShopPage = () => {
                                      <IoIosStar className="lg:text-xl hidden lg:block md:block text-sm text-[#4e7661]" />
                                   </div>
                                   <h2>Brand : {product.brand}</h2>
+                                  <h2>Sold:  {product.sold} / {product.stock}</h2>
                                </div>
                               
                            </div>

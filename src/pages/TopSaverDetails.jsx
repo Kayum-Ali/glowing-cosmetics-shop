@@ -96,7 +96,7 @@ const TopSaverDetails = () => {
       <div className="flex flex-col lg:flex-row md:flex-row container mx-auto gap-14 lg:py-16 py-3 md:py-14 px-5">
         <div className="flex-1">
 
-          <img className="w-full lg:h-[600px] h-auto" src={activeIMG} alt="" />
+          <img className="w-full lg:h-[400px] h-auto" src={activeIMG} alt="" />
           <div className="flex flex-wrap lg:gap-5 gap-2 mt-3">
             <img
               onClick={() => setActiveIMG(products.img)}
@@ -161,6 +161,11 @@ const TopSaverDetails = () => {
           </div>
           {/* description */}
           <p className="text-lg font-medium">{products.description.slice(0,50)}</p>
+          {/* stock and sold */}
+          <div className="flex gap-3 items-center">
+            <p className="text-[#007D71]"> {products.stock} In stock</p>
+            <p className=" ">Sold: {products.sold}</p>
+          </div>
           {/* color */}
           <div className="flex gap-3 items-center">
             <label htmlFor="color" className="text-2xl font-bold">
