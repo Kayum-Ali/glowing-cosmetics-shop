@@ -12,7 +12,7 @@ import Swal from "sweetalert2";
 const Navbar = () => {
   const { user,logout } = useContext(AuthContext);
   const [toggle, setToggle] = useState(false)
-  const [data, setData] = useState([])
+  
   const navigate = useNavigate()
   const handleLogout = () =>{
   
@@ -31,11 +31,13 @@ const Navbar = () => {
     })
   }
 
+  const [data, setData] = useState([]);
+
   useEffect(()=>{
-    fetch('https://glowing-cosmetics-shop-server.vercel.app/addToCart')
-    .then(res => res.json())
-    .then(data => setData(data))
-},[])
+      fetch('https://glowing-cosmetics-shop-server.vercel.app/addToCart')
+      .then(res => res.json())
+      .then(data => setData(data))
+  },[])
 
   return (
     <div className="font-medium bg-gradient-to-r from-[#E6E6FA] to-[#aed6f1] fixed top-0 w-full z-50 ">
