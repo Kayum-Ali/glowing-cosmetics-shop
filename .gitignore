@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+src/config/credentials.js
 dist-ssr
 *.local
 
