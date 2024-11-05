@@ -5,13 +5,14 @@ import { GoPerson } from "react-icons/go";
 import { TbJewishStar } from "react-icons/tb";
 import { PiShoppingBagOpenBold } from "react-icons/pi";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user,logout } = useContext(AuthContext);
   const [toggle, setToggle] = useState(false)
+  const [data, setData] = useState([])
   const navigate = useNavigate()
   const handleLogout = () =>{
   
@@ -29,6 +30,12 @@ const Navbar = () => {
       
     })
   }
+
+  useEffect(()=>{
+    fetch('https://glowing-cosmetics-shop-server.vercel.app/addToCart')
+    .then(res => res.json())
+    .then(data => setData(data))
+},[])
 
   return (
     <div className="font-medium bg-gradient-to-r from-[#E6E6FA] to-[#aed6f1] fixed top-0 w-full z-50 ">
@@ -149,7 +156,7 @@ const Navbar = () => {
           <NavLink to={`/addToCart`} className="flex relative">
             <PiShoppingBagOpenBold  className=""/>
             <span className="absolute -top-3 text-center text-white -right-2 bg-black h-[20px] overflow-hidden text-sm w-[20px] rounded-full mx-auto">
-              0
+              {data.length}
             </span>
           </NavLink>
         </div>
