@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 // import { Link } from "react-router-dom";
 
 const AddToCart = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/addToCart")
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -18,7 +19,7 @@ const AddToCart = () => {
         const newQuantity = item.quantity + 1;
 
         // সার্ভারে আপডেট পাঠানো
-        fetch(`http://localhost:5000/addToCart/${id}`, {
+        fetch(`https://glowing-cosmetics-shop-server.vercel.app/addToCart/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -26,7 +27,7 @@ const AddToCart = () => {
           body: JSON.stringify({ quantity: newQuantity }),
         })
           .then((res) => res.json())
-          .then(() => console.log("Quantity increased successfully"));
+          .then((data) => toast.success(data.message) );
 
         return { ...item, quantity: newQuantity };
       }
@@ -43,7 +44,7 @@ const AddToCart = () => {
         const newQuantity = item.quantity - 1;
 
         // সার্ভারে আপডেট পাঠানো
-        fetch(`http://localhost:5000/addToCart/${id}`, {
+        fetch(`https://glowing-cosmetics-shop-server.vercel.app/addToCart/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -51,7 +52,7 @@ const AddToCart = () => {
           body: JSON.stringify({ quantity: newQuantity }),
         })
           .then((res) => res.json())
-          .then(() => console.log("Quantity decreased successfully"));
+          .then((data) => toast.success(data.message));
 
         return { ...item, quantity: newQuantity };
       }
@@ -106,11 +107,11 @@ const AddToCart = () => {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200 ">
                   {data.map((job) => (
-                    <tr key={job._id}>
+                    <tr key={job._id} className="">
                       <td className="px-4 py-4 text-sm text-gray-500  whitespace-nowrap">
-                        <div className="flex items-center gap-5">
+                        <div className="flex items-center gap-5 w-max">
                           <img className="size-20" src={job.photo} alt="" />
-                          <h2 className="text-xl font-bold">
+                          <h2 className="lg:text-xl text-sm font-bold">
                             {job.productName}
                           </h2>
                         </div>
@@ -142,7 +143,7 @@ const AddToCart = () => {
                           </span>
                         </div>
                       </td>
-                      <td>${job.price * job.quantity}</td>
+                      <td className="px-4 py-4">${job.price * job.quantity}</td>
                       <td className="px-4 py-4 text-sm whitespace-nowrap">
                         <div className="flex items-center gap-x-6">
                           <button className="text-gray-500 transition-colors duration-200   hover:text-red-500 focus:outline-none">
