@@ -12,7 +12,10 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const TopSaverDetails = () => {
-    const { user } = useContext(AuthContext);
+    const {
+        user,
+        cartUpdate: [isCartUpdated, setIsCartUpdated],
+    } = useContext(AuthContext);
     const photo = user.photoURL;
     const product = useLoaderData();
     const [size, setSize] = useState("");
@@ -104,10 +107,14 @@ const TopSaverDetails = () => {
             body: JSON.stringify(cartData),
         })
             .then(res => res.json())
-            .then(({ message, data: { exists } }) =>
-                exists ? toast.error(message) : toast.success(message)
-            );
-           
+            .then(({ message, data: { exists } }) => {
+                if (exists) {
+                    toast.error(message);
+                } else {
+                    toast.success(message);
+                    setIsCartUpdated(!isCartUpdated);
+                }
+            });
     };
 
     return (
