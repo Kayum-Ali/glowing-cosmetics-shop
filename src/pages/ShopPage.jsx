@@ -238,7 +238,7 @@ const ShopPage = () => {
           >
             {topSaver.map((product, index) => (
               <SwiperSlide key={index}>
-                <div className="w-full lg:h-[440px] h-[250px] relative ">
+                <div className="w-full lg:h-[540px] h-[300px] relative ">
                   <Link
                     to={`/top-savers/${product._id}`}
                     className={`relative block w-full`}

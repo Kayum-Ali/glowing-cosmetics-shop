@@ -96,7 +96,7 @@ const TopSaverDetails = () => {
             email: user.email,
             prodId: product._id,
         };
-        fetch("http://localhost:5000/addToCart", {
+        fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -107,6 +107,7 @@ const TopSaverDetails = () => {
             .then(({ message, data: { exists } }) =>
                 exists ? toast.error(message) : toast.success(message)
             );
+           
     };
 
     return (

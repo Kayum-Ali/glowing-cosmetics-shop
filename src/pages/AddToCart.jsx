@@ -5,7 +5,7 @@ const AddToCart = () => {
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/addToCart')
+        fetch('https://glowing-cosmetics-shop-server.vercel.app/addToCart')
         .then(res => res.json())
         .then(data => setData(data))
     },[])
