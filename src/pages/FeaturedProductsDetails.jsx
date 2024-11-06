@@ -81,7 +81,7 @@ const FeaturedProductsDetails = () => {
       });
   };
 
-
+`q1query`
   // handleaddToCart
   const handleAddToCart = () => {
     const cartData = {

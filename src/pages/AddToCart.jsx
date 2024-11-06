@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { AuthContext } from "../context/AuthProvider";
+import { FaHome } from "react-icons/fa";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const AddToCart = () => {
@@ -9,7 +11,9 @@ const AddToCart = () => {
 
   useEffect(() => {
     // fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart")//-
-    fetch(`https://glowing-cosmetics-shop-server.vercel.app/addToCart?email=${user?.email}`)
+    fetch(
+      `https://glowing-cosmetics-shop-server.vercel.app/addToCart?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [user]);
@@ -22,15 +26,18 @@ const AddToCart = () => {
         const newQuantity = item.quantity + 1;
 
         // সার্ভারে আপডেট পাঠানো
-        fetch(`https://glowing-cosmetics-shop-server.vercel.app/addToCart/${id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ quantity: newQuantity }),
-        })
+        fetch(
+          `https://glowing-cosmetics-shop-server.vercel.app/addToCart/${id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ quantity: newQuantity }),
+          }
+        )
           .then((res) => res.json())
-          .then((data) => toast.success(data.message) );
+          .then((data) => toast.success(data.message));
 
         return { ...item, quantity: newQuantity };
       }
@@ -47,13 +54,16 @@ const AddToCart = () => {
         const newQuantity = item.quantity - 1;
 
         // সার্ভারে আপডেট পাঠানো
-        fetch(`https://glowing-cosmetics-shop-server.vercel.app/addToCart/${id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ quantity: newQuantity }),
-        })
+        fetch(
+          `https://glowing-cosmetics-shop-server.vercel.app/addToCart/${id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ quantity: newQuantity }),
+          }
+        )
           .then((res) => res.json())
           .then((data) => toast.success(data.message));
 
@@ -64,14 +74,25 @@ const AddToCart = () => {
     setData(updatedData);
   };
   return (
-    <section className="container px-4 mx-auto pt-12">
-      <div className="flex items-center gap-x-3">
-        <h2 className="text-lg font-medium text-gray-800 ">My Posted Jobs</h2>
-
-        <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full ">
-          Job
-        </span>
+   <>
+    <div className="flex items-center gap-x-3 relative">
+       <img className="mx-auto lg:h-[400px]  lg:w-full" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730877454/1_1920x_gk8nmu.webp" alt="" />
+     
+        {/* breadcumbs */}
+      <div className="breadcrumbs absolute left-[10%] py-3 ">
+      <h3 className="lg:text-5xl text-4xl font-bold my-5">Cart</h3>
+        <ul className="container mx-auto flex justify-center">
+          <li className="flex gap-2">
+            <FaHome />
+            <Link to={`/`}>Home</Link>{" "}
+          </li>
+          <li>Cart</li>
+      
+        </ul>
       </div>
+  </div>
+    <section className="container px-4 mx-auto lg:pt-12 pt-6">
+     
 
       <div className="flex flex-col mt-6">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -176,6 +197,7 @@ const AddToCart = () => {
         </div>
       </div>
     </section>
+   </>
   );
 };
 
