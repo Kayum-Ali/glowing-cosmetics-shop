@@ -3,6 +3,7 @@ import Displain from "../components/Displain";
 import FeaturedProducts from "../components/FeaturedProducts";
 import MoreDiscover from "../components/MoreDiscover";
 import NewCollection from "../components/NewCollection";
+import NewsLetter from "../components/NewsLetter";
 
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
            <NewCollection></NewCollection>
            <Displain></Displain>
            <MoreDiscover></MoreDiscover>
+           <NewsLetter></NewsLetter>
         </div>
     );
 };
