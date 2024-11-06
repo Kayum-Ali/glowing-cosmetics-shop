@@ -12,7 +12,10 @@ import {  toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
 const FeaturedProductsDetails = () => {
-  const { user } = useContext(AuthContext);
+  const {
+    user,
+    cartUpdate: [isCartUpdated, setIsCartUpdated],
+} = useContext(AuthContext);
   const photo = user.photoURL;
   const products = useLoaderData();
   const [size, setSize] = useState("");
@@ -77,6 +80,35 @@ const FeaturedProductsDetails = () => {
         }
       });
   };
+
+
+  // handleaddToCart
+  const handleAddToCart = () => {
+    const cartData = {
+        productName: products.productName,
+        price: products.price,
+        quantity: 1,
+        photo: products.img,
+        email: user.email,
+        prodId: products._id,
+    };
+    fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartData),
+    })
+        .then(res => res.json())
+        .then(({ message, data: { exists } }) => {
+            if (exists) {
+                toast.error(message);
+            } else {
+                toast.success(message);
+                setIsCartUpdated(!isCartUpdated);
+            }
+        });
+};
 
   return (
     <div>
@@ -217,7 +249,7 @@ const FeaturedProductsDetails = () => {
             <button className="bg-[#F8D7DA] hover:bg-[#FFC1CC] duration-300 lg:px-20 px-8 md:px-10 py-4 rounded-lg font-bold">
               1
             </button>
-            <button className="bg-[#4E7661] hover:bg-black duration-300 lg:px-16 px-10 py-4 text-white  rounded-lg font-bold ">
+            <button onClick={handleAddToCart} className="bg-[#4E7661] hover:bg-black duration-300 lg:px-16 px-10 py-4 text-white  rounded-lg font-bold ">
               Add To Cart
             </button>
           </div>

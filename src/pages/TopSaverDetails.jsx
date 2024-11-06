@@ -65,7 +65,7 @@ const TopSaverDetails = () => {
         const formattedDate = currentDate.toLocaleDateString("en-US", options);
         const newReview = { name, email, review, rating, photo, formattedDate };
 
-        console.log(newReview);
+        // console.log(newReview);
         fetch(
             "https://glowing-cosmetics-shop-server.vercel.app/top-Saver-Review",
             {
