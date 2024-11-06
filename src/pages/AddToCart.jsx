@@ -1,15 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { AuthContext } from "../context/AuthProvider";
 // import { Link } from "react-router-dom";
 
 const AddToCart = () => {
+  const { user } = useContext(AuthContext);
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart")
+    // fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart")//-
+    fetch(`https://glowing-cosmetics-shop-server.vercel.app/addToCart?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, []);
+  }, [user]);
   console.log(data);
 
   // Quantity বাড়ানোর ফাংশন

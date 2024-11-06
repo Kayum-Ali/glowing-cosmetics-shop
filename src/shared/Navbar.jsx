@@ -33,11 +33,15 @@ const Navbar = () => {
 
     const [data, setData] = useState([]);
 
+
     useEffect(() => {
-        fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart")
+        // fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart")//-
+        fetch(`https://glowing-cosmetics-shop-server.vercel.app/addToCart?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setData(data));
-    }, [isCartUpdated]);
+    }, [isCartUpdated, user]);
+   
+
 
     return (
         <div className="font-medium bg-gradient-to-r from-[#E6E6FA] to-[#aed6f1] fixed top-0 w-full z-50 ">
