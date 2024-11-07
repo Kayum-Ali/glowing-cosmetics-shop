@@ -44,6 +44,7 @@ const AuthProvider = ({ children }) => {
         login,
         logout,
         loading,
+        setLoading,
         cartUpdate: [isCartUpdated, setIsCartUpdated],
     };
 
