@@ -1,0 +1,24 @@
+.swiper-slide {
+    min-width: 300px;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* 
+  .swiper-slide img {
+    display: block;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  } */
+  /* .bg {
+    background-image: url("https://res.cloudinary.com/dqescabbl/image/upload/v1730968682/2_1920x_1_gssluv.webp");
+  }
+  .bg2 {
+    background-image: url("../assets/bg-slider-02.jpg");
+  }
+  .bg3 {
+    background-image: url("../assets/bg-slider-03.jpg");
+  } */
+  
