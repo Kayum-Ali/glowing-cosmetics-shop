@@ -93,12 +93,12 @@ const CountdownTimer = ({ endDate }) => {
           </button>
         </div>
         {/* video */}
-        <div className="flex-1">
+         <div className="flex-1">
           <div
             onClick={() => document.getElementById("my_modal_2").showModal()}
             className="relative"
           >
-            <img
+            <img title="Click here to show the video"
               className="w-full rounded-lg"
               src="https://res.cloudinary.com/dqescabbl/image/upload/v1730132377/video-02_gw5dp7.jpg"
               alt=""
@@ -146,6 +146,20 @@ const CountdownTimer = ({ endDate }) => {
                 </div>
                 <button className="px-8 py-3 hover:bg-[#B88539] bg-[#4E7661] text-white font-bold rounded-lg shadow-lg">Get Only | $58.00</button>
 
+           </div>
+      </div>
+
+      {/* another banner */}
+      <div className="flex container items-center gap-5 flex-col-reverse mx-auto lg:flex-row-reverse px-5 py-10 ">
+        {/* video */}
+           <div className="w-full">
+               <iframe className="w-full h-[315px] rounded-md" src="https://www.youtube.com/embed/BT2NFDNDFOM?si=k_vO3JTCVZwRULGY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           </div>
+              {/* img */}
+           <div className="w-full space-y-5">
+               <h2>মদিনা ব্যাগ ও ভ্যারাইটিস স্টোরে ক্রেতা <br /> ও বিক্রেতার মাঝে আলাপ - কেনাকাটার অভিজ্ঞতা</h2>
+               <p>যদি আপনি প্রথমবারের মতো এই স্টোরে আসেন, তবে আপনার জন্য রয়েছে বিশেষ মূল্যছাড়ের সুযোগ।</p>
+               {/* <img className="w-full" src="https://res.cloudinary.com/dqescabbl/image/upload/v1730912982/4_630x_vf1qoh.webp" alt="" /> */}
            </div>
       </div>
     </div>
