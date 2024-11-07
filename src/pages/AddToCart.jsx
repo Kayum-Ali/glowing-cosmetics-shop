@@ -6,7 +6,11 @@ import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const AddToCart = () => {
-  const { user } = useContext(AuthContext);
+  const {
+     user,
+     cartUpdate: [isCartUpdated, setIsCartUpdated]
+
+   } = useContext(AuthContext);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,8 +20,8 @@ const AddToCart = () => {
     )
       .then((res) => res.json())
       .then((data) => setData(data));
-  }, [user]);
-  console.log(data);
+  }, [user, isCartUpdated]);
+  // console.log(data);
 
   // Quantity বাড়ানোর ফাংশন
   const handleIncrease = (id) => {
@@ -73,6 +77,31 @@ const AddToCart = () => {
     });
     setData(updatedData);
   };
+
+
+
+  const handleDelete = (prodId) =>{
+    const deleteData = {
+      email: user?.email,
+    }
+    fetch(`https://glowing-cosmetics-shop-server.vercel.app/addToCart/${prodId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(deleteData)
+    })
+    .then(response => response.json())
+    .then(({ message, data: { exists } }) => {
+      if (exists) {
+          toast.error(message);
+      } else {
+          toast.success(message);
+          setIsCartUpdated(!isCartUpdated);
+      }
+  });
+    
+  }
   return (
    <>
     <div className="flex items-center gap-x-3 relative">
@@ -170,7 +199,7 @@ const AddToCart = () => {
                       <td className="px-4 py-4">${job.price * job.quantity}</td>
                       <td className="px-4 py-4 text-sm whitespace-nowrap">
                         <div className="flex items-center gap-x-6">
-                          <button className="text-gray-500 transition-colors duration-200   hover:text-red-500 focus:outline-none">
+                          <button onClick={()=>handleDelete(job.prodId)} className="text-gray-500 transition-colors duration-200   hover:text-red-500 focus:outline-none">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
