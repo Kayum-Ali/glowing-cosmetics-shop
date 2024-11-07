@@ -1,5 +1,9 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,9 +30,9 @@ const BlogPage = () => {
           <div className="bg-[url('https://res.cloudinary.com/dqescabbl/image/upload/v1730968682/2_1920x_1_gssluv.webp')] w-full h-full bg-cover bg-center relative">
             <div className="absolute top-1/2 lg:left-[60%] left-1/2 -translate-y-1/2 lg:space-y-5 space-y-2">
               
-               <div className="flex gap-5">
-                    <div className="bg-[#A084BD] w-[5px]"></div>
-                    <div>
+               <div className="flex gap-5" >
+                    <div className="bg-[#A084BD] w-[5px]"  data-aos="zoom-in"></div>
+                    <div data-aos="fade-left" data-aos-duration="500">
                         <h2 className="lg:text-5xl text-2xl font-semibold">New Collections</h2>
                         <h2 className="lg:text-5xl text-2xl font-semibold">Nature <span className="text-[#A084BD]">&</span> Nature</h2>
                     </div>
@@ -46,8 +50,8 @@ const BlogPage = () => {
           <div className="absolute top-1/2 lg:left-[60%] left-1/2 -translate-y-1/2 lg:space-y-5 space-y-2">
               
               <div className="flex gap-5">
-                   <div className="bg-[#87AC52] w-[5px]"></div>
-                   <div>
+                   <div className="bg-[#87AC52] w-[5px]" data-aos="fade-left"></div>
+                   <div data-aos="fade-left" data-aos-duration="1500">
                        <h2 className="lg:text-5xl text-2xl font-semibold">Hot Trending</h2>
                        <h2 className="lg:text-5xl text-2xl font-semibold"> <span className="text-[#87AC52]">Green</span> Tea</h2>
                    </div>
@@ -65,8 +69,8 @@ const BlogPage = () => {
           <div className="absolute top-1/2 lg:left-[60%] left-1/2 -translate-y-1/2 lg:space-y-5 space-y-2">
               
               <div className="flex gap-5">
-                   <div className="bg-[#FCD814] w-[5px]"></div>
-                   <div>
+                   <div className="bg-[#FCD814] w-[5px]" data-aos="fade-left"></div>
+                   <div data-aos="fade-left" data-aos-duration="1000">
                        <h2 className="lg:text-5xl text-2xl font-semibold">Cosmetics</h2>
                        <h2 className="lg:text-5xl text-2xl font-semibold">Moisturiser</h2>
                    </div>
