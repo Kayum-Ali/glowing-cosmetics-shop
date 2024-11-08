@@ -17,17 +17,18 @@ const AddToCart = () => {
     cartUpdate: [isCartUpdated, setIsCartUpdated],
   } = useContext(AuthContext);
   const [data, setData] = useState([]);
+ const totalPrice =  data.reduce((acc, item) => acc + item.price, 0)
+//  console.log(totalPrice);
 
   useEffect(() => {
     // fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart")//-
-    
+
     fetch(
       `https://glowing-cosmetics-shop-server.vercel.app/addToCart?email=${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => {
         setData(data);
-        
       });
   }, [user, isCartUpdated, setLoading]);
   // console.log(data);
@@ -277,15 +278,30 @@ const AddToCart = () => {
       )}
 
       {/* continue shopping */}
-      <div className="container mx-auto px-5 flex justify-between my-5">
-           <div>
-               <Link to={`/shop`}>
-               <button className="bg-[#00766B] px-5 py-2.5 text-white rounded-md">Continue Shopping</button>
-               </Link>
-           </div>
-           <div>
-           <button className="bg-[#00766B] px-5 py-2.5 text-white rounded-md">Update Cart</button>
-           </div>
+      <div className="container mx-auto px-5  my-5">
+        <div className="flex justify-between">
+          <div>
+            <Link to={`/shop`}>
+              <button className="bg-[#00766B] px-5 py-2.5 text-white rounded-md">
+                Continue Shopping
+              </button>
+            </Link>
+          </div>
+          <div>
+            <button className="bg-[#00766B] px-5 py-2.5 text-white rounded-md">
+              Update Cart
+            </button>
+          </div>
+        </div>
+       {
+         totalPrice === 2000 ? <div>Congratulations! You get free shipping with your order greater <span className="text-[#00766B]">$ 2000</span></div> :  <div className="text-center mt-5">
+         <p>Spend <span className="text-[#00766B]">$ {2000 - totalPrice}</span> more to reach FREE SHIPPING!</p>
+         <p className="">
+           to add more products to your cart and receive free shipping for
+           order <span className="text-[#00766B]">$ 2000</span>
+         </p>
+       </div>
+       }
       </div>
     </>
   );
