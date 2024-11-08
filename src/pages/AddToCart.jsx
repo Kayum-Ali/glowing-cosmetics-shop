@@ -275,6 +275,18 @@ const AddToCart = () => {
           </div>
         </section>
       )}
+
+      {/* continue shopping */}
+      <div className="container mx-auto px-5 flex justify-between my-5">
+           <div>
+               <Link to={`/shop`}>
+               <button className="bg-[#00766B] px-5 py-2.5 text-white rounded-md">Continue Shopping</button>
+               </Link>
+           </div>
+           <div>
+           <button className="bg-[#00766B] px-5 py-2.5 text-white rounded-md">Update Cart</button>
+           </div>
+      </div>
     </>
   );
 };
