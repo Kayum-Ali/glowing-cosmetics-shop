@@ -206,7 +206,7 @@ const ShopPage = () => {
           <h2 className="text-2xl font-bold">Top Saver Today</h2>
           <div className="flex gap-2 justify-between flex-col lg:flex-row md:flex-row lg:items-center">
             <p className="font-bold lg:text-2xl text-xl">Ends in : </p>
-            <CountdownTimer endDate="2024-11-31T20:59:59" />
+            <CountdownTimer endDate="2025-11-31T20:59:59" />
           </div>
         </div>
 
