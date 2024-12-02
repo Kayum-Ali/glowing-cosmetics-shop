@@ -142,7 +142,7 @@ const CountdownTimer = ({ endDate }) => {
                 <h2 className="text-4xl font-bold">Mountain Pain Bath Oil</h2>
                 <p className="text-[#7E7E7E] lg:w-2/3  tracking-wider font-medium">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
                 <div>
-                   <CountdownTimer endDate="2024-11-31T20:59:59" />
+                   <CountdownTimer endDate="2025-11-31T20:59:59" />
                 </div>
                 <button className="px-8 py-3 hover:bg-[#B88539] bg-[#4E7661] text-white font-bold rounded-lg shadow-lg">Get Only | $58.00</button>
 

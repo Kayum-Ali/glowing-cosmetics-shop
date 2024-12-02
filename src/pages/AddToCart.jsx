@@ -17,8 +17,8 @@ const AddToCart = () => {
     cartUpdate: [isCartUpdated, setIsCartUpdated],
   } = useContext(AuthContext);
   const [data, setData] = useState([]);
- const totalPrice =  data.reduce((acc, item) => acc + item.price, 0)
-//  console.log(totalPrice);
+  const totalPrice = data.reduce((acc, item) => acc + item.price, 0);
+  //  console.log(totalPrice);
 
   useEffect(() => {
     // fetch("https://glowing-cosmetics-shop-server.vercel.app/addToCart")//-
@@ -293,15 +293,40 @@ const AddToCart = () => {
             </button>
           </div>
         </div>
-       {
-         totalPrice === 2000 ? <div>Congratulations! You get free shipping with your order greater <span className="text-[#00766B]">$ 2000</span></div> :  <div className="text-center mt-5">
-         <p>Spend <span className="text-[#00766B]">$ {2000 - totalPrice}</span> more to reach FREE SHIPPING!</p>
-         <p className="">
-           to add more products to your cart and receive free shipping for
-           order <span className="text-[#00766B]">$ 2000</span>
-         </p>
-       </div>
-       }
+        {totalPrice === 2000 ? (
+          <div>
+            Congratulations! You get free shipping with your order greater{" "}
+            <span className="text-[#00766B]">$ 2000</span>
+          </div>
+        ) : (
+          <div className="text-center mt-5">
+            <p>
+              Spend{" "}
+              <span className="text-[#00766B]">$ {2000 - totalPrice}</span> more
+              to reach FREE SHIPPING!
+            </p>
+            <p className="">
+              to add more products to your cart and receive free shipping for
+              order <span className="text-[#00766B]">$ 2000</span>
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* apply coupon,  cart total and proced checkout */}
+      <div className="container mx-auto px-5  my-5 grid grid-cols-3">
+         <div>
+              <h3> Coupon</h3>
+              <input type="text" name="" id=""  placeholder="Enter Your Coupon hare"/>
+         </div>
+         <div>
+             <h2>Cart Totals</h2>
+             <hr />
+         </div>
+         <div>
+              <button>Procced to checkout</button>
+         </div>
+          
       </div>
     </>
   );
