@@ -314,19 +314,22 @@ const AddToCart = () => {
       </div>
 
       {/* apply coupon,  cart total and proced checkout */}
-      <div className="container mx-auto px-5  my-5 grid grid-cols-3">
-         <div>
-              <h3> Coupon</h3>
-              <input type="text" name="" id=""  placeholder="Enter Your Coupon hare"/>
-         </div>
-         <div>
-             <h2>Cart Totals</h2>
-             <hr />
-         </div>
-         <div>
-              <button>Procced to checkout</button>
-         </div>
-          
+      <div className="container mx-auto px-5  my-5 grid grid-cols-3 gap-5">
+        <div>
+          <h3 className="text-xl font-bold">Coupon</h3>
+          <div className=" mt-6">
+            <input type="text" name="" id="" className="bg-[#F5F5F5] py-2.5 px-6 text-gray-900 rounded-tl-lg rounded-bl-lg" placeholder="Enter Your Coupon hare" />
+            <button className="bg-[#007D71] text-white py-2.5 px-3 ">Apply Coupon</button>
+          </div>
+        </div>
+        <div>
+          <h2  className="text-xl font-bold">Cart Totals</h2>
+          <hr className=" mt-6  border-black opacity-40" />
+        </div>
+        <div>
+          <button className="bg-[#00766B] text-white py-2.5 rounded-md text-center w-full mt-5">Procced to checkout</button>
+        </div>
+
       </div>
     </>
   );
