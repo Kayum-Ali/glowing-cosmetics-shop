@@ -4,6 +4,9 @@ import { AuthContext } from "../context/AuthProvider";
 import { FaHome } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+// import { LuCircleCheck } from "react-icons/lu";
+// import { LuCircleCheck } from "react-icons";
+import { TbCircleCheck } from "react-icons/tb";
 
 const AddToCart = () => {
   useEffect(() => {
@@ -314,23 +317,69 @@ const AddToCart = () => {
       </div>
 
       {/* apply coupon,  cart total and proced checkout */}
-      <div className="container mx-auto px-5  my-5 grid grid-cols-3 gap-5">
-        <div>
-          <h3 className="text-xl font-bold">Coupon</h3>
-          <div className=" mt-6">
-            <input type="text" name="" id="" className="bg-[#F5F5F5] py-2.5 px-6 text-gray-900 rounded-tl-lg rounded-bl-lg" placeholder="Enter Your Coupon hare" />
-            <button className="bg-[#007D71] text-white py-2.5 px-3 ">Apply Coupon</button>
+     {
+      data.length === 0 ? null :  <div className="container mx-auto px-5  my-5 grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-5">
+      <div>
+        <h3 className="text-xl font-bold">Coupon</h3>
+        <div className=" mt-6 flex">
+          <input type="text" name="" id="" className="bg-[#F5F5F5] py-2.5 px-6 text-gray-900 rounded-tl-lg rounded-bl-lg sm:max-w-[200px] w-max" placeholder="Enter Your Coupon hare" />
+          <button className="bg-[#007D71] text-white py-2.5 px-3 ">Apply Coupon</button>
+        </div>
+      </div>
+      <div>
+        <h2 className="text-xl font-bold">Cart Totals</h2>
+        <hr className=" mt-6  border-black opacity-40" />
+        {/* subtotal */}
+        <div className="flex justify-between my-5">
+          <h3 className="text-gray-700 font-medium">Subtotal</h3>
+          <p className="text-[#00766B] font-bold">$1181.00</p>
+        </div>
+        {/* shipping */}
+        <div className="flex justify-between">
+          <h3>Shipping</h3>
+          <div className="flex  items-center gap-2">
+            <h2>Flat rate: </h2>
+            <p className="text-[#00766B] font-bold">$20.00</p>
+            {/* <LuCircleCheck  /> */}
+            <TbCircleCheck className="text-[#00766B] text-lg font-bold" />
+
           </div>
         </div>
-        <div>
-          <h2  className="text-xl font-bold">Cart Totals</h2>
-          <hr className=" mt-6  border-black opacity-40" />
-        </div>
-        <div>
-          <button className="bg-[#00766B] text-white py-2.5 rounded-md text-center w-full mt-5">Procced to checkout</button>
-        </div>
+        {/* local pickup */}
+        <div className="flex justify-end">
+          <div className="flex  items-center gap-2">
+            <h2>Local pickup: </h2>
+            <p className="text-[#00766B] font-bold">$20.00</p>
+            {/* <LuCircleCheck  /> */}
+            <TbCircleCheck className="text-[#00766B] text-lg font-bold" />
 
+          </div>
+        </div>
+        {/* option */}
+        <div className="flex justify-end ">
+          <div className="flex flex-col text-end space-y-1 mt-2 text-gray-900 leading-6">
+            <h3>Shipping options will be</h3>
+            <h2>updated during checkout.</h2>
+            <p className="text-[#00766B] font-medium">Calculate shipping</p>
+          </div>
+        </div>
+        <hr  className="my-3 border-black opacity-40"/>
+        {/* total */}
+        <div className="flex justify-between">
+            <h2 className="text-xl font-bold">Total</h2>
+            <p className="text-[#00766B] font-bold">$1201.00</p>
+        </div>
+        {/* md;block */}
+        <div className="lg:hidden hidden md:block ">
+           <button className="bg-[#00766B] text-white py-2.5 rounded-md text-center w-full mt-5">Procced to checkout</button>
       </div>
+      </div>
+      <div className="md:hidden lg:block block">
+        <button className="bg-[#00766B] text-white py-2.5 rounded-md text-center w-full mt-5">Procced to checkout</button>
+      </div>
+
+    </div>
+     }
     </>
   );
 };
